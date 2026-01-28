@@ -1,6 +1,7 @@
 package walhalla.mmo.core;
 
 import java.io.File;
+import java.util.UUID;
 
 import org.bukkit.Bukkit;
 import org.bukkit.command.PluginCommand;
@@ -31,6 +32,9 @@ public class ValhallaCorePlugin extends JavaPlugin {
         saveDefaultConfig();
         ensureCanonicalDataFolders();
 
+        // Bootstrap CoreAPI first
+        CoreAPI.bootstrap(this);
+
         this.canon = new CanonDataService(this);
         this.canon.loadOrFail();
 
@@ -38,7 +42,6 @@ public class ValhallaCorePlugin extends JavaPlugin {
         this.progress = new PlayerProgressService(this, store);
 
         // CoreAPI needs access to services.
-        CoreAPI.bootstrap(this, progress);
         CoreAPI.setCanonService(canon);
 
         // Phase 12: Economy prices + balance authority
@@ -51,7 +54,6 @@ public class ValhallaCorePlugin extends JavaPlugin {
         // Trusted mutation bridge for runtime systems (Combat/Spells). UI must stay read-only via CoreAPI.
         Bukkit.getServicesManager().register(walhalla.mmo.core.api.progress.ProgressMutationBridge.class,
                 new walhalla.mmo.core.progress.ProgressMutationBridgeImpl(progress), this, ServicePriority.Normal);
-
 
         // Onboarding UI + gating (players never use commands)
         BranchSelectionMenu onboardingMenu = new BranchSelectionMenu(this, progress);
