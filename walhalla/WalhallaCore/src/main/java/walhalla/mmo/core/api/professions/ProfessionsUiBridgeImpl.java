@@ -1,6 +1,6 @@
 package walhalla.mmo.core.api.professions;
 
-import java.util.Arrays;
+import java.util.Arrays; // Added import
 
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
