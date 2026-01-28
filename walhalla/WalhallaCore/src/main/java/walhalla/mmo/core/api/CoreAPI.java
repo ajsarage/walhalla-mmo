@@ -23,12 +23,12 @@ public final class CoreAPI {
     }
 
     public static List<String> getChosenBranches(UUID playerId) {
-        if (progress == null) return List.of();
+        if (progress == null || playerId == null) return List.of();
         return progress.getChosenBranches(playerId);
     }
 
     public static PlayerData.PlayerLifecycleState getLifecycleState(UUID playerId) {
-        if (progress == null) return PlayerData.PlayerLifecycleState.UNINITIALIZED;
+        if (progress == null || playerId == null) return PlayerData.PlayerLifecycleState.UNINITIALIZED;
         return progress.getLifecycleState(playerId);
     }
 }
