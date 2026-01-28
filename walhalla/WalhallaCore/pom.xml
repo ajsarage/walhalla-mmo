@@ -12,8 +12,6 @@
         <maven.compiler.release>21</maven.compiler.release>
     </properties>
 
-    
-
     <dependencies>
         <dependency>
             <groupId>io.papermc.paper</groupId>
@@ -22,7 +20,7 @@
             <scope>provided</scope>
         </dependency>
         
-            <dependency>
+        <dependency>
             <groupId>net.kyori</groupId>
             <artifactId>adventure-platform-bukkit</artifactId>
             <version>4.3.0</version>
@@ -32,7 +30,7 @@
             <artifactId>adventure-text-serializer-legacy</artifactId>
             <version>4.14.0</version>
         </dependency>
-            <dependency>
+        <dependency>
             <groupId>net.kyori</groupId>
             <artifactId>adventure-api</artifactId>
             <version>4.16.0</version>
@@ -56,11 +54,3 @@
         </repository>
     </repositories>
 </project>
-
-
-
-
-
-
-
-
