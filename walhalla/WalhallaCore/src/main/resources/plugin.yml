@@ -1,0 +1,14 @@
+name: WalhallaCore
+version: 0.6.0-SNAPSHOT
+main: walhalla.mmo.core.ValhallaCorePlugin
+api-version: "1.20"
+commands:
+  walhalla:
+    description: "Walhalla admin commands (OP only)"
+    usage: "/walhalla"
+    permission: walhalla.admin
+permissions:
+  walhalla.admin:
+    description: "Walhalla admin permission"
+    default: op
+
