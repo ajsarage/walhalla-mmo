@@ -6,9 +6,9 @@ import java.util.Optional;
 
 import org.bukkit.plugin.java.JavaPlugin;
 
-import walhalla.mmo.core.progress.PlayerProgressService;
-import walhalla.mmo.core.canon.CanonDataService;
-import walhalla.mmo.core.economy.EconomyPriceEngine;
+import walhalla.mmo.core.PlayerProgressService; // Corrected import
+import walhalla.mmo.core.canon.CanonDataService; // Corrected import
+import walhalla.mmo.core.economy.EconomyPriceEngine; // Corrected import
 import walhalla.mmo.core.api.progress.PlayerData; // Corrected import
 
 public final class CoreAPI {
