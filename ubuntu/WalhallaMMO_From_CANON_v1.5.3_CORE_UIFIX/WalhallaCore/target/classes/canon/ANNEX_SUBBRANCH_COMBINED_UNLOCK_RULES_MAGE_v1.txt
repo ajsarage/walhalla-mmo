@@ -1,0 +1,142 @@
+ANNEX_SUBBRANCH_COMBINED_UNLOCK_RULES_MAGE_v1.txt
+===============================================
+
+PROYECTO
+--------
+WalhallaMMOonline
+
+CANON ACTIVO
+------------
+CANON_UNIFICADO_WALHALLAMMO_v3
+
+TIPO DE DOCUMENTO
+----------------
+ANEXO CANÓNICO
+(EXTENSIÓN DE DESBLOQUEO DE SUBRAMAS)
+(NO IMPLEMENTACIÓN)
+
+REFERENCIA CANÓNICA OBLIGATORIA
+-------------------------------
+- CONTRACT_SUBBRANCH_UNLOCK_RULES_v1
+- CONTRACT_SUBBRANCH_PROGRESSION_MODEL_v1
+- CONTRACT_SUBBRANCH_PROGRESSION_TIERS_v1
+- MAPA_DE_CONSECUENCIAS_FASE_F_v1
+
+
+PROPÓSITO
+---------
+Definir las reglas especiales de desbloqueo aplicables
+a las subramas del Mago, incluyendo subramas combinadas
+y la relación particular entre Luz y Oscuridad.
+
+Este anexo NO redefine el sistema general de subramas.
+Solo añade condiciones adicionales específicas del Mago.
+
+
+1) ÁMBITO DE APLICACIÓN
+----------------------
+Este anexo aplica EXCLUSIVAMENTE a:
+- La rama principal Mago
+- Sus subramas elementales
+- Sus subramas combinadas
+- Las subramas Luz y Oscuridad
+
+No aplica a ninguna otra rama del juego.
+
+
+2) SUBRAMAS ELEMENTALES BASE
+---------------------------
+Se consideran subramas elementales base del Mago
+aquellas que representan un único elemento.
+
+Estas subramas:
+- se activan automáticamente según las reglas generales
+- progresan de forma independiente
+- sirven como prerequisito para subramas combinadas
+
+
+3) SUBRAMAS COMBINADAS ELEMENTALES
+---------------------------------
+Se consideran subramas combinadas aquellas que resultan
+de la combinación de dos subramas elementales base.
+
+Regla M-SC1:
+Para desbloquear una subrama combinada, el jugador debe:
+- haber desbloqueado ambas subramas elementales base
+- alcanzar un nivel SUPERIOR a 15 (>15) en cada una de ellas
+
+Regla M-SC2:
+El desbloqueo de una subrama combinada:
+- es permanente
+- no elimina ni bloquea las subramas base
+- habilita progresión independiente de la subrama combinada
+
+Regla M-SC3:
+El desbloqueo de subramas combinadas requiere una
+acción explícita del jugador, validada por el Core.
+
+
+4) RELACIÓN LUZ / OSCURIDAD
+--------------------------
+Luz y Oscuridad son subramas especiales con una relación
+progresiva y excluyente en cuanto a activación principal.
+
+Regla M-LO1:
+En un momento dado, solo una de las subramas (Luz u Oscuridad)
+puede estar activa como subrama principal.
+
+Regla M-LO2:
+El jugador debe progresar y completar (nivel máximo)
+la subrama activa para habilitar el acceso progresivo
+a la subrama contraria.
+
+Regla M-LO3:
+Una vez habilitada, la subrama contraria puede comenzar
+su progresión de forma limitada.
+
+Regla M-LO4:
+Cuando la subrama contraria alcanza un nivel SUPERIOR a 15 (>15),
+se desbloquea la transición o combinación especial asociada.
+
+Regla M-LO5:
+Este proceso es secuencial y permanente, y no elimina
+el progreso histórico de ninguna de las dos subramas.
+
+
+
+5) RELACIÓN CON XP
+-----------------
+Este anexo no define:
+- cantidades de XP
+- velocidad de progresión
+- balance
+
+Solo define requisitos de nivel relativos (>15, nivel máximo),
+que deben evaluarse según los contratos de XP existentes.
+
+
+6) AUTORIDAD
+------------
+El Core es la única autoridad para:
+- validar niveles requeridos
+- autorizar desbloqueos combinados
+- persistir el estado resultante
+
+La UI:
+- solo puede mostrar requisitos y opciones
+- no puede forzar desbloqueos
+
+
+7) RELACIÓN CON FASE F
+---------------------
+Las reglas descritas en este anexo:
+- forman parte de las consecuencias permitidas en FASE F
+- no activan implementación por sí mismas
+- deben respetarse por cualquier contrato futuro
+  de ejecución o UI
+
+
+CIERRE
+------
+Anexo canónico de reglas especiales de desbloqueo
+para subramas del Mago.

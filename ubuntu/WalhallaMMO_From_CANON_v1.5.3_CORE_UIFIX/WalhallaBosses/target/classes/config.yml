@@ -1,0 +1,41 @@
+# Phase 13 (Endgame real) — WalhallaBosses
+endgame:
+  # If true: vanilla entity drops/exp are replaced by canon drops (ANNEX_ENTITY_DROPS_AND_LOOT_TABLES_v1.1)
+  overrideVanillaDrops: true
+
+  elites:
+    enabled: true
+
+    # Promotion chance when a player first engages an enemy in a zone type.
+    chance:
+      CONTESTED: 0.08
+      DANGEROUS: 0.15
+      BLACK: 0.25
+
+    # Health multiplier applied when an enemy becomes ELITE.
+    healthMultiplier:
+      CONTESTED: 1.25
+      DANGEROUS: 1.60
+      BLACK: 2.00
+
+    # Extra loot rolls (in addition to the base zone loot multiplier).
+    extraLootRolls:
+      CONTESTED: 1.0
+      DANGEROUS: 2.0
+      BLACK: 3.0
+
+  # Optional world bosses.
+  # Disabled by default because spawn points are server-specific.
+  worldBosses:
+    enabled: false
+    list: {}
+    # Example:
+    # list:
+    #   black_wither_1:
+    #     entityType: WITHER
+    #     world: world
+    #     x: 0
+    #     y: 80
+    #     z: 0
+    #     respawnMinutes: 120
+    #     announce: true

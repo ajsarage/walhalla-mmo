@@ -1,0 +1,5 @@
+name: WalhallaProfessions
+version: 0.6.0-SNAPSHOT
+main: walhalla.mmo.professions.WalhallaProfessionsPlugin
+api-version: "1.21"
+depend: [WalhallaCore]

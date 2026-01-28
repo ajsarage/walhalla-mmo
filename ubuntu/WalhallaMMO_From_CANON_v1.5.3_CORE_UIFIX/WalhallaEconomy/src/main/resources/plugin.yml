@@ -1,0 +1,5 @@
+name: WalhallaEconomy
+version: 0.6.0-SNAPSHOT
+main: walhalla.mmo.economy.WalhallaEconomyPlugin
+api-version: "1.21"
+depend: [WalhallaCore]

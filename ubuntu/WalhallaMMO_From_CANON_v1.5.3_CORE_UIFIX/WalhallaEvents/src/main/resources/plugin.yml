@@ -1,0 +1,5 @@
+name: WalhallaEvents
+version: 0.6.0-SNAPSHOT
+main: walhalla.mmo.events.WalhallaEventsPlugin
+api-version: "1.21"
+depend: [WalhallaCore]

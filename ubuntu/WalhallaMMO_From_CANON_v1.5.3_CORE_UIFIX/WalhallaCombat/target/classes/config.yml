@@ -1,0 +1,26 @@
+# WalhallaCombat (Phase 3)
+# These are not final balance values; they are knobs for testing and future tuning.
+xp:
+  globalPerHit: 1
+  branchPerHit: 1
+  affinityPerHit: 1
+
+multiplier:
+  GUERRERO: 1.0
+  TANQUE: 0.95
+  CAZADOR: 0.95
+  MAGO: 0.85
+
+# Phase 9: qualitative cooldown/cost mappings for canon kit labels
+kitCooldownTicks:
+  MUY_BAJO: 10
+  BAJO: 30
+  MEDIO: 60
+  ALTO: 120
+  MUY_ALTO: 200
+kitCostUnits:
+  MUY_BAJO: 2
+  BAJO: 5
+  MEDIO: 10
+  ALTO: 20
+  MUY_ALTO: 30

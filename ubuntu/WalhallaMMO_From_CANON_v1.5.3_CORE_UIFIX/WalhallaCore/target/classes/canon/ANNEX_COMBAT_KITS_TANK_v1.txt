@@ -1,0 +1,274 @@
+ANNEX_COMBAT_KITS_TANK_v1.txt
+============================
+
+PROYECTO: WalhallaMMOonline
+TIPO: ANEXO DE DATOS CANÓNICO
+VERSIÓN: v1 (REDEFINIDO)
+ESTADO: ACTIVO – VINCULANTE
+ALCANCE: KITS DE COMBATE – RAMA TANQUE (ESCUDO-CÉNTRICO)
+
+============================
+1. PROPÓSITO
+============================
+Este documento define los KITS DE COMBATE
+de la RAMA TANQUE, centrados de forma absoluta
+en el USO DEL ESCUDO.
+
+El tanque:
+- no es un DPS
+- no gira en torno al arma
+- progresa mediante defensa activa
+
+La espada existe únicamente como apoyo,
+el ESCUDO es el núcleo del gameplay.
+
+============================
+2. RELACIÓN CON OTROS DOCUMENTOS
+============================
+Este anexo se apoya en:
+
+- ANNEX_EQUIPMENT_TIERS_v1
+- ANNEX_XP_CURVES_ALL_v1
+- ANNEX_COMBAT_CORE_RULES_v1
+- ANNEX_COMBAT_VISUAL_FEEDBACK_v1
+
+============================
+3. REGLAS FUNDAMENTALES DEL TANQUE
+============================
+1) El tanque usa VIGOR.
+2) El tanque escala con ARMADURA y ESCUDO.
+3) El tanque gana XP principalmente por:
+   - PARRY PERFECTO
+   - BLOQUEO ACTIVO
+   - EMBESTIDAS CON ESCUDO
+4) El daño directo NO es su objetivo.
+5) La espada NO es fuente principal de daño.
+6) El control y la mitigación definen su valor.
+
+============================
+4. MECÁNICAS CLAVE DE ESCUDO (CANÓNICAS)
+============================
+Estas mecánicas son universales al tanque:
+
+- BLOQUEO ACTIVO:
+  Reduce daño frontal mientras consume vigor.
+
+- PARRY PERFECTO:
+  Bloqueo en ventana exacta.
+  Otorga:
+  - XP adicional
+  - efectos de control
+  - ventajas tácticas
+
+- EMBESTIDA DE ESCUDO:
+  Movimiento ofensivo-defensivo
+  que genera amenaza y control.
+
+============================
+5. ESTRUCTURA DE KITS
+============================
+Cada SUBRAMA del TANQUE define
+un kit completo centrado en ESCUDO.
+
+Formato:
+- Identidad
+- Ataque Básico (Escudo)
+- Ataque Secundario (Escudo)
+- Ataque Especial (Escudo)
+
+============================
+6. KITS DE COMBATE
+============================
+
+--------------------------------
+6.1 KIT: BASTIÓN
+--------------------------------
+Identidad:
+Muralla impenetrable,
+especialista en parry y bloqueo perfecto.
+
+Ataque Básico: GOLPE DE ESCUDO
+- Tipo: Impacto frontal con escudo
+- Coste: Bajo
+- Cooldown: Bajo
+- Efecto:
+  - Daño bajo
+  - Genera amenaza
+  - Empuje corto
+
+Ataque Secundario: PARRY FIRME
+- Tipo: Defensa reactiva
+- Coste: Bajo
+- Cooldown: Medio
+- Efecto:
+  - Bloqueo en ventana exacta
+  - Aturde al atacante
+  - Otorga XP adicional al tanque
+
+Ataque Especial: FORTALEZA VIVA
+- Tipo: Postura defensiva
+- Coste: Alto
+- Cooldown: Alto
+- Efecto:
+  - Bloqueo automático frontal
+  - Reducción masiva de daño
+  - Generación constante de amenaza
+
+--------------------------------
+6.2 KIT: PROTECTOR
+--------------------------------
+Identidad:
+Escudo del grupo,
+defensa activa de aliados.
+
+Ataque Básico: EMPUJE DEFENSIVO
+- Tipo: Golpe de escudo direccional
+- Coste: Bajo
+- Cooldown: Bajo
+- Efecto:
+  - Empuja enemigos
+  - Protege espacio
+
+Ataque Secundario: INTERPOSICIÓN
+- Tipo: Movimiento reactivo
+- Coste: Medio
+- Cooldown: Medio
+- Efecto:
+  - Se interpone entre aliado y daño
+  - Bloqueo garantizado
+  - Gana XP por daño mitigado
+
+Ataque Especial: BASTIÓN COMPARTIDO
+- Tipo: Defensa de área
+- Coste: Alto
+- Cooldown: Muy alto
+- Efecto:
+  - Escudos aliados aumentados
+  - Reducción de daño grupal
+  - Ideal para bosses
+
+--------------------------------
+6.3 KIT: TITÁN
+--------------------------------
+Identidad:
+Control por masa y presencia,
+embestidas devastadoras.
+
+Ataque Básico: GOLPE CONTUNDENTE
+- Tipo: Golpe pesado con escudo
+- Coste: Medio
+- Cooldown: Bajo
+- Efecto:
+  - Daño moderado
+  - Empuje fuerte
+
+Ataque Secundario: EMBESTIDA TITÁNICA
+- Tipo: Carga con escudo
+- Coste: Medio
+- Cooldown: Medio
+- Efecto:
+  - Avanza empujando enemigos
+  - Interrumpe acciones
+  - Genera gran amenaza
+
+Ataque Especial: COLOSO
+- Tipo: Postura de masa
+- Coste: Alto
+- Cooldown: Muy alto
+- Efecto:
+  - Aumenta tamaño y defensa
+  - Inmunidad a empujes
+  - Control absoluto del espacio
+
+--------------------------------
+6.4 KIT: VIGÍA
+--------------------------------
+Identidad:
+Tanque técnico,
+castigo al error enemigo.
+
+Ataque Básico: TOQUE DE ESCUDO
+- Tipo: Golpe preciso
+- Coste: Bajo
+- Cooldown: Bajo
+- Efecto:
+  - Marca objetivos peligrosos
+  - Daño mínimo
+
+Ataque Secundario: PARRY REACTIVO
+- Tipo: Defensa precisa
+- Coste: Bajo
+- Cooldown: Medio
+- Efecto:
+  - Devuelve parte del impacto
+  - Desestabiliza al atacante
+  - Alta ganancia de XP
+
+Ataque Especial: SENTINELA
+- Tipo: Postura avanzada
+- Coste: Alto
+- Cooldown: Alto
+- Efecto:
+  - Parries automáticos en ventana amplia
+  - Generación máxima de amenaza
+
+--------------------------------
+6.5 KIT: JUGGERNAUT
+--------------------------------
+Identidad:
+Dominio total por fuerza,
+sacrificio de movilidad.
+
+Ataque Básico: AZOTE DE ESCUDO
+- Tipo: Golpe pesado
+- Coste: Medio
+- Cooldown: Bajo
+- Efecto:
+  - Daño medio
+  - Derribo corto
+
+Ataque Secundario: INAMOVIBLE
+- Tipo: Buff defensivo
+- Coste: Medio
+- Cooldown: Medio
+- Efecto:
+  - Inmunidad a empujes
+  - Reducción extrema de daño
+
+Ataque Especial: APLASTAMIENTO
+- Tipo: Embestida final
+- Coste: Alto
+- Cooldown: Alto
+- Efecto:
+  - Avanza con el escudo
+  - Derriba enemigos
+  - Genera amenaza masiva
+
+============================
+7. ESCALADO Y EXPERIENCIA
+============================
+- El tanque gana XP principalmente por:
+  - Parries perfectos
+  - Daño bloqueado
+  - Aliados protegidos
+  - Embestidas exitosas
+
+- El daño infligido es secundario
+  en la ganancia de experiencia.
+
+============================
+8. CIERRE CANÓNICO
+============================
+Desde esta versión:
+
+- El ESCUDO es el eje del tanque
+- El parry es mecánica central
+- La espada es secundaria
+- El rol es técnico, activo y exigente
+- El gameplay tanque es único y profundo
+
+Este documento sustituye cualquier
+definición previa del tanque.
+
+FIN DEL DOCUMENTO
+============================

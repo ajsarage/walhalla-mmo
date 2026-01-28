@@ -1,0 +1,5 @@
+name: WalhallaQuests
+version: 0.6.0-SNAPSHOT
+main: walhalla.mmo.quests.WalhallaQuestsPlugin
+api-version: "1.21"
+depend: [WalhallaCore]

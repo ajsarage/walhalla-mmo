@@ -1,0 +1,401 @@
+ANNEX_ITEM_CATALOG_ALL_v1.txt
+================================
+
+PROYECTO: WalhallaMMOonline
+TIPO: ANEXO DE DATOS CANÓNICO
+VERSIÓN: v1
+ESTADO: ACTIVO – VINCULANTE
+ALCANCE: CATÁLOGO TOTAL DE ÍTEMS DEL JUEGO
+
+================================
+1. PROPÓSITO
+================================
+Este documento define el catálogo COMPLETO y CERRADO de ítems existentes
+en WalhallaMMOonline.
+
+Ningún sistema del juego (gathering, crafting, economía, combate, progresión,
+endgame) puede utilizar ítems que no estén definidos explícitamente en este
+anexo o en una versión posterior del mismo.
+
+Este anexo NO define mecánicas, solo DATOS.
+
+================================
+2. RELACIÓN CON OTROS DOCUMENTOS
+================================
+Este anexo se apoya y no contradice:
+
+- WALHALLA_CANON_UNIFICADO_FINAL_v4
+- CANON_ITEM_TIERS_AND_QUALITY_v1
+- CANON_PROFESSIONS_MASTER_v1
+- CANON_CRAFTING_SYSTEM_v2
+- CANON_ECONOMY_MASTER_v1
+- CANON_COMBAT_MASTER_v1
+
+================================
+3. REGLAS MAESTRAS DEL CATÁLOGO
+================================
+1) Todo ítem tiene un ID canónico único.
+2) No existen ítems implícitos.
+3) No existen variantes fuera de calidad (Q0–Q5).
+4) Todo ítem pertenece a una sola categoría primaria.
+5) El Tier es obligatorio salvo excepciones explícitas.
+6) La calidad nunca crea nuevos IDs.
+7) Todo ítem debe poder ser referenciado por otros anexos.
+
+================================
+4. CONVENCIÓN DE IDS
+================================
+Formato:
+IT_<CATEGORIA>_<FAMILIA>_<NOMBRE>[_T#]
+
+Reglas:
+- Mayúsculas
+- Sin espacios
+- Sin caracteres especiales
+- El tier solo se incluye si el ítem es intrínsecamente de tier fijo
+
+================================
+5. DEFINICIÓN DE CAMPOS
+================================
+Tipo:
+CURRENCY | RESOURCE | MATERIAL | COMPONENT | TOOL | WEAPON | ARMOR |
+CONSUMABLE | UTILITY | QUEST
+
+Tier:
+T1–T8 o N/A
+
+Calidad:
+FIXED_Q1
+CRAFT_Q0_Q5
+DROP_Q1_Q3
+SERVICE_NA
+
+Stack:
+1 | 16 | 32 | 64
+
+Usos:
+CRAFTING_INPUT
+CRAFTING_OUTPUT
+REFINING_INPUT
+REFINING_OUTPUT
+COMBAT_EQUIP
+GATHERING_TOOL
+CONSUME_BUFF
+CONSUME_HEAL
+ECON_TRADE
+ECON_SINK_INPUT
+UTILITY_ACCESS
+UTILITY_NAV
+PVE_LOOT_INPUT
+
+================================
+6. MONEDAS
+================================
+IT_CURR_WCOIN
+Nombre: WCoin
+Tipo: CURRENCY
+Tier: N/A
+Calidad: SERVICE_NA
+Stack: 64
+Usos: ECON_TRADE, ECON_SINK_INPUT
+
+IT_CURR_WCRAFT
+Nombre: WCraft
+Tipo: CURRENCY
+Tier: N/A
+Calidad: SERVICE_NA
+Stack: 64
+Usos: ECON_SINK_INPUT, UTILITY_ACCESS
+
+================================
+7. RECURSOS BRUTOS – MADERA (LEÑADOR)
+================================
+T1 OAK
+IT_RES_WOOD_LOG_OAK_T1
+
+T2 BIRCH
+IT_RES_WOOD_LOG_BIRCH_T2
+
+T3 SPRUCE
+IT_RES_WOOD_LOG_SPRUCE_T3
+
+T4 JUNGLE
+IT_RES_WOOD_LOG_JUNGLE_T4
+
+T5 ACACIA
+IT_RES_WOOD_LOG_ACACIA_T5
+
+T6 DARK_OAK
+IT_RES_WOOD_LOG_DARK_OAK_T6
+
+T7 MANGROVE
+IT_RES_WOOD_LOG_MANGROVE_T7
+
+T8 CHERRY
+IT_RES_WOOD_LOG_CHERRY_T8
+
+Todos:
+Tipo: RESOURCE
+Calidad: FIXED_Q1
+Stack: 64
+Usos: REFINING_INPUT, CRAFTING_INPUT, ECON_TRADE
+
+--------------------------------
+ESTADOS DE MADERA (POR TIER)
+--------------------------------
+Por cada T1–T8 existen exactamente:
+
+IT_RES_WOOD_RAW_T#
+IT_RES_WOOD_HARDENED_T#
+IT_RES_WOOD_ENRICHED_T#
+
+Tipo: RESOURCE
+Calidad: FIXED_Q1
+Stack: 64
+Usos: REFINING_INPUT, CRAFTING_INPUT, ECON_TRADE
+
+================================
+8. RECURSOS BRUTOS – ROCA (MINERO)
+================================
+T1 STONE
+IT_RES_ROCK_STONE_T1
+
+T2 ANDESITE
+IT_RES_ROCK_ANDESITE_T2
+
+T3 DIORITE
+IT_RES_ROCK_DIORITE_T3
+
+T4 GRANITE
+IT_RES_ROCK_GRANITE_T4
+
+T5 DEEPSLATE
+IT_RES_ROCK_DEEPSLATE_T5
+
+T6 BASALT
+IT_RES_ROCK_BASALT_T6
+
+T7 TUFF
+IT_RES_ROCK_TUFF_T7
+
+T8 OBSIDIAN
+IT_RES_ROCK_OBSIDIAN_T8
+
+--------------------------------
+ESTADOS DE ROCA (POR TIER)
+--------------------------------
+Por cada T1–T8:
+
+IT_RES_ROCK_FRACTURED_T#
+IT_RES_ROCK_COMPACT_T#
+IT_RES_ROCK_RUNIC_T#
+
+================================
+9. METALES (MINERO → HERRERO)
+================================
+Metales base:
+COPPER | IRON | GOLD | NETHERITE
+
+Grados por tier:
+T1 IMPURE
+T2 COMMON
+T3 RICH
+T4 DENSE
+T5 ENRICHED
+T6 CORRUPT
+T7 ANCIENT
+T8 PRIMORDIAL
+
+IDs:
+IT_RES_METAL_ORE_<METAL>_T1
+…
+IT_RES_METAL_ORE_<METAL>_T8
+
+Tipo: RESOURCE
+Calidad: FIXED_Q1
+Stack: 64
+Usos: REFINING_INPUT, ECON_TRADE
+
+================================
+10. GEMAS Y CRISTALES
+================================
+IT_RES_GEM_LAPIS_T1
+IT_RES_GEM_AMETHYST_T2
+IT_RES_GEM_EMERALD_T3
+IT_RES_GEM_DIAMOND_T4
+IT_RES_CRYSTAL_RESONANT_T5
+IT_RES_CRYSTAL_ANCIENT_T6
+IT_RES_CRYSTAL_CORRUPT_T7
+IT_RES_CRYSTAL_PRIMORDIAL_T8
+
+================================
+11. FIBRAS VEGETALES (AGRICULTOR)
+================================
+IT_RES_FIBER_WHEAT_T1
+IT_RES_FIBER_SUGARCANE_T2
+IT_RES_FIBER_BAMBOO_T3
+IT_RES_FIBER_VINE_T4
+IT_RES_FIBER_NETHER_FUNGUS_T5
+IT_RES_FIBER_WARPED_T6
+IT_RES_FIBER_CRIMSON_T7
+IT_RES_FIBER_CHORUS_T8
+
+================================
+12. HIERBAS Y REACTIVOS (DON DE HIERBAS)
+================================
+IT_RES_HERB_DANDELION_T1
+IT_RES_HERB_POPPY_T2
+IT_RES_HERB_BLUE_ORCHID_T3
+IT_RES_HERB_ALLIUM_T4
+IT_RES_REACT_BLAZE_T5
+IT_RES_REACT_GHAST_T6
+IT_RES_REACT_ENDER_T7
+IT_RES_REACT_DRAGON_T8
+
+================================
+13. PESCA
+================================
+IT_RES_FISH_COD_T1
+IT_RES_FISH_SALMON_T2
+IT_RES_FISH_TROPICAL_T3
+IT_RES_FISH_PUFFER_T4
+IT_RES_FISH_INK_T5
+IT_RES_FISH_NAUTILUS_T6
+IT_RES_FISH_HEART_FRAGMENT_T7
+IT_RES_FISH_TRIDENT_FRAGMENT_T8
+
+================================
+14. MATERIALES REFINADOS
+================================
+MADERA:
+IT_MAT_WOOD_PLANK_T#
+IT_MAT_WOOD_BOARD_T#
+
+PIEDRA:
+IT_MAT_STONE_BLOCK_T#
+IT_MAT_STONE_BRICK_T#
+
+METALES:
+IT_MAT_METAL_INGOT_<METAL>_T#
+
+GEMAS:
+IT_MAT_GEM_CUT_LAPIS_T1
+IT_MAT_GEM_CUT_AMETHYST_T2
+IT_MAT_GEM_CUT_EMERALD_T3
+IT_MAT_GEM_CUT_DIAMOND_T4
+IT_MAT_CRYSTAL_REFINED_T5–T8
+
+FIBRAS:
+IT_MAT_FIBER_THREAD_T#
+IT_MAT_FIBER_CLOTH_T#
+
+REACTIVOS:
+IT_MAT_REACT_EXTRACT_T#
+
+================================
+15. COMPONENTES
+================================
+MADERA:
+IT_COMP_WOOD_HANDLE_T#
+IT_COMP_WOOD_SHAFT_T#
+IT_COMP_WOOD_CORE_T#
+
+METAL:
+IT_COMP_METAL_BLADE_T#
+IT_COMP_METAL_HEAD_T#
+IT_COMP_METAL_PLATE_T#
+IT_COMP_METAL_RIVET_SET_T#
+
+ARCANO:
+IT_COMP_ARCANE_RUNE_T#
+IT_COMP_ARCANE_FOCUS_T#
+IT_COMP_ARCANE_CATALYST_T#
+
+TELA / CUERO:
+IT_COMP_CLOTH_PADDING_T#
+IT_COMP_CLOTH_STRAP_T#
+IT_COMP_HIDE_LEATHER_T#
+
+================================
+16. HERRAMIENTAS
+================================
+MINERÍA:
+IT_TOOL_PICKAXE_T#
+IT_TOOL_HAMMER_T#
+
+LEÑADOR:
+IT_TOOL_AXE_T#
+IT_TOOL_SAW_T#
+
+AGRICULTURA:
+IT_TOOL_HOE_T#
+IT_TOOL_SICKLE_T#
+
+PESCA / NAVEGACIÓN:
+IT_TOOL_FISHING_ROD_T#
+IT_TOOL_COMPASS_T#
+
+ALQUIMIA:
+IT_TOOL_MORTAR_T#
+IT_TOOL_VIAL_SET_T#
+
+================================
+17. EQUIPO DE COMBATE
+================================
+ARMAS:
+IT_EQUIP_WEAPON_SWORD_T#
+IT_EQUIP_WEAPON_AXE_T#
+IT_EQUIP_WEAPON_MACE_T#
+IT_EQUIP_WEAPON_SPEAR_T#
+IT_EQUIP_WEAPON_DAGGER_T#
+IT_EQUIP_WEAPON_BOW_T#
+IT_EQUIP_WEAPON_CROSSBOW_T#
+IT_EQUIP_WEAPON_SHIELD_T#
+
+BASTONES:
+IT_EQUIP_STAFF_FIRE_T#
+IT_EQUIP_STAFF_WATER_T#
+IT_EQUIP_STAFF_AIR_T#
+IT_EQUIP_STAFF_EARTH_T#
+IT_EQUIP_STAFF_LIGHT_T#
+IT_EQUIP_STAFF_DARK_T#
+
+ARMADURAS:
+IT_EQUIP_ARMOR_LIGHT_<PIEZA>_T#
+IT_EQUIP_ARMOR_MEDIUM_<PIEZA>_T#
+IT_EQUIP_ARMOR_HEAVY_<PIEZA>_T#
+
+================================
+18. CONSUMIBLES
+================================
+COMIDA:
+IT_CONS_FOOD_MEAL_T#
+
+POCIONES:
+IT_CONS_POTION_BUFF_T#
+IT_CONS_POTION_HEAL_T#
+
+================================
+19. UTILIDADES
+================================
+MAPAS:
+IT_UTIL_MAP_FRAGMENT_T#
+IT_UTIL_TREASURE_CHART_T#
+
+TOKENS:
+IT_UTIL_SERVICE_TOKEN_T5
+IT_UTIL_SERVICE_TOKEN_T6
+IT_UTIL_SERVICE_TOKEN_T7
+IT_UTIL_SERVICE_TOKEN_T8
+
+================================
+20. CIERRE CANÓNICO
+================================
+Este documento define un universo cerrado de ítems.
+Cualquier ampliación requiere:
+- nuevo anexo
+- nueva versión
+- indexación explícita
+
+FIN DEL DOCUMENTO
+================================

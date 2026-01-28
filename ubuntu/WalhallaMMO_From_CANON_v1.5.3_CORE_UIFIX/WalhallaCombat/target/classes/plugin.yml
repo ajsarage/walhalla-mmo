@@ -1,0 +1,5 @@
+name: WalhallaCombat
+version: 0.6.0-SNAPSHOT
+main: walhalla.mmo.combat.WalhallaCombatPlugin
+api-version: "1.21"
+depend: [WalhallaCore]

@@ -1,0 +1,144 @@
+ANNEX_CRAFTING_VANILLA_AND_EXPANSION_POLICY_v1.txt
+==================================================
+
+PROYECTO: WalhallaMMOonline
+TIPO: ANEXO DE DECISIÓN CANÓNICA (DATOS)
+VERSIÓN: v1
+ESTADO: ACTIVO – VINCULANTE
+ALCANCE: POLÍTICA DE CRAFTEO BASE Y EXPANSIÓN
+
+==================================================
+1. PROPÓSITO
+==================================================
+Este documento define de manera explícita y definitiva:
+
+- qué recetas de crafteo existen por defecto
+- cómo se integra el crafteo vanilla de Minecraft
+- cómo se permite la creación de nuevas recetas,
+  armas y armaduras sin romper el canon
+
+Este documento NO define recetas concretas,
+solo fija las reglas de inclusión y expansión.
+
+==================================================
+2. RELACIÓN CON OTROS DOCUMENTOS
+==================================================
+Este anexo gobierna y condiciona:
+
+- ANNEX_CRAFTING_RECIPES_ALL_v1
+- ANNEX_ITEM_CATALOG_ALL_v1 (+ addendums)
+- ANNEX_REFINING_RECIPES_v1
+- ANNEX_EQUIPMENT_TIERS_v1
+- ANNEX_COMBAT_KITS_*.txt
+- ANNEX_ECONOMY_PRICES_BASE_v1
+
+==================================================
+3. DECISIÓN CANÓNICA PRINCIPAL
+==================================================
+
+SE INCLUYE TODO EL CRAFTEO VANILLA
+COMO BASE CANÓNICA DEL JUEGO
+
+Esto implica que:
+- Todas las recetas vanilla existentes en Minecraft
+  forman parte del crafteo base de WalhallaMMOonline.
+- Estas recetas se consideran:
+  “RECETAS BASE DEL MUNDO”
+
+==================================================
+4. ADAPTACIÓN DEL CRAFTEO VANILLA
+==================================================
+
+Las recetas vanilla:
+- NO se eliminan
+- NO se ignoran
+- NO se duplican
+
+Se adaptan mediante:
+- asignación de estación (mesa, forja, etc.)
+- ajuste de tier lógico
+- integración económica (coste/sink si aplica)
+- coherencia con progresión Albion-style
+
+No se redefine su funcionamiento básico,
+solo su CONTEXTO dentro del sistema MMO.
+
+==================================================
+5. POLÍTICA DE EXPANSIÓN DE RECETAS
+==================================================
+
+Se fija como CANÓNICO que:
+
+LA EXPANSIÓN DE RECETAS SE REALIZA
+MEDIANTE EL PLUGIN >>> NOXO <<<
+
+El plugin Noxo es el mecanismo oficial para:
+- añadir nuevas recetas
+- añadir nuevas armas
+- añadir nuevas armaduras
+- añadir variaciones de recetas existentes
+
+==================================================
+6. REGLAS PARA RECETAS CREADAS CON NOXO
+==================================================
+
+Toda receta añadida mediante Noxo DEBE cumplir:
+
+1) USAR ÍTEMS CANÓNICOS
+   - Inputs y outputs deben existir en el catálogo
+   - O requerir un addendum del catálogo
+
+2) RESPETAR TIERS Y CALIDAD
+   - No saltar progresión
+   - No crear power spikes ilegales
+
+3) ASIGNARSE A UNA ESTACIÓN EXISTENTE
+   - O requerir un nuevo anexo de estación
+
+4) DECLARARSE COMO RECETA EXPANDIDA
+   - No sustituye recetas base
+   - No rompe compatibilidad vanilla
+
+==================================================
+7. ARMAS Y ARMADURAS PERSONALIZADAS
+==================================================
+
+Las armas y armaduras creadas con Noxo:
+
+- Son VARIANTES del equipo canónico
+- Pertenecen siempre a un tier definido
+- Usan las mismas reglas de durabilidad,
+  calidad y economía
+
+No se permite:
+- crear equipos fuera de tier
+- crear equipos sin coste económico
+- crear equipos sin ruta de crafting
+
+==================================================
+8. FUTURAS AMPLIACIONES
+==================================================
+
+Este documento garantiza que:
+
+- el sistema de crafteo es CERRADO en reglas
+- el contenido es ABIERTO en expansión
+- no es necesario rehacer el canon
+  para añadir contenido nuevo
+
+Cualquier cambio estructural:
+- requiere nuevo anexo de decisión
+- versionado explícito
+
+==================================================
+9. CIERRE CANÓNICO
+==================================================
+
+Desde la versión v1 de este documento:
+
+- El crafteo vanilla es base obligatoria
+- Noxo es el único sistema de expansión
+- El canon queda protegido frente a mods arbitrarios
+
+FIN DEL DOCUMENTO
+==================================================

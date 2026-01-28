@@ -1,0 +1,304 @@
+ANNEX_REFINING_RECIPES_v1.txt
+============================
+
+PROYECTO: WalhallaMMOonline
+TIPO: ANEXO DE DATOS CANÓNICO
+VERSIÓN: v1
+ESTADO: ACTIVO – VINCULANTE
+ALCANCE: RECETAS DE REFINADO (TRANSFORMACIÓN DE RECURSOS)
+
+============================
+1. PROPÓSITO
+============================
+Este documento define TODAS las recetas de REFINADO
+existentes en WalhallaMMOonline.
+
+El refinado es la transformación de:
+- recursos brutos
+- drops de entidades
+en materiales utilizables para crafting.
+
+Este documento NO define recetas finales de equipo,
+solo procesos intermedios.
+
+============================
+2. RELACIÓN CON OTROS DOCUMENTOS
+============================
+Este anexo depende directamente de:
+
+- ANNEX_ITEM_CATALOG_ALL_v1 (+ addendums)
+- ANNEX_GATHERING_RESOURCE_TABLE_v1
+- ANNEX_ENTITY_DROPS_AND_LOOT_TABLES_v1.1
+- ANNEX_CRAFTING_STATIONS_v1
+- ANNEX_MAGE_CRAFTING_PROFESSION_BINDING_v1
+- ANNEX_ECONOMY_SINKS_v1
+
+============================
+3. REGLAS GENERALES DE REFINADO
+============================
+1) Toda receta usa UNA estación concreta.
+2) Toda receta tiene inputs y outputs explícitos.
+3) El tier del output es IGUAL al tier del input.
+4) El refinado NO genera calidad (Q siempre FIXED_Q1).
+5) El refinado puede consumir moneda (sink).
+6) No existen recetas implícitas.
+
+============================
+4. DEFINICIÓN DE CAMPOS
+============================
+Estación:
+ID definido en ANNEX_CRAFTING_STATIONS_v1
+
+Input:
+ID exacto del catálogo + cantidad
+
+Output:
+ID exacto del catálogo + cantidad
+
+Tiempo:
+Tiempo base de proceso (segundos)
+
+Coste:
+WCoin consumido por ejecución
+
+============================
+5. REFINADO DE MADERA
+============================
+
+--------------------------------
+REC_WOOD_LOG_TO_RAW
+--------------------------------
+Estación: ST_WOOD_PROCESSING_TABLE
+Profesión: LEÑADOR
+Input:
+- IT_RES_WOOD_LOG_<ESPECIE>_T# x1
+Output:
+- IT_RES_WOOD_RAW_T# x2
+Tiempo: 5s
+Coste: 1 WCoin
+
+--------------------------------
+REC_WOOD_RAW_TO_HARDENED
+--------------------------------
+Estación: ST_WOOD_PROCESSING_TABLE
+Profesión: LEÑADOR
+Input:
+- IT_RES_WOOD_RAW_T# x2
+Output:
+- IT_RES_WOOD_HARDENED_T# x1
+Tiempo: 8s
+Coste: 1 WCoin
+
+--------------------------------
+REC_WOOD_HARDENED_TO_ENRICHED
+--------------------------------
+Estación: ST_WOOD_PROCESSING_TABLE
+Profesión: LEÑADOR
+Input:
+- IT_RES_WOOD_HARDENED_T# x2
+Output:
+- IT_RES_WOOD_ENRICHED_T# x1
+Tiempo: 12s
+Coste: 2 WCoin
+
+============================
+6. REFINADO DE ROCA
+============================
+
+--------------------------------
+REC_ROCK_TO_BLOCK
+--------------------------------
+Estación: ST_REFINING_FURNACE
+Profesión: MINERO
+Input:
+- IT_RES_ROCK_<TIPO>_T# x2
+Output:
+- IT_MAT_STONE_BLOCK_T# x1
+Tiempo: 6s
+Coste: 1 WCoin
+
+--------------------------------
+REC_BLOCK_TO_BRICK
+--------------------------------
+Estación: ST_REFINING_FURNACE
+Profesión: MINERO
+Input:
+- IT_MAT_STONE_BLOCK_T# x2
+Output:
+- IT_MAT_STONE_BRICK_T# x1
+Tiempo: 8s
+Coste: 1 WCoin
+
+--------------------------------
+REC_ROCK_TO_RUNIC
+--------------------------------
+Estación: ST_REFINING_FURNACE
+Profesión: MINERO
+Input:
+- IT_RES_ROCK_RUNIC_T# x1
+Output:
+- IT_MAT_STONE_BRICK_T# x2
+Tiempo: 12s
+Coste: 2 WCoin
+
+============================
+7. REFINADO DE METALES
+============================
+
+--------------------------------
+REC_METAL_ORE_TO_INGOT
+--------------------------------
+Estación: ST_REFINING_FURNACE
+Profesión: MINERO
+Input:
+- IT_RES_METAL_ORE_<METAL>_T# x2
+Output:
+- IT_MAT_METAL_INGOT_<METAL>_T# x1
+Tiempo: 10s
+Coste: 2 WCoin
+
+--------------------------------
+REC_METAL_INGOT_PURIFICATION
+--------------------------------
+Estación: ST_REFINING_FURNACE
+Profesión: MINERO
+Input:
+- IT_MAT_METAL_INGOT_<METAL>_T# x2
+Output:
+- IT_MAT_METAL_INGOT_<METAL>_T# x1
+Tiempo: 15s
+Coste: 3 WCoin
+
+Nota:
+Este proceso representa pérdida de masa y
+no aumenta tier ni calidad.
+
+============================
+8. REFINADO DE GEMAS Y CRISTALES
+============================
+
+--------------------------------
+REC_GEM_CUTTING
+--------------------------------
+Estación: ST_REFINING_FURNACE
+Profesión: MINERO / JOYERO
+Input:
+- IT_RES_GEM_<TIPO>_T# x1
+Output:
+- IT_MAT_GEM_CUT_<TIPO>_T# x1
+Tiempo: 12s
+Coste: 2 WCoin
+
+--------------------------------
+REC_CRYSTAL_REFINING
+--------------------------------
+Estación: ST_REFINING_FURNACE
+Profesión: JOYERO
+Input:
+- IT_RES_CRYSTAL_<TIPO>_T# x2
+Output:
+- IT_MAT_CRYSTAL_REFINED_T# x1
+Tiempo: 18s
+Coste: 3 WCoin
+
+============================
+9. REFINADO DE FIBRAS
+============================
+
+--------------------------------
+REC_FIBER_TO_THREAD
+--------------------------------
+Estación: ST_FIBER_PROCESSING_LOOM
+Profesión: AGRICULTOR
+Input:
+- IT_RES_FIBER_<TIPO>_T# x2
+Output:
+- IT_MAT_FIBER_THREAD_T# x2
+Tiempo: 6s
+Coste: 1 WCoin
+
+--------------------------------
+REC_THREAD_TO_CLOTH
+--------------------------------
+Estación: ST_FIBER_PROCESSING_LOOM
+Profesión: AGRICULTOR / SASTRE
+Input:
+- IT_MAT_FIBER_THREAD_T# x2
+Output:
+- IT_MAT_FIBER_CLOTH_T# x1
+Tiempo: 10s
+Coste: 1 WCoin
+
+============================
+10. REFINADO DE HIERBAS Y REACTIVOS
+============================
+
+--------------------------------
+REC_HERB_TO_EXTRACT
+--------------------------------
+Estación: ST_ALCHEMY_REACTOR
+Profesión: DON_DE_HIERBAS
+Input:
+- IT_RES_HERB_<TIPO>_T# x2
+Output:
+- IT_MAT_REACT_EXTRACT_T# x1
+Tiempo: 10s
+Coste: 2 WCoin
+
+--------------------------------
+REC_ENTITY_REACTOR_PROCESS
+--------------------------------
+Estación: ST_ALCHEMY_REACTOR
+Profesión: DON_DE_HIERBAS
+Input:
+- IT_RES_ENTITY_<REACTIVO>_T# x1
+Output:
+- IT_MAT_REACT_EXTRACT_T# x1
+Tiempo: 15s
+Coste: 3 WCoin
+
+============================
+11. REFINADO DE DROPS ANIMALES
+============================
+
+--------------------------------
+REC_HIDE_TO_LEATHER
+--------------------------------
+Estación: ST_TAILOR_WORKBENCH
+Profesión: SASTRE
+Input:
+- IT_RES_ENTITY_LEATHER_T1 x2
+Output:
+- IT_COMP_HIDE_LEATHER_T1 x1
+Tiempo: 10s
+Coste: 1 WCoin
+
+--------------------------------
+REC_BONE_TO_DUST
+--------------------------------
+Estación: ST_ALCHEMY_REACTOR
+Profesión: DON_DE_HIERBAS
+Input:
+- IT_RES_ENTITY_BONE_T2 x2
+Output:
+- IT_MAT_REACT_EXTRACT_T2 x1
+Tiempo: 12s
+Coste: 2 WCoin
+
+============================
+12. CIERRE CANÓNICO
+============================
+Este documento define TODAS las recetas de refinado
+existentes en WalhallaMMOonline.
+
+No existen:
+- refinados fuera de estación
+- refinados sin coste
+- refinados que aumenten tier o calidad
+
+Cualquier modificación requiere:
+- nueva versión del anexo
+- reindexación explícita
+
+FIN DEL DOCUMENTO
+============================

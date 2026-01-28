@@ -1,0 +1,325 @@
+ANNEX_ENTITY_DROPS_AND_LOOT_TABLES_v1.txt
+=======================================
+
+PROYECTO: WalhallaMMOonline
+TIPO: ANEXO DE DATOS CANÓNICO
+VERSIÓN: v1
+ESTADO: ACTIVO – VINCULANTE
+ALCANCE: DROPS DE ENTIDADES Y TABLAS DE LOOT
+
+=======================================
+1. PROPÓSITO
+=======================================
+Este documento define de forma explícita y cerrada
+todos los recursos obtenidos a partir de ENTIDADES
+(mobs pasivos, hostiles, élites y bosses).
+
+Estos recursos:
+- NO pertenecen al gathering ambiental
+- SÍ impactan directamente en crafteo, economía y endgame
+- Están ligados al combate, riesgo y zonas
+
+No se definen mecánicas, solo DATOS.
+
+=======================================
+2. RELACIÓN CON OTROS DOCUMENTOS
+=======================================
+Este anexo utiliza exclusivamente IDs definidos en:
+
+- ANNEX_ITEM_CATALOG_ALL_v1
+- ANNEX_GATHERING_RESOURCE_TABLE_v1
+- CANON_COMBAT_MASTER_v1
+- CANON_GAMEPLAY_RISK_REWARD_v1
+- CANON_ZONE_DIFFICULTY_v1
+
+=======================================
+3. REGLAS GENERALES DE DROPS DE ENTIDADES
+=======================================
+1) Toda entidad tiene una categoría.
+2) Todo drop pertenece a un tier.
+3) La rareza es independiente del tier.
+4) Los drops de entidades pueden usarse en:
+   - crafteo
+   - refinado
+   - economía
+   - endgame
+5) No existen drops implícitos.
+6) No existen drops fuera de tabla.
+
+=======================================
+4. DEFINICIÓN DE CAMPOS
+=======================================
+Entidad Tipo:
+PASSIVE | HOSTILE | ELITE | BOSS
+
+Drop Tipo:
+RESOURCE | MATERIAL | COMPONENT | QUEST
+
+Rareza:
+COMMON | UNCOMMON | RARE | EPIC | LEGENDARY | MYTHIC
+
+Cantidad Base:
+Cantidad mínima garantizada por kill válida.
+
+=======================================
+5. ENTIDADES PASIVAS
+=======================================
+
+---------------------------------------
+VACA
+---------------------------------------
+Entidad Tipo: PASSIVE
+Tier: T1
+
+Drops:
+IT_RES_ENTITY_RAW_BEEF_T1
+Tipo: RESOURCE
+Rareza: COMMON
+Cantidad Base: 2
+
+IT_RES_ENTITY_LEATHER_T1
+Tipo: RESOURCE
+Rareza: UNCOMMON
+Cantidad Base: 1
+
+---------------------------------------
+OVEJA
+---------------------------------------
+Entidad Tipo: PASSIVE
+Tier: T1
+
+Drops:
+IT_RES_ENTITY_RAW_MUTTON_T1
+Tipo: RESOURCE
+Rareza: COMMON
+Cantidad Base: 2
+
+IT_RES_ENTITY_WOOL_T1
+Tipo: RESOURCE
+Rareza: COMMON
+Cantidad Base: 1
+
+---------------------------------------
+CERDO
+---------------------------------------
+Entidad Tipo: PASSIVE
+Tier: T1
+
+Drops:
+IT_RES_ENTITY_RAW_PORK_T1
+Tipo: RESOURCE
+Rareza: COMMON
+Cantidad Base: 2
+
+---------------------------------------
+POLLO
+---------------------------------------
+Entidad Tipo: PASSIVE
+Tier: T1
+
+Drops:
+IT_RES_ENTITY_RAW_CHICKEN_T1
+Tipo: RESOURCE
+Rareza: COMMON
+Cantidad Base: 1
+
+IT_RES_ENTITY_FEATHER_T1
+Tipo: RESOURCE
+Rareza: UNCOMMON
+Cantidad Base: 1
+
+---------------------------------------
+CALAMAR
+---------------------------------------
+Entidad Tipo: PASSIVE
+Tier: T2
+
+Drops:
+IT_RES_ENTITY_INK_SAC_T2
+Tipo: RESOURCE
+Rareza: COMMON
+Cantidad Base: 1
+
+=======================================
+6. ENTIDADES HOSTILES
+=======================================
+
+---------------------------------------
+ZOMBIE
+---------------------------------------
+Entidad Tipo: HOSTILE
+Tier: T2
+
+Drops:
+IT_RES_ENTITY_ROTTEN_FLESH_T2
+Tipo: RESOURCE
+Rareza: COMMON
+Cantidad Base: 1
+
+---------------------------------------
+ESQUELETO
+---------------------------------------
+Entidad Tipo: HOSTILE
+Tier: T2
+
+Drops:
+IT_RES_ENTITY_BONE_T2
+Tipo: RESOURCE
+Rareza: COMMON
+Cantidad Base: 2
+
+IT_RES_ENTITY_ARROW_FRAGMENT_T2
+Tipo: RESOURCE
+Rareza: UNCOMMON
+Cantidad Base: 1
+
+---------------------------------------
+ARAÑA
+---------------------------------------
+Entidad Tipo: HOSTILE
+Tier: T2
+
+Drops:
+IT_RES_ENTITY_STRING_T2
+Tipo: RESOURCE
+Rareza: COMMON
+Cantidad Base: 2
+
+---------------------------------------
+CREEPER
+---------------------------------------
+Entidad Tipo: HOSTILE
+Tier: T3
+
+Drops:
+IT_RES_ENTITY_GUNPOWDER_T3
+Tipo: RESOURCE
+Rareza: COMMON
+Cantidad Base: 2
+
+---------------------------------------
+ENDERMAN
+---------------------------------------
+Entidad Tipo: HOSTILE
+Tier: T4
+
+Drops:
+IT_RES_ENTITY_ENDER_PEARL_T4
+Tipo: RESOURCE
+Rareza: UNCOMMON
+Cantidad Base: 1
+
+---------------------------------------
+SLIME
+---------------------------------------
+Entidad Tipo: HOSTILE
+Tier: T3
+
+Drops:
+IT_RES_ENTITY_SLIMEBALL_T3
+Tipo: RESOURCE
+Rareza: COMMON
+Cantidad Base: 2
+
+=======================================
+7. ENTIDADES ÉLITE
+=======================================
+
+---------------------------------------
+BLAZE
+---------------------------------------
+Entidad Tipo: ELITE
+Tier: T5
+
+Drops:
+IT_RES_ENTITY_BLAZE_ROD_T5
+Tipo: RESOURCE
+Rareza: RARE
+Cantidad Base: 1
+
+---------------------------------------
+GUARDIAN
+---------------------------------------
+Entidad Tipo: ELITE
+Tier: T5
+
+Drops:
+IT_RES_ENTITY_PRISMARINE_SHARD_T5
+Tipo: RESOURCE
+Rareza: RARE
+Cantidad Base: 2
+
+---------------------------------------
+SHULKER
+---------------------------------------
+Entidad Tipo: ELITE
+Tier: T6
+
+Drops:
+IT_RES_ENTITY_SHULKER_SHELL_T6
+Tipo: RESOURCE
+Rareza: EPIC
+Cantidad Base: 1
+
+=======================================
+8. BOSSES
+=======================================
+
+---------------------------------------
+WITHER
+---------------------------------------
+Entidad Tipo: BOSS
+Tier: T7
+
+Drops:
+IT_RES_ENTITY_NETHER_STAR_T7
+Tipo: RESOURCE
+Rareza: LEGENDARY
+Cantidad Base: 1
+
+---------------------------------------
+ENDER DRAGON
+---------------------------------------
+Entidad Tipo: BOSS
+Tier: T8
+
+Drops:
+IT_RES_ENTITY_DRAGON_HEART_T8
+Tipo: RESOURCE
+Rareza: MYTHIC
+Cantidad Base: 1
+
+IT_RES_ENTITY_DRAGON_SCALE_T8
+Tipo: RESOURCE
+Rareza: EPIC
+Cantidad Base: 2
+
+=======================================
+9. USOS CANÓNICOS DE DROPS DE ENTIDADES
+=======================================
+Los recursos definidos en este anexo pueden usarse en:
+
+- ANNEX_REFINING_RECIPES_v1
+- ANNEX_CRAFTING_RECIPES_ALL_v1
+- ANNEX_EQUIPMENT_TIERS_v1
+- ANNEX_ECONOMY_PRICES_BASE_v1
+- ANNEX_GAMEPLAY_LOOP_AND_ENDGAME_v1
+
+=======================================
+10. CIERRE CANÓNICO
+=======================================
+Este documento define la TOTALIDAD de los drops
+procedentes de entidades en WalhallaMMOonline.
+
+No existen:
+- drops ocultos
+- drops por entidad no listada
+- drops fuera de tier
+
+Cualquier ampliación requiere:
+- nuevo anexo
+- nueva versión
+- indexación explícita
+
+FIN DEL DOCUMENTO
+=======================================

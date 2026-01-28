@@ -1,0 +1,18 @@
+WalhallaMMO_From_CANON_v1.4.0 — FASE 13 (Endgame real)
+==================================================
+
+Contenido implementado (sin tocar canon):
+
+1) WalhallaBosses — Endgame runtime
+- Elites: promoción al primer engagement en zonas CONTESTED/DANGEROUS/BLACK (configurable).
+- Canon drops: override de drops vanilla por tablas canónicas (ANNEX_ENTITY_DROPS_AND_LOOT_TABLES_v1.1).
+- Multiplicadores por zona: lee zones_multipliers.yml desde WalhallaZones.
+- World Boss Spawner: sistema opcional y data-driven (desactivado por defecto).
+
+2) WalhallaCombat — Penalización por muerte (sink)
+- En zonas DANGEROUS/BLACK con deathPenalty=XP_AND_GEAR_DURABILITY aplica daño de durabilidad al equipo (para forzar reparación como sink).
+- Mantiene keepInventory (no drops no controlados).
+
+Notas:
+- Sin comandos para jugadores.
+- Comandos OP no añadidos en esta fase (gestión por config + reload plugin).

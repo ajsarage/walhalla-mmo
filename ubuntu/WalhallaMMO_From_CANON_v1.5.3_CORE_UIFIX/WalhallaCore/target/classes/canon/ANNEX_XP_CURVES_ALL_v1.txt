@@ -1,0 +1,225 @@
+ANNEX_XP_CURVES_ALL_v1.txt
+=========================
+
+PROYECTO: WalhallaMMOonline
+TIPO: ANEXO DE DATOS CANÓNICO
+VERSIÓN: v1 (CORREGIDO)
+ESTADO: ACTIVO – VINCULANTE
+ALCANCE: CURVAS DE EXPERIENCIA (XP) – SISTEMA COMPLETO
+
+================================================
+1. PROPÓSITO
+================================================
+Este documento define de forma explícita y definitiva
+las CURVAS DE EXPERIENCIA (XP) de todos los sistemas
+de progresión del juego.
+
+El objetivo es:
+- garantizar coherencia temporal
+- respetar el tiempo del jugador
+- evitar bloqueos artificiales
+- permitir especialización real
+- cerrar completamente el sistema de progresión
+
+ANCLA CANÓNICA PRINCIPAL:
+Un jugador con ~250 horas de juego debe haber
+completado las 4 ramas elegidas al inicio
+y ser un experto funcional en ellas.
+
+================================================
+2. PRINCIPIOS GENERALES DE PROGRESIÓN
+================================================
+1) Todas las curvas son HOMOGÉNEAS.
+2) No existen picos artificiales de coste.
+3) El progreso es constante y predecible.
+4) No hay prestigio infinito oculto.
+5) La progresión se mide en TIEMPO REAL DE JUEGO.
+6) El poder proviene de ramas, no del nivel global.
+
+================================================
+3. PERFIL GLOBAL DEL JUGADOR
+================================================
+
+NIVEL MÁXIMO:
+- Nivel máximo: 100
+
+FUNCIÓN:
+- Indicador de recorrido global
+- NO bloquea ramas ni habilidades
+- NO define poder directo
+
+TIEMPO ESPERADO:
+- Nivel 100: largo plazo (>300 h)
+- A ~250 h:
+  • nivel alto
+  • jugador veterano
+  • no obligatorio alcanzar el máximo
+
+CURVA:
+- Progresión suave y estable
+- Incremento ligero de XP por nivel
+- Nunca dominante sobre otros sistemas
+
+================================================
+4. XP DE RAMAS (COMBATE)
+================================================
+
+APLICA A:
+- Guerrero
+- Tanque
+- Hunter
+- Otras ramas de ataque futuras
+
+NIVEL MÁXIMO DE RAMA:
+- 50
+
+FUNCIÓN:
+- Define el rol principal del jugador
+- Determina acceso completo a habilidades
+
+TIEMPO ESPERADO:
+- 1 rama completa (50): ~55–65 h
+- 4 ramas completas: ~220–260 h
+
+CURVA:
+- Homogénea
+- Incremento progresivo estable
+- Sin soft caps ocultos
+
+REGLA CANÓNICA:
+A ~250 h, el jugador debe haber
+completado las 4 ramas elegidas inicialmente.
+
+================================================
+5. XP DE SUBRAMAS
+================================================
+
+NIVEL MÁXIMO DE SUBRAMA:
+- 100
+
+FUNCIÓN:
+- Especialización profunda dentro de una rama
+- Define builds y estilos de juego
+
+TIEMPO ESPERADO:
+- Subrama funcional: ~15–25 h
+- Subrama avanzada: ~40–60 h
+- Subrama experta (100): largo plazo
+
+CURVA:
+- Homogénea
+- Más lenta que la rama principal
+- Sin tramo final artificialmente lento
+
+REGLA:
+No se espera que el jugador
+maxee todas las subramas.
+
+================================================
+6. XP DE AFINIDAD
+================================================
+
+APLICA A:
+- Armas
+- Bastones
+- Herramientas con afinidad
+
+NIVEL MÁXIMO DE AFINIDAD:
+- 250
+
+FUNCIÓN:
+- Representa maestría por USO REAL
+- Refuerza identidad del arma/equipo
+
+TIEMPO ESPERADO:
+- Afinidad alta (100–180): común en 250 h
+- Afinidad máxima (250): maestría absoluta
+
+CURVA:
+- Homogénea
+- Progreso constante
+- Sin picos de prestigio
+
+REGLA:
+La afinidad NO es obligatoria
+para ser experto en una rama.
+
+================================================
+7. XP DE PROFESIÓN
+================================================
+
+APLICA A:
+- Todos los oficios
+
+NIVEL MÁXIMO DE PROFESIÓN:
+- 100
+
+FUNCIÓN:
+- Define rol económico y de crafteo
+- Progresión paralela al combate
+
+TIEMPO ESPERADO:
+- Profesión avanzada: ~40–60 h
+- Profesión experta (100): ~80–120 h
+
+CURVA:
+- Estable y acumulativa
+- Ligada a acciones reales
+- No explosiva
+
+REGLA:
+No se espera que el jugador
+maxee todas las profesiones.
+
+================================================
+8. RELACIÓN ENTRE SISTEMAS
+================================================
+
+Los sistemas de XP progresan EN PARALELO:
+
+- Perfil global:
+  • recorrido total
+- Rama:
+  • rol de combate
+- Subrama:
+  • especialización
+- Afinidad:
+  • maestría por uso
+- Profesión:
+  • economía y crafting
+
+Ningún sistema bloquea a otro.
+
+================================================
+9. VALIDACIÓN TEMPORAL GLOBAL
+================================================
+
+A ~250 horas de juego promedio:
+- 4 ramas completas (50)
+- 1–2 subramas muy avanzadas
+- Afinidades altas en equipo principal
+- 1–2 profesiones muy avanzadas
+- Jugador en late-game funcional
+
+NO se espera:
+- Afinidad máxima en todo
+- Todas las subramas a 100
+- Todas las profesiones a 100
+- Agotamiento del endgame
+
+================================================
+10. CIERRE CANÓNICO
+================================================
+
+Desde esta versión:
+
+- Los niveles máximos quedan fijados
+- Las curvas de XP quedan cerradas
+- El tiempo de juego es la métrica base
+- El sistema es coherente, justo y profundo
+
+Este documento completa el sistema de progresión
+y prevalece sobre cualquier versión anterior.
+
+FIN DEL DOCUMENTO
+=================

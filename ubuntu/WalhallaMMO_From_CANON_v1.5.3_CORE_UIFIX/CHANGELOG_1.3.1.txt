@@ -1,0 +1,1 @@
+FASE 13.1 aplicada: multiplicadores por zona, UI indicador, respawn y auditoría.

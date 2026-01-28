@@ -1,0 +1,137 @@
+ANNEX_ENTITY_DROP_POLICY_DECISION_v1.txt
+=======================================
+
+PROYECTO: WalhallaMMOonline
+TIPO: ANEXO DE DECISIÓN CANÓNICA (DATOS)
+VERSIÓN: v1
+ESTADO: ACTIVO – VINCULANTE
+ALCANCE: POLÍTICA DE DROPS DE ENTIDADES
+
+=======================================
+1. PROPÓSITO
+=======================================
+Este documento fija de manera explícita y definitiva
+la política canónica sobre:
+
+- qué entidades pueden tener drops
+- si pueden añadirse nuevos drops a entidades sin drop previo
+- bajo qué condiciones está permitido hacerlo
+
+Este documento NO define ítems ni tablas,
+solo reglas de decisión de datos.
+
+=======================================
+2. RELACIÓN CON OTROS DOCUMENTOS
+=======================================
+Este anexo gobierna y condiciona:
+
+- ANNEX_ITEM_CATALOG_ALL_v1 (+ addendums)
+- ANNEX_ENTITY_DROPS_AND_LOOT_TABLES_v1.x
+- ANNEX_REFINING_RECIPES_v1
+- ANNEX_CRAFTING_RECIPES_ALL_v1
+- ANNEX_ECONOMY_PRICES_BASE_v1
+- ANNEX_GAMEPLAY_LOOP_AND_ENDGAME_v1
+
+=======================================
+3. DECISIÓN CANÓNICA FIJADA
+=======================================
+Se adopta de forma definitiva la siguiente política:
+
+ENTIDADES SIN DROPS NO SE LISTAN
+(SOLO ENTIDADES RELEVANTES)
+
+Esto implica:
+- Las entidades que no aportan recursos significativos
+  NO aparecen en los anexos de drops.
+- La ausencia de una entidad en dichos anexos implica
+  que no tiene drops canónicos.
+
+=======================================
+4. POLÍTICA DE AÑADIDO DE DROPS
+=======================================
+Se establece que:
+
+SÍ es posible añadir drops a entidades que originalmente
+no tenían drops canónicos, PERO solo si se cumplen
+estrictamente TODAS las condiciones siguientes.
+
+---------------------------------------
+4.1 CONDICIONES OBLIGATORIAS
+---------------------------------------
+
+1) FUNCIÓN SISTÉMICA
+El drop debe cumplir una función clara en al menos uno
+de los siguientes sistemas:
+- Crafteo
+- Refinado
+- Economía
+- Endgame
+- Progresión de builds o profesiones
+
+2) COHERENCIA DE TIER
+- El tier del drop debe ser igual o inferior
+  al tier de la entidad.
+- No se permite salto de progresión.
+
+3) NO DUPLICACIÓN FUNCIONAL
+- No se permite crear un ítem nuevo cuya función
+  sea equivalente a otro ya existente.
+- Si la función ya existe, debe reutilizarse el ítem
+  o justificarse una variante funcional distinta.
+
+4) RIESGO / RECOMPENSA
+- El valor del drop debe ser coherente con
+  el riesgo real de la entidad y la zona.
+
+---------------------------------------
+4.2 PROCEDIMIENTO CANÓNICO
+---------------------------------------
+Para añadir un nuevo drop se requiere obligatoriamente:
+
+1) Addendum al catálogo de ítems
+   (si el ítem no existe aún)
+
+2) Nueva versión del anexo de drops
+   (ANNEX_ENTITY_DROPS_AND_LOOT_TABLES_v1.x)
+
+3) Indexación explícita en el índice maestro de datos
+
+No se permiten añadidos informales ni implícitos.
+
+=======================================
+5. CASOS EXPLÍCITAMENTE RESTRINGIDOS
+=======================================
+Se establecen las siguientes restricciones:
+
+- Entidades sociales (Villagers, Traders):
+  NO dropean recursos estándar.
+
+- Entidades utilitarias (Allay, similares):
+  NO dropean recursos comunes.
+
+- Entidades ambientales sin riesgo (Bat, similares):
+  SOLO pueden recibir drops si cumplen función alquímica
+  o de sistema claramente definida.
+
+=======================================
+6. EFECTO SOBRE EL CANON EXISTENTE
+=======================================
+Este documento:
+
+- No invalida ningún drop ya canonizado.
+- No obliga a añadir drops a entidades sin ellos.
+- Garantiza control del crecimiento del catálogo.
+- Protege la coherencia económica y de progresión.
+
+=======================================
+7. CIERRE CANÓNICO
+=======================================
+Desde la versión v1 de este documento:
+
+- La política de drops queda FIJADA.
+- No se permite reinterpretación posterior.
+- Cualquier excepción requiere un nuevo anexo
+  de decisión versionado.
+
+FIN DEL DOCUMENTO
+=======================================

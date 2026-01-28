@@ -1,0 +1,122 @@
+ANNEX_MAGE_CRAFTING_PROFESSION_BINDING_v1.txt
+============================================
+
+PROYECTO: WalhallaMMOonline
+TIPO: ANEXO DE DECISIÓN CANÓNICA (DATOS)
+VERSIÓN: v1
+ESTADO: ACTIVO – VINCULANTE
+ALCANCE: VINCULACIÓN DE CRAFTEO DEL MAGO A PROFESIÓN
+
+============================================
+1. PROPÓSITO
+============================================
+Este documento fija de manera explícita y definitiva
+la relación canónica entre:
+
+- la rama MAGO (combate / gameplay)
+- la profesión DON_DE_HIERBAS
+- todas las actividades de CRAFTEO relacionadas con magia
+
+El objetivo es evitar ambigüedades entre
+rama de combate y profesión de producción.
+
+============================================
+2. RELACIÓN CON OTROS DOCUMENTOS
+============================================
+Este anexo gobierna y condiciona:
+
+- ANNEX_CRAFTING_STATIONS_v1
+- ANNEX_REFINING_RECIPES_v1
+- ANNEX_CRAFTING_RECIPES_ALL_v1
+- ANNEX_ITEM_CATALOG_ALL_v1
+- ANNEX_ENTITY_DROPS_AND_LOOT_TABLES_v1.x
+- CANON_PROFESSIONS_MASTER_v1
+- CANON_MAGIC_SYSTEM_MASTER_v1
+
+============================================
+3. DECISIÓN CANÓNICA FIJADA
+============================================
+
+TODO lo relacionado con el CRAFTEO DEL MAGO
+pertenece exclusivamente a la profesión:
+
+>>> DON_DE_HIERBAS <<<
+
+Esto incluye, sin excepción:
+
+- Componentes arcanos
+- Reactivos mágicos
+- Catalizadores
+- Runas
+- Focos
+- Bastones mágicos
+- Consumibles mágicos
+- Artefactos mágicos
+- Ítems de soporte mágico
+- Cualquier receta cuyo output tenga afinidad mágica
+
+============================================
+4. SEPARACIÓN DE RESPONSABILIDADES
+============================================
+
+RAMA MAGO:
+- Uso de bastones
+- Uso de hechizos
+- Loadouts
+- Combate
+- Progresión mágica
+- Afinidades y sinergias
+
+PROFESIÓN DON_DE_HIERBAS:
+- Obtención de hierbas y reactivos
+- Procesado alquímico
+- Creación de componentes arcanos
+- Crafteo de bastones
+- Crafteo de artefactos mágicos
+- Preparación de consumibles mágicos
+
+El MAGO:
+- NO es una profesión de crafteo
+- NO fabrica ítems mágicos por sí mismo
+
+============================================
+5. IMPACTO DIRECTO SOBRE ESTACIONES
+============================================
+
+Las siguientes estaciones quedan
+canónicamente asociadas a DON_DE_HIERBAS:
+
+- ST_ALCHEMY_REACTOR
+- ST_ARCANE_FOCUS_ALTAR
+- ST_STAFF_FORGE
+- ST_POTION_BREWERY
+- ST_ARTIFACT_ALTAR (parte mágica)
+
+Cualquier referencia previa que asigne estas estaciones
+a la profesión MAGO queda INVALIDADA
+y sustituida por esta decisión.
+
+============================================
+6. REGLA DE FUTURAS AMPLIACIONES
+============================================
+
+Toda nueva estación o receta que:
+- tenga afinidad mágica
+- consuma reactivos mágicos
+- produzca ítems mágicos
+
+DEBE asignarse a la profesión DON_DE_HIERBAS,
+salvo que un nuevo anexo de decisión indique lo contrario.
+
+============================================
+7. CIERRE CANÓNICO
+============================================
+
+Desde la versión v1 de este documento:
+
+- El crafteo mágico queda unificado bajo DON_DE_HIERBAS
+- Se elimina cualquier ambigüedad MAGO vs PROFESIÓN
+- El canon de datos queda coherente y estable
+
+FIN DEL DOCUMENTO
+============================================

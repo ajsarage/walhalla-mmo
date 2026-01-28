@@ -1,0 +1,294 @@
+ANNEX_COMBAT_KITS_HUNTER_v1.txt
+==============================
+
+PROYECTO: WalhallaMMOonline
+TIPO: ANEXO DE DATOS CANÓNICO
+VERSIÓN: v1
+ESTADO: ACTIVO – VINCULANTE
+ALCANCE: KITS DE COMBATE – RAMA HUNTER
+
+==============================
+1. PROPÓSITO
+==============================
+Este documento define los KITS DE COMBATE
+correspondientes a la RAMA HUNTER.
+
+El Hunter es una rama:
+- de combate a distancia
+- altamente móvil
+- basada en precisión y posicionamiento
+- castigadora del error enemigo
+- frágil en combate directo
+
+Cada kit define UNA identidad clara
+y se compone de:
+- Ataque Básico
+- Ataque Secundario
+- Ataque Especial
+
+==============================
+2. RELACIÓN CON OTROS DOCUMENTOS
+==============================
+Este anexo se apoya en:
+
+- ANNEX_EQUIPMENT_TIERS_v1
+- ANNEX_COMBAT_KITS_WARRIOR_v1
+- ANNEX_COMBAT_KITS_TANK_v1
+- ANNEX_XP_CURVES_ALL_v1
+- ANNEX_COMBAT_CORE_RULES_v1
+- ANNEX_COMBAT_VISUAL_FEEDBACK_v1
+
+==============================
+3. REGLAS GENERALES DEL HUNTER
+==============================
+1) El Hunter usa ENERGÍA (Resistencia).
+2) El Hunter escala con:
+   - arma a distancia equipada
+   - tier del arma
+   - calidad del arma
+3) El Hunter NO puede tanquear.
+4) El Hunter depende de:
+   - distancia
+   - cobertura
+   - movilidad
+5) El Hunter castiga errores,
+   pero es castigado duramente si falla.
+6) El Hunter NO genera amenaza elevada.
+
+==============================
+4. MECÁNICAS CLAVE (CANÓNICAS)
+==============================
+Estas mecánicas son universales al Hunter:
+
+- DISPARO PRECISO:
+  Bonificación por impacto en punto débil.
+
+- MOVILIDAD ACTIVA:
+  Saltos, rodadas o desplazamientos cortos
+  integrados en habilidades.
+
+- CONTROL DE ZONA:
+  Uso de ralentizaciones, marcas y trampas ligeras
+  (NO ingeniería pesada).
+
+==============================
+5. ESTRUCTURA DE KITS
+==============================
+Cada SUBRAMA del HUNTER define
+un kit completo y cerrado.
+
+Formato:
+- Identidad
+- Ataque Básico
+- Ataque Secundario
+- Ataque Especial
+
+==============================
+6. KITS DE COMBATE
+==============================
+
+--------------------------------
+6.1 KIT: TIRADOR
+--------------------------------
+Identidad:
+Francotirador,
+máximo daño a larga distancia.
+
+Ataque Básico: DISPARO CERTERO
+- Tipo: Disparo dirigido
+- Coste: Bajo
+- Cooldown: Bajo
+- Efecto:
+  - Daño alto a objetivo único
+  - Bonificación si impacta en punto débil
+
+Ataque Secundario: MARCA DEL CAZADOR
+- Tipo: Debuff a distancia
+- Coste: Medio
+- Cooldown: Medio
+- Efecto:
+  - Marca al objetivo
+  - Aumenta daño recibido a distancia
+
+Ataque Especial: DISPARO LETAL
+- Tipo: Disparo cargado
+- Coste: Alto
+- Cooldown: Alto
+- Condición:
+  - Requiere inmovilidad breve
+- Efecto:
+  - Daño extremo
+  - Alto riesgo si falla
+
+--------------------------------
+6.2 KIT: HOSTIGADOR
+--------------------------------
+Identidad:
+Movilidad constante,
+daño sostenido mientras se desplaza.
+
+Ataque Básico: FLECHA RÁPIDA
+- Tipo: Disparo veloz
+- Coste: Bajo
+- Cooldown: Muy bajo
+- Efecto:
+  - Daño medio
+  - Permite moverse mientras dispara
+
+Ataque Secundario: RODADA EVASIVA
+- Tipo: Movimiento defensivo
+- Coste: Medio
+- Cooldown: Medio
+- Efecto:
+  - Desplazamiento rápido
+  - Breve evasión de daño
+
+Ataque Especial: LLUVIA DE PROYECTILES
+- Tipo: Área a distancia
+- Coste: Alto
+- Cooldown: Alto
+- Efecto:
+  - Daño en área
+  - Ideal para control de grupos
+
+--------------------------------
+6.3 KIT: TRAMPA LIGERA
+--------------------------------
+Identidad:
+Control táctico del terreno,
+castigo por persecución.
+
+Ataque Básico: DISPARO DE CONTROL
+- Tipo: Disparo especial
+- Coste: Bajo
+- Cooldown: Bajo
+- Efecto:
+  - Daño bajo
+  - Ralentiza al objetivo
+
+Ataque Secundario: TRAMPA RÁPIDA
+- Tipo: Colocación instantánea
+- Coste: Medio
+- Cooldown: Medio
+- Efecto:
+  - Inmoviliza brevemente
+  - Daño bajo
+  - NO escala como ingeniería
+
+Ataque Especial: ZONA DE CAZA
+- Tipo: Área persistente
+- Coste: Alto
+- Cooldown: Alto
+- Efecto:
+  - Enemigos ralentizados
+  - Bonificación de daño del Hunter
+  - Control del espacio
+
+--------------------------------
+6.4 KIT: ASESINO A DISTANCIA
+--------------------------------
+Identidad:
+Castigo explosivo,
+ventanas de daño extremo.
+
+Ataque Básico: DISPARO VITAL
+- Tipo: Disparo preciso
+- Coste: Bajo
+- Cooldown: Bajo
+- Efecto:
+  - Daño alto
+  - Bonificación a objetivos marcados
+
+Ataque Secundario: CAMUFLAJE BREVE
+- Tipo: Buff personal
+- Coste: Medio
+- Cooldown: Medio
+- Efecto:
+  - Reducción de amenaza
+  - Breve invisibilidad o sigilo
+
+Ataque Especial: EJECUCIÓN A DISTANCIA
+- Tipo: Disparo crítico
+- Coste: Alto
+- Cooldown: Muy alto
+- Condición:
+  - Objetivo marcado o debilitado
+- Efecto:
+  - Daño masivo
+  - Fallar deja al Hunter expuesto
+
+--------------------------------
+6.5 KIT: VIGILANTE
+--------------------------------
+Identidad:
+Soporte ofensivo,
+visión y control del campo.
+
+Ataque Básico: DISPARO DE SUPRESIÓN
+- Tipo: Disparo de presión
+- Coste: Bajo
+- Cooldown: Bajo
+- Efecto:
+  - Daño moderado
+  - Reduce movilidad enemiga
+
+Ataque Secundario: OJO DEL VIGÍA
+- Tipo: Marcado de área
+- Coste: Medio
+- Cooldown: Medio
+- Efecto:
+  - Revela enemigos
+  - Aumenta precisión aliada
+
+Ataque Especial: DOMINIO DEL TERRENO
+- Tipo: Buff de zona
+- Coste: Alto
+- Cooldown: Alto
+- Efecto:
+  - Bonificaciones de daño y visión
+  - Control estratégico del combate
+
+==============================
+7. ESCALADO POR TIER
+==============================
+
+- T1–T2:
+  Kits básicos,
+  dependencia fuerte de posicionamiento
+
+- T3–T4:
+  Kits completos,
+  control y movilidad claros
+
+- T5–T6:
+  Sinergias fuertes,
+  castigo severo al error enemigo
+
+- T7–T8:
+  Hunters expertos,
+  máxima exigencia de habilidad
+
+==============================
+8. SINERGIAS Y LIMITACIONES
+==============================
+
+- El Hunter NO puede usar kits de guerrero o tanque.
+- El Hunter depende del grupo para protección.
+- El Hunter brilla en:
+  - daño puntual
+  - control de campo
+  - eliminación de objetivos prioritarios
+
+==============================
+9. CIERRE CANÓNICO
+==============================
+
+Desde esta versión:
+
+- El Hunter es frágil pero letal
+- El combate premia precisión y timing
+- El rol está claramente diferenciado
+- El estilo Warframe queda respetado
+
+FIN DEL DOCUMENTO
+==============================

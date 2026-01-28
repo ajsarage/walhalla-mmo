@@ -1,0 +1,224 @@
+ANNEX_ECONOMY_SINKS_v1.txt
+=========================
+
+PROYECTO: WalhallaMMOonline
+TIPO: ANEXO DE DATOS CANÓNICO
+VERSIÓN: v1
+ESTADO: ACTIVO – VINCULANTE
+ALCANCE: SUMIDEROS ECONÓMICOS (WCOIN Y WCRAFT)
+
+=========================
+1. PROPÓSITO
+=========================
+Este documento define TODOS los mecanismos
+mediante los cuales la moneda SALE del sistema
+económico de WalhallaMMOonline.
+
+Los sinks son obligatorios para:
+- evitar inflación
+- dar valor al crafteo
+- estabilizar el mercado
+- mantener sano el endgame
+
+=========================
+2. RELACIÓN CON OTROS DOCUMENTOS
+=========================
+Este anexo se apoya en:
+
+- ANNEX_ECONOMY_PRICES_BASE_v1
+- ANNEX_ECONOMY_WCRAFT_POLICY_v1
+- ANNEX_ECONOMY_WCRAFT_TRADE_POLICY_v1
+- ANNEX_AUCTION_HOUSE_SYSTEM_v1
+- ANNEX_CRAFTING_STATIONS_v1
+- ANNEX_CRAFTING_RECIPES_ALL_v1
+- ANNEX_EQUIPMENT_TIERS_v1
+
+=========================
+3. PRINCIPIO CANÓNICO
+=========================
+
+TODA MONEDA QUE ENTRA
+DEBE PODER SALIR DEL SISTEMA.
+
+No existen monedas sin sinks.
+No existen sinks ocultos.
+
+=========================
+4. CLASIFICACIÓN DE SINKS
+=========================
+
+A) SINKS DE USO DIARIO  
+B) SINKS DE CRAFTEO  
+C) SINKS DE EQUIPO  
+D) SINKS DE SUBASTA  
+E) SINKS DE ENDGAME  
+
+=========================
+5. SINKS DE USO DIARIO (WCOIN)
+=========================
+
+--------------------------------
+5.1 USO DE ESTACIONES
+--------------------------------
+Cada uso de estación consume WCoin.
+
+Coste base:
+- T1–T2: 1 WCoin
+- T3–T4: 2 WCoin
+- T5–T6: 3 WCoin
+- T7–T8: 1 WCraft (alternativa: alto WCoin)
+
+--------------------------------
+5.2 VIAJES Y SERVICIOS
+--------------------------------
+- Teletransporte
+- Servicios urbanos
+- Servicios de NPC
+
+Coste:
+- Bajo, recurrente
+- Siempre en WCoin
+
+=========================
+6. SINKS DE CRAFTEO
+=========================
+
+--------------------------------
+6.1 COSTES DE RECETA
+--------------------------------
+Toda receta tiene un coste económico:
+
+- Recursos brutos: 0–1 WCoin
+- Refinado: 1–3 WCoin
+- Componentes: 2–4 WCoin
+- Equipo final: 5–10 WCoin
+- Endgame: 1 WCraft (alternativa: WCoin elevado)
+
+--------------------------------
+6.2 FALLO DE CRAFTEO (CALIDAD)
+--------------------------------
+En crafteos de calidad alta (Q4–Q5):
+
+- Posibilidad de pérdida parcial de materiales
+- Coste económico adicional
+- Moneda destruida permanentemente
+
+=========================
+7. SINKS DE EQUIPO
+=========================
+
+--------------------------------
+7.1 DURABILIDAD Y REPARACIÓN
+--------------------------------
+Todo equipo pierde durabilidad.
+
+Reparar equipo:
+- consume WCoin
+- escala con tier y calidad
+- nunca es gratis
+
+Equipo de alto tier:
+- reparación muy cara
+- incentiva reemplazo / mercado
+
+--------------------------------
+7.2 DESTRUCCIÓN DE EQUIPO
+--------------------------------
+En:
+- PvP
+- Muerte en zonas de riesgo
+- Fracaso de actividades
+
+Parte del equipo se destruye
+(total o parcialmente).
+
+=========================
+8. SINKS DE SUBASTA
+=========================
+
+--------------------------------
+8.1 PUBLICACIÓN
+--------------------------------
+Publicar un ítem:
+- coste fijo en WCoin
+- no reembolsable
+
+Escala por tier:
+- T1–T2: bajo
+- T3–T5: medio
+- T6–T8: alto
+
+--------------------------------
+8.2 IMPUESTO DE VENTA
+--------------------------------
+Toda venta exitosa paga:
+
+- % automático en WCoin o WCraft
+- moneda destruida
+- porcentaje fijo (definido globalmente)
+
+--------------------------------
+8.3 SUBASTA FALLIDA
+--------------------------------
+Si no se vende:
+- el coste de publicación se pierde
+
+=========================
+9. SINKS DE WCRAFT (ENDGAME)
+=========================
+
+--------------------------------
+9.1 SERVICIOS PREMIUM
+--------------------------------
+- Crafteo de artefactos
+- Mejora final de equipo
+- Acceso a actividades de alto nivel
+
+Siempre existe:
+- alternativa en WCoin
+- coste MUY alto en WCoin
+
+--------------------------------
+9.2 CONSUMO DEFINITIVO
+--------------------------------
+WCraft:
+- se destruye al usarse
+- no retorna al mercado
+- regula su propia inflación
+
+=========================
+10. SINKS ESPECIALES
+=========================
+
+- Eventos globales
+- Mecánicas de endgame
+- Impuestos regionales
+- Mantenimiento de estructuras
+
+(Definidos en anexos futuros
+sin romper este documento.)
+
+=========================
+11. EFECTO GLOBAL
+=========================
+
+Este sistema garantiza:
+
+- moneda siempre valiosa
+- farmeo siempre relevante
+- mercado estable
+- endgame sostenible
+
+=========================
+12. CIERRE CANÓNICO
+=========================
+
+Desde esta versión:
+
+- Toda moneda tiene salida
+- No hay inflación infinita
+- WCraft no rompe el juego
+- El mercado se autorregula
+
+FIN DEL DOCUMENTO
+=========================

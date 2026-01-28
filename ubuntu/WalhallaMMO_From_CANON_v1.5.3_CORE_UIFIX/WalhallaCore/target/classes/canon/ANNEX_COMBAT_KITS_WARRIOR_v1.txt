@@ -1,0 +1,275 @@
+ANNEX_COMBAT_KITS_WARRIOR_v1.txt
+===============================
+
+PROYECTO: WalhallaMMOonline
+TIPO: ANEXO DE DATOS CANÓNICO
+VERSIÓN: v1
+ESTADO: ACTIVO – VINCULANTE
+ALCANCE: KITS DE COMBATE – RAMA GUERRERO
+
+===============================
+1. PROPÓSITO
+===============================
+Este documento define los KITS DE COMBATE
+correspondientes a la RAMA GUERRERO.
+
+Cada kit representa una identidad de combate
+y se compone de:
+
+- Ataque Básico
+- Ataque Secundario
+- Ataque Especial
+
+El guerrero es una rama:
+- física
+- directa
+- basada en posicionamiento
+- dependiente del equipo y la habilidad del jugador
+
+===============================
+2. RELACIÓN CON OTROS DOCUMENTOS
+===============================
+Este anexo se apoya en:
+
+- ANNEX_EQUIPMENT_TIERS_v1
+- ANNEX_XP_CURVES_ALL_v1
+- ANNEX_COMBAT_CORE_RULES_v1
+- ANNEX_COMBAT_VISUAL_FEEDBACK_v1
+
+===============================
+3. REGLAS GENERALES DE KITS
+===============================
+1) Todo guerrero usa energía física (Vigor).
+2) El guerrero NO usa maná.
+3) Cada ataque tiene:
+   - coste
+   - cooldown
+   - escalado por tier
+4) Ningún ataque ignora armadura.
+5) El daño escala principalmente con:
+   - arma equipada
+   - tier del equipo
+   - calidad del equipo
+6) Los efectos de control son limitados
+   y dependen de riesgo/posición.
+
+===============================
+4. ESTRUCTURA DE KITS
+===============================
+Cada SUBRAMA del guerrero define
+UN kit completo y cerrado.
+
+Formato:
+- Nombre del Kit
+- Identidad
+- Ataque Básico
+- Ataque Secundario
+- Ataque Especial
+
+===============================
+5. KITS DE COMBATE
+===============================
+
+--------------------------------
+5.1 KIT: VANGUARDIA
+--------------------------------
+Identidad:
+Guerrero frontal, control de espacio,
+avance constante.
+
+Ataque Básico: GOLPE FRONTAL
+- Tipo: Melee directo
+- Coste: Bajo
+- Cooldown: Muy bajo
+- Efecto: Daño físico + empuje leve frontal
+- Escala con: arma + fuerza
+
+Ataque Secundario: EMBESTIDA
+- Tipo: Carga direccional
+- Coste: Medio
+- Cooldown: Medio
+- Efecto:
+  - Avanza rápidamente
+  - Daño a todos los enemigos atravesados
+  - Interrumpe casteos
+- Riesgo: deja al jugador expuesto al final
+
+Ataque Especial: MURALLA VIVA
+- Tipo: Postura defensiva
+- Coste: Alto
+- Cooldown: Alto
+- Efecto:
+  - Reducción masiva de daño frontal
+  - Genera amenaza
+  - Sin daño directo
+- Uso: control de grupo / PvE
+
+--------------------------------
+5.2 KIT: ROMPEESCUDOS
+--------------------------------
+Identidad:
+Guerrero destructor,
+especialista en romper defensas.
+
+Ataque Básico: TAJO PESADO
+- Tipo: Melee contundente
+- Coste: Medio
+- Cooldown: Bajo
+- Efecto:
+  - Daño elevado
+  - Penalización leve de defensa enemiga
+
+Ataque Secundario: QUEBRANTO
+- Tipo: Golpe concentrado
+- Coste: Medio
+- Cooldown: Medio
+- Efecto:
+  - Reduce armadura del objetivo
+  - Aplica debuff temporal
+
+Ataque Especial: EJECUCIÓN
+- Tipo: Ataque de alto riesgo
+- Coste: Alto
+- Cooldown: Alto
+- Condición:
+  - Objetivo con vida reducida
+- Efecto:
+  - Daño extremo
+  - Fallar deja vulnerable al jugador
+
+--------------------------------
+5.3 KIT: BERSERKER
+--------------------------------
+Identidad:
+Guerrero agresivo,
+daño sostenido a costa de defensa.
+
+Ataque Básico: CORTE FRENÉTICO
+- Tipo: Melee rápido
+- Coste: Bajo
+- Cooldown: Muy bajo
+- Efecto:
+  - Golpes rápidos consecutivos
+  - Escala con velocidad
+
+Ataque Secundario: IRA DESATADA
+- Tipo: Buff personal
+- Coste: Medio
+- Cooldown: Medio
+- Efecto:
+  - Aumenta daño y velocidad
+  - Reduce defensa temporalmente
+
+Ataque Especial: MASACRE
+- Tipo: Área cercana
+- Coste: Muy alto
+- Cooldown: Alto
+- Efecto:
+  - Daño en área alrededor del jugador
+  - Cuantos más enemigos, más efectivo
+- Riesgo: extrema exposición
+
+--------------------------------
+5.4 KIT: DUELISTA
+--------------------------------
+Identidad:
+Combate preciso,
+castigo al error del enemigo.
+
+Ataque Básico: ESTOCADA
+- Tipo: Melee preciso
+- Coste: Bajo
+- Cooldown: Bajo
+- Efecto:
+  - Daño dirigido
+  - Bonificación si impacta en ventana precisa
+
+Ataque Secundario: CONTRAATAQUE
+- Tipo: Reacción defensiva
+- Coste: Medio
+- Cooldown: Medio
+- Efecto:
+  - Bloquea ataque entrante
+  - Devuelve daño aumentado
+
+Ataque Especial: DESENLACE
+- Tipo: Golpe único
+- Coste: Alto
+- Cooldown: Alto
+- Condición:
+  - Tras esquiva o bloqueo exitoso
+- Efecto:
+  - Daño crítico masivo
+
+--------------------------------
+5.5 KIT: GUARDIÁN
+--------------------------------
+Identidad:
+Protección del grupo,
+control y supervivencia.
+
+Ataque Básico: GOLPE DE ESCUDO
+- Tipo: Melee defensivo
+- Coste: Bajo
+- Cooldown: Bajo
+- Efecto:
+  - Daño moderado
+  - Aturdimiento leve
+
+Ataque Secundario: PROTECCIÓN
+- Tipo: Habilidad de soporte
+- Coste: Medio
+- Cooldown: Medio
+- Efecto:
+  - Redirige daño cercano hacia el guardián
+  - Reduce daño recibido por aliados
+
+Ataque Especial: JURAMENTO
+- Tipo: Buff defensivo de área
+- Coste: Alto
+- Cooldown: Muy alto
+- Efecto:
+  - Gran aumento de defensa del grupo
+  - Genera amenaza máxima
+
+===============================
+6. ESCALADO POR TIER
+===============================
+
+- T1–T2:
+  Kits básicos, sin sinergias complejas
+
+- T3–T4:
+  Kits completos, rotación clara
+
+- T5–T6:
+  Sinergias fuertes
+  Mayor dependencia de posicionamiento
+
+- T7–T8:
+  Kits optimizados
+  Errores se castigan severamente
+
+===============================
+7. SINERGIAS Y LIMITACIONES
+===============================
+
+- Un guerrero NO puede usar dos kits a la vez.
+- El cambio de kit requiere:
+  - tiempo
+  - preparación
+- Los kits definen rol en grupo.
+
+===============================
+8. CIERRE CANÓNICO
+===============================
+
+Desde esta versión:
+
+- El guerrero tiene identidades claras
+- El combate es activo y táctico
+- El equipo importa más que el spam
+- El estilo Warframe queda respetado
+
+FIN DEL DOCUMENTO
+===============================

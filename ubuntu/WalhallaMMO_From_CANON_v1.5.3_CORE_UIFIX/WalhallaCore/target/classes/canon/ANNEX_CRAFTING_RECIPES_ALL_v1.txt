@@ -1,0 +1,354 @@
+ANNEX_CRAFTING_RECIPES_ALL_v1.txt
+================================
+
+PROYECTO: WalhallaMMOonline
+TIPO: ANEXO DE DATOS CANÓNICO
+VERSIÓN: v1 (ACTUALIZADO)
+ESTADO: ACTIVO – VINCULANTE
+ALCANCE: TOTALIDAD DE RECETAS DE CRAFTEO DEL JUEGO
+
+================================
+1. PROPÓSITO
+================================
+Este documento define TODAS las recetas de crafteo
+existentes en WalhallaMMOonline, estableciendo:
+
+- qué se puede craftear
+- en qué estación
+- por qué oficio y subrama
+- bajo qué reglas de tier, calidad y economía
+
+Incluye:
+- crafteo vanilla (integrado)
+- crafteo estructurado Albion-style
+- expansión futura controlada (NOXO)
+
+================================
+2. RELACIÓN CON OTROS DOCUMENTOS
+================================
+Este anexo se rige por:
+
+- ANNEX_ITEM_CATALOG_ALL_v1 (+ addendums)
+- ANNEX_REFINING_RECIPES_v1
+- ANNEX_CRAFTING_STATIONS_v1
+- ANNEX_CRAFTING_VANILLA_AND_EXPANSION_POLICY_v1
+- ANNEX_PROFESSION_AND_SUBBRANCH_CRAFTING_STRUCTURE_v1
+- ANNEX_MAGE_CRAFTING_PROFESSION_BINDING_v1
+- ANNEX_EQUIPMENT_TIERS_v1
+
+================================
+3. REGLA DE ORO (APLICADA)
+================================
+
+NINGÚN OFICIO PUEDE CRAFTEAR
+RECETAS QUE NO LE PERTENEZCAN.
+
+Toda receta de este documento:
+- pertenece a UN oficio
+- opcionalmente a UNA subrama
+- es inválida fuera de esa autoridad
+
+================================
+4. CLASIFICACIÓN DE RECETAS
+================================
+
+A) RECETAS VANILLA INTEGRADAS  
+B) RECETAS ESTRUCTURADAS (ALBION-STYLE)  
+C) RECETAS EXPANDIDAS (NOXO)
+
+================================
+5. RECETAS VANILLA INTEGRADAS
+================================
+
+Las recetas vanilla existen canónicamente,
+pero se REASIGNAN a oficios según su naturaleza.
+
+--------------------------------
+5.1 HERRAMIENTAS VANILLA
+--------------------------------
+OFICIO: HERRERO
+
+Incluye TODAS las recetas vanilla de:
+- Picos
+- Hachas
+- Palas
+- Azadas
+- Tijeras
+- Cubos
+- Espadas
+- Escudos
+
+Estación: ST_WEAPON_FORGE
+Tier: según material
+Calidad: CRAFT_Q0_Q5
+Coste Base: 1–3 WCoin
+
+--------------------------------
+5.2 ARMADURAS VANILLA
+--------------------------------
+OFICIO: HERRERO
+
+Incluye TODAS las recetas vanilla de:
+- Cascos
+- Pecheras
+- Pantalones
+- Botas
+
+Estación: ST_ARMOR_FORGE
+Tier: según material
+Calidad: CRAFT_Q0_Q5
+Coste Base: 2–5 WCoin
+
+--------------------------------
+5.3 BLOQUES Y ESTRUCTURAS DE MADERA
+--------------------------------
+OFICIO: LEÑADOR
+SUBRAMA: CARPINTERO
+
+Incluye TODAS las recetas vanilla de:
+- Tablas
+- Escaleras
+- Losas
+- Puertas
+- Vallas
+- Cofres
+- Barriles
+
+Estación: ST_WOOD_CARPENTRY_BENCH
+Tier: según madera
+Coste Base: 0–1 WCoin
+
+--------------------------------
+5.4 BLOQUES Y ESTRUCTURAS DE PIEDRA
+--------------------------------
+OFICIO: MINERO
+SUBRAMA: CANTERO
+
+Incluye TODAS las recetas vanilla de:
+- Ladrillos
+- Bloques de piedra
+- Escaleras de piedra
+- Losas de piedra
+
+Estación: ST_REFINING_FURNACE
+Tier: según roca
+Coste Base: 0–1 WCoin
+
+--------------------------------
+5.5 COMIDA VANILLA
+--------------------------------
+OFICIO: AGRICULTOR
+SUBRAMA: COCINERO
+
+Incluye TODAS las recetas vanilla de:
+- Pan
+- Carnes cocinadas
+- Estofados
+- Sopas
+- Pasteles
+
+Estación: ST_COOKING_FIRE
+Tier: según ingredientes
+Coste Base: 0–1 WCoin
+
+--------------------------------
+5.6 POCIONES VANILLA
+--------------------------------
+OFICIO: DON_DE_HIERBAS
+
+Incluye TODAS las recetas vanilla de:
+- Curación
+- Regeneración
+- Fuerza
+- Velocidad
+- Resistencia
+- Invisibilidad
+- Respiración acuática
+
+Estación: ST_POTION_BREWERY
+Tier: según reactivo más alto
+Coste Base: 1–3 WCoin
+
+================================
+6. RECETAS ESTRUCTURADAS (ALBION-STYLE)
+================================
+
+--------------------------------
+6.1 COMPONENTES DE MADERA
+--------------------------------
+OFICIO: LEÑADOR
+SUBRAMA: CARPINTERO
+
+Outputs:
+- IT_COMP_WOOD_HANDLE_T#
+- IT_COMP_WOOD_SHAFT_T#
+- IT_COMP_WOOD_CORE_T#
+
+Estación: ST_WOOD_CARPENTRY_BENCH
+Inputs: madera procesada T#
+Calidad: FIXED_Q1
+Coste: 2 WCoin
+
+--------------------------------
+6.2 COMPONENTES DE PIEDRA
+--------------------------------
+OFICIO: MINERO
+SUBRAMA: CANTERO
+
+Outputs:
+- IT_MAT_STONE_BLOCK_T#
+- IT_MAT_STONE_BRICK_T#
+
+Estación: ST_REFINING_FURNACE
+Inputs: roca T#
+Calidad: FIXED_Q1
+Coste: 1 WCoin
+
+--------------------------------
+6.3 COMPONENTES METÁLICOS
+--------------------------------
+OFICIO: HERRERO
+
+Outputs:
+- IT_COMP_METAL_BLADE_T#
+- IT_COMP_METAL_HEAD_T#
+- IT_COMP_METAL_PLATE_T#
+- IT_COMP_METAL_RIVET_SET_T#
+
+Estación: ST_METAL_FORGE
+Inputs: lingotes T#
+Calidad: FIXED_Q1
+Coste: 2–3 WCoin
+
+--------------------------------
+6.4 ARMAS FÍSICAS
+--------------------------------
+OFICIO: HERRERO
+SUBRAMA: ARQUERO (solo ranged)
+
+Outputs:
+- Espadas, hachas, mazas, lanzas, dagas
+- Arcos y ballestas (ARQUERO)
+
+Estación: ST_WEAPON_FORGE / ST_RANGED_WORKSHOP
+Inputs: componentes madera + metal
+Calidad: CRAFT_Q0_Q5
+Coste: 5 WCoin
+
+--------------------------------
+6.5 ARMADURAS
+--------------------------------
+OFICIO: HERRERO
+
+Outputs:
+- Armaduras ligeras, medias y pesadas
+
+Estación: ST_ARMOR_FORGE
+Inputs:
+- Placas metálicas
+- Componentes textiles (del SASTRE)
+Calidad: CRAFT_Q0_Q5
+Coste: 5–6 WCoin
+
+--------------------------------
+6.6 TEXTILES Y CUERO
+--------------------------------
+OFICIO: AGRICULTOR
+SUBRAMA: SASTRE
+
+Outputs:
+- Telas
+- Acolchados
+- Cuero tratado
+
+Estación: ST_TAILOR_WORKBENCH
+Inputs: fibras / cuero
+Calidad: FIXED_Q1
+Coste: 2 WCoin
+
+--------------------------------
+6.7 MAGIA Y JOYERÍA
+--------------------------------
+OFICIO: DON_DE_HIERBAS
+SUBRAMAS: (incluye JOYERO)
+
+Outputs:
+- Componentes arcanos
+- Runas, focos, catalizadores
+- Bastones mágicos
+- Consumibles mágicos
+- Joyería mágica
+- Artefactos mágicos
+
+Estaciones:
+- ST_ALCHEMY_REACTOR
+- ST_ARCANE_FOCUS_ALTAR
+- ST_STAFF_FORGE
+- ST_JEWELRY_WORKSHOP
+- ST_ARTIFACT_ALTAR
+
+Calidad:
+- Componentes: FIXED_Q1
+- Ítems finales: CRAFT_Q0_Q5
+
+Coste: 3–10 WCoin (+ WCraft en endgame)
+
+--------------------------------
+6.8 TRAMPAS E INGENIERÍA
+--------------------------------
+OFICIO: TRAMPERO
+SUBRAMA: INGENIERO
+
+Outputs:
+- Trampas
+- Dispositivos ofensivos
+- Mecanismos de combate
+
+Estación: ST_TRAP_ENGINEERING_TABLE
+Inputs:
+- Componentes metálicos
+- Componentes mecánicos
+- Reactivos especiales
+
+Calidad: FIXED_Q1
+Coste: 4–8 WCoin
+
+================================
+7. RECETAS EXPANDIDAS (NOXO)
+================================
+
+Las recetas creadas mediante NOXO:
+
+- DEBEN asignarse a un oficio existente
+- DEBEN respetar esta distribución
+- NO pueden saltarse la regla de oro
+
+Formato:
+REC_NOXO_<OFICIO>_<NOMBRE>_T#
+
+================================
+8. REGLA DE APERTURA FUTURA
+================================
+
+Este documento:
+- es COMPLETO en reglas
+- es ABIERTO en contenido
+
+El crecimiento se realiza mediante:
+- nuevas recetas NOXO
+- addendums del catálogo
+- nuevas versiones del anexo
+
+================================
+9. CIERRE CANÓNICO
+================================
+
+Desde esta versión:
+
+- Cada receta tiene oficio y subrama
+- El HERRERO es el núcleo del crafteo duro
+- No existen solapamientos ilegales
+- El canon queda protegido
+
+FIN DEL DOCUMENTO
+================================

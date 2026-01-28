@@ -1,0 +1,12 @@
+SAFE:
+  xp: 0.75
+  loot: 0.5
+CONTESTED:
+  xp: 1.0
+  loot: 1.0
+DANGEROUS:
+  xp: 1.4
+  loot: 1.5
+BLACK:
+  xp: 2.0
+  loot: 2.2

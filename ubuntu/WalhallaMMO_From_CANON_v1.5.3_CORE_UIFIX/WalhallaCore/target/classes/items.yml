@@ -1,0 +1,536 @@
+# WalhallaMMO - Item Catalog
+# Canonical item definitions for all systems
+# Version: 1.0
+# Last Updated: 2026-01-27
+
+# ============================================
+# CURRENCIES
+# ============================================
+currencies:
+  IT_CURR_WCOIN:
+    name: "WCoin"
+    type: "CURRENCY"
+    tier: "N/A"
+    quality: "SERVICE_NA"
+    stack: 64
+    uses:
+      - "ECON_TRADE"
+      - "ECON_SINK_INPUT"
+
+  IT_CURR_WCRAFT:
+    name: "WCraft"
+    type: "CURRENCY"
+    tier: "N/A"
+    quality: "SERVICE_NA"
+    stack: 64
+    uses:
+      - "ECON_SINK_INPUT"
+      - "UTILITY_ACCESS"
+
+# ============================================
+# METALS - ORES (MINERÍA)
+# ============================================
+metals:
+  copper:
+    IT_RES_METAL_ORE_COPPER_T1:
+      name: "Copper Ore T1"
+      type: "RESOURCE"
+      tier: "T1"
+      quality: "FIXED_Q1"
+      stack: 64
+      uses:
+        - "REFINING_INPUT"
+        - "CRAFTING_INPUT"
+        - "ECON_TRADE"
+    IT_RES_METAL_ORE_COPPER_T2:
+      name: "Copper Ore T2"
+      type: "RESOURCE"
+      tier: "T2"
+      quality: "FIXED_Q1"
+      stack: 64
+      uses:
+        - "REFINING_INPUT"
+        - "CRAFTING_INPUT"
+        - "ECON_TRADE"
+    IT_RES_METAL_ORE_COPPER_T3:
+      name: "Copper Ore T3"
+      type: "RESOURCE"
+      tier: "T3"
+      quality: "FIXED_Q1"
+      stack: 64
+      uses:
+        - "REFINING_INPUT"
+        - "CRAFTING_INPUT"
+        - "ECON_TRADE"
+    IT_RES_METAL_ORE_COPPER_T4:
+      name: "Copper Ore T4"
+      type: "RESOURCE"
+      tier: "T4"
+      quality: "FIXED_Q1"
+      stack: 64
+      uses:
+        - "REFINING_INPUT"
+        - "CRAFTING_INPUT"
+        - "ECON_TRADE"
+    IT_RES_METAL_ORE_COPPER_T5:
+      name: "Copper Ore T5"
+      type: "RESOURCE"
+      tier: "T5"
+      quality: "FIXED_Q1"
+      stack: 64
+      uses:
+        - "REFINING_INPUT"
+        - "CRAFTING_INPUT"
+        - "ECON_TRADE"
+    IT_RES_METAL_ORE_COPPER_T6:
+      name: "Copper Ore T6"
+      type: "RESOURCE"
+      tier: "T6"
+      quality: "FIXED_Q1"
+      stack: 64
+      uses:
+        - "REFINING_INPUT"
+        - "CRAFTING_INPUT"
+        - "ECON_TRADE"
+    IT_RES_METAL_ORE_COPPER_T7:
+      name: "Copper Ore T7"
+      type: "RESOURCE"
+      tier: "T7"
+      quality: "FIXED_Q1"
+      stack: 64
+      uses:
+        - "REFINING_INPUT"
+        - "CRAFTING_INPUT"
+        - "ECON_TRADE"
+    IT_RES_METAL_ORE_COPPER_T8:
+      name: "Copper Ore T8"
+      type: "RESOURCE"
+      tier: "T8"
+      quality: "FIXED_Q1"
+      stack: 64
+      uses:
+        - "REFINING_INPUT"
+        - "CRAFTING_INPUT"
+        - "ECON_TRADE"
+
+  iron:
+    IT_RES_METAL_ORE_IRON_T1:
+      name: "Iron Ore T1"
+      type: "RESOURCE"
+      tier: "T1"
+      quality: "FIXED_Q1"
+      stack: 64
+      uses:
+        - "REFINING_INPUT"
+        - "CRAFTING_INPUT"
+        - "ECON_TRADE"
+    IT_RES_METAL_ORE_IRON_T2:
+      name: "Iron Ore T2"
+      type: "RESOURCE"
+      tier: "T2"
+      quality: "FIXED_Q1"
+      stack: 64
+      uses:
+        - "REFINING_INPUT"
+        - "CRAFTING_INPUT"
+        - "ECON_TRADE"
+    IT_RES_METAL_ORE_IRON_T3:
+      name: "Iron Ore T3"
+      type: "RESOURCE"
+      tier: "T3"
+      quality: "FIXED_Q1"
+      stack: 64
+      uses:
+        - "REFINING_INPUT"
+        - "CRAFTING_INPUT"
+        - "ECON_TRADE"
+    IT_RES_METAL_ORE_IRON_T4:
+      name: "Iron Ore T4"
+      type: "RESOURCE"
+      tier: "T4"
+      quality: "FIXED_Q1"
+      stack: 64
+      uses:
+        - "REFINING_INPUT"
+        - "CRAFTING_INPUT"
+        - "ECON_TRADE"
+    IT_RES_METAL_ORE_IRON_T5:
+      name: "Iron Ore T5"
+      type: "RESOURCE"
+      tier: "T5"
+      quality: "FIXED_Q1"
+      stack: 64
+      uses:
+        - "REFINING_INPUT"
+        - "CRAFTING_INPUT"
+        - "ECON_TRADE"
+    IT_RES_METAL_ORE_IRON_T6:
+      name: "Iron Ore T6"
+      type: "RESOURCE"
+      tier: "T6"
+      quality: "FIXED_Q1"
+      stack: 64
+      uses:
+        - "REFINING_INPUT"
+        - "CRAFTING_INPUT"
+        - "ECON_TRADE"
+    IT_RES_METAL_ORE_IRON_T7:
+      name: "Iron Ore T7"
+      type: "RESOURCE"
+      tier: "T7"
+      quality: "FIXED_Q1"
+      stack: 64
+      uses:
+        - "REFINING_INPUT"
+        - "CRAFTING_INPUT"
+        - "ECON_TRADE"
+    IT_RES_METAL_ORE_IRON_T8:
+      name: "Iron Ore T8"
+      type: "RESOURCE"
+      tier: "T8"
+      quality: "FIXED_Q1"
+      stack: 64
+      uses:
+        - "REFINING_INPUT"
+        - "CRAFTING_INPUT"
+        - "ECON_TRADE"
+
+  gold:
+    IT_RES_METAL_ORE_GOLD_T1:
+      name: "Gold Ore T1"
+      type: "RESOURCE"
+      tier: "T1"
+      quality: "FIXED_Q1"
+      stack: 64
+      uses:
+        - "REFINING_INPUT"
+        - "CRAFTING_INPUT"
+        - "ECON_TRADE"
+    IT_RES_METAL_ORE_GOLD_T2:
+      name: "Gold Ore T2"
+      type: "RESOURCE"
+      tier: "T2"
+      quality: "FIXED_Q1"
+      stack: 64
+      uses:
+        - "REFINING_INPUT"
+        - "CRAFTING_INPUT"
+        - "ECON_TRADE"
+    IT_RES_METAL_ORE_GOLD_T3:
+      name: "Gold Ore T3"
+      type: "RESOURCE"
+      tier: "T3"
+      quality: "FIXED_Q1"
+      stack: 64
+      uses:
+        - "REFINING_INPUT"
+        - "CRAFTING_INPUT"
+        - "ECON_TRADE"
+    IT_RES_METAL_ORE_GOLD_T4:
+      name: "Gold Ore T4"
+      type: "RESOURCE"
+      tier: "T4"
+      quality: "FIXED_Q1"
+      stack: 64
+      uses:
+        - "REFINING_INPUT"
+        - "CRAFTING_INPUT"
+        - "ECON_TRADE"
+    IT_RES_METAL_ORE_GOLD_T5:
+      name: "Gold Ore T5"
+      type: "RESOURCE"
+      tier: "T5"
+      quality: "FIXED_Q1"
+      stack: 64
+      uses:
+        - "REFINING_INPUT"
+        - "CRAFTING_INPUT"
+        - "ECON_TRADE"
+    IT_RES_METAL_ORE_GOLD_T6:
+      name: "Gold Ore T6"
+      type: "RESOURCE"
+      tier: "T6"
+      quality: "FIXED_Q1"
+      stack: 64
+      uses:
+        - "REFINING_INPUT"
+        - "CRAFTING_INPUT"
+        - "ECON_TRADE"
+    IT_RES_METAL_ORE_GOLD_T7:
+      name: "Gold Ore T7"
+      type: "RESOURCE"
+      tier: "T7"
+      quality: "FIXED_Q1"
+      stack: 64
+      uses:
+        - "REFINING_INPUT"
+        - "CRAFTING_INPUT"
+        - "ECON_TRADE"
+    IT_RES_METAL_ORE_GOLD_T8:
+      name: "Gold Ore T8"
+      type: "RESOURCE"
+      tier: "T8"
+      quality: "FIXED_Q1"
+      stack: 64
+      uses:
+        - "REFINING_INPUT"
+        - "CRAFTING_INPUT"
+        - "ECON_TRADE"
+
+  netherite:
+    IT_RES_METAL_ORE_NETHERITE_T1:
+      name: "Netherite Ore T1"
+      type: "RESOURCE"
+      tier: "T1"
+      quality: "FIXED_Q1"
+      stack: 64
+      uses:
+        - "REFINING_INPUT"
+        - "CRAFTING_INPUT"
+        - "ECON_TRADE"
+    IT_RES_METAL_ORE_NETHERITE_T2:
+      name: "Netherite Ore T2"
+      type: "RESOURCE"
+      tier: "T2"
+      quality: "FIXED_Q1"
+      stack: 64
+      uses:
+        - "REFINING_INPUT"
+        - "CRAFTING_INPUT"
+        - "ECON_TRADE"
+    IT_RES_METAL_ORE_NETHERITE_T3:
+      name: "Netherite Ore T3"
+      type: "RESOURCE"
+      tier: "T3"
+      quality: "FIXED_Q1"
+      stack: 64
+      uses:
+        - "REFINING_INPUT"
+        - "CRAFTING_INPUT"
+        - "ECON_TRADE"
+    IT_RES_METAL_ORE_NETHERITE_T4:
+      name: "Netherite Ore T4"
+      type: "RESOURCE"
+      tier: "T4"
+      quality: "FIXED_Q1"
+      stack: 64
+      uses:
+        - "REFINING_INPUT"
+        - "CRAFTING_INPUT"
+        - "ECON_TRADE"
+    IT_RES_METAL_ORE_NETHERITE_T5:
+      name: "Netherite Ore T5"
+      type: "RESOURCE"
+      tier: "T5"
+      quality: "FIXED_Q1"
+      stack: 64
+      uses:
+        - "REFINING_INPUT"
+        - "CRAFTING_INPUT"
+        - "ECON_TRADE"
+    IT_RES_METAL_ORE_NETHERITE_T6:
+      name: "Netherite Ore T6"
+      type: "RESOURCE"
+      tier: "T6"
+      quality: "FIXED_Q1"
+      stack: 64
+      uses:
+        - "REFINING_INPUT"
+        - "CRAFTING_INPUT"
+        - "ECON_TRADE"
+    IT_RES_METAL_ORE_NETHERITE_T7:
+      name: "Netherite Ore T7"
+      type: "RESOURCE"
+      tier: "T7"
+      quality: "FIXED_Q1"
+      stack: 64
+      uses:
+        - "REFINING_INPUT"
+        - "CRAFTING_INPUT"
+        - "ECON_TRADE"
+    IT_RES_METAL_ORE_NETHERITE_T8:
+      name: "Netherite Ore T8"
+      type: "RESOURCE"
+      tier: "T8"
+      quality: "FIXED_Q1"
+      stack: 64
+      uses:
+        - "REFINING_INPUT"
+        - "CRAFTING_INPUT"
+        - "ECON_TRADE"
+
+# ============================================
+# ROCKS
+# ============================================
+rocks:
+  IT_RES_ROCK_STONE_T1:
+    name: "Stone T1"
+    type: "RESOURCE"
+    tier: "T1"
+    quality: "FIXED_Q1"
+    stack: 64
+    uses:
+      - "CRAFTING_INPUT"
+      - "ECON_TRADE"
+
+  IT_RES_ROCK_ANDESITE_T2:
+    name: "Andesite T2"
+    type: "RESOURCE"
+    tier: "T2"
+    quality: "FIXED_Q1"
+    stack: 64
+    uses:
+      - "CRAFTING_INPUT"
+      - "ECON_TRADE"
+
+  IT_RES_ROCK_DIORITE_T3:
+    name: "Diorite T3"
+    type: "RESOURCE"
+    tier: "T3"
+    quality: "FIXED_Q1"
+    stack: 64
+    uses:
+      - "CRAFTING_INPUT"
+      - "ECON_TRADE"
+
+  IT_RES_ROCK_GRANITE_T4:
+    name: "Granite T4"
+    type: "RESOURCE"
+    tier: "T4"
+    quality: "FIXED_Q1"
+    stack: 64
+    uses:
+      - "CRAFTING_INPUT"
+      - "ECON_TRADE"
+
+  IT_RES_ROCK_DEEPSLATE_T5:
+    name: "Deepslate T5"
+    type: "RESOURCE"
+    tier: "T5"
+    quality: "FIXED_Q1"
+    stack: 64
+    uses:
+      - "CRAFTING_INPUT"
+      - "ECON_TRADE"
+
+  IT_RES_ROCK_BASALT_T6:
+    name: "Basalt T6"
+    type: "RESOURCE"
+    tier: "T6"
+    quality: "FIXED_Q1"
+    stack: 64
+    uses:
+      - "CRAFTING_INPUT"
+      - "ECON_TRADE"
+
+  IT_RES_ROCK_TUFF_T7:
+    name: "Tuff T7"
+    type: "RESOURCE"
+    tier: "T7"
+    quality: "FIXED_Q1"
+    stack: 64
+    uses:
+      - "CRAFTING_INPUT"
+      - "ECON_TRADE"
+
+  IT_RES_ROCK_OBSIDIAN_T8:
+    name: "Obsidian T8"
+    type: "RESOURCE"
+    tier: "T8"
+    quality: "FIXED_Q1"
+    stack: 64
+    uses:
+      - "CRAFTING_INPUT"
+      - "ECON_TRADE"
+
+# ============================================
+# WOOD
+# ============================================
+wood:
+  IT_RES_WOOD_LOG_OAK_T1:
+    name: "Oak Log T1"
+    type: "RESOURCE"
+    tier: "T1"
+    quality: "FIXED_Q1"
+    stack: 64
+    uses:
+      - "REFINING_INPUT"
+      - "CRAFTING_INPUT"
+      - "ECON_TRADE"
+
+  IT_RES_WOOD_LOG_BIRCH_T2:
+    name: "Birch Log T2"
+    type: "RESOURCE"
+    tier: "T2"
+    quality: "FIXED_Q1"
+    stack: 64
+    uses:
+      - "REFINING_INPUT"
+      - "CRAFTING_INPUT"
+      - "ECON_TRADE"
+
+  IT_RES_WOOD_LOG_SPRUCE_T3:
+    name: "Spruce Log T3"
+    type: "RESOURCE"
+    tier: "T3"
+    quality: "FIXED_Q1"
+    stack: 64
+    uses:
+      - "REFINING_INPUT"
+      - "CRAFTING_INPUT"
+      - "ECON_TRADE"
+
+  IT_RES_WOOD_LOG_JUNGLE_T4:
+    name: "Jungle Log T4"
+    type: "RESOURCE"
+    tier: "T4"
+    quality: "FIXED_Q1"
+    stack: 64
+    uses:
+      - "REFINING_INPUT"
+      - "CRAFTING_INPUT"
+      - "ECON_TRADE"
+
+  IT_RES_WOOD_LOG_ACACIA_T5:
+    name: "Acacia Log T5"
+    type: "RESOURCE"
+    tier: "T5"
+    quality: "FIXED_Q1"
+    stack: 64
+    uses:
+      - "REFINING_INPUT"
+      - "CRAFTING_INPUT"
+      - "ECON_TRADE"
+
+  IT_RES_WOOD_LOG_DARK_OAK_T6:
+    name: "Dark Oak Log T6"
+    type: "RESOURCE"
+    tier: "T6"
+    quality: "FIXED_Q1"
+    stack: 64
+    uses:
+      - "REFINING_INPUT"
+      - "CRAFTING_INPUT"
+      - "ECON_TRADE"
+
+  IT_RES_WOOD_LOG_MANGROVE_T7:
+    name: "Mangrove Log T7"
+    type: "RESOURCE"
+    tier: "T7"
+    quality: "FIXED_Q1"
+    stack: 64
+    uses:
+      - "REFINING_INPUT"
+      - "CRAFTING_INPUT"
+      - "ECON_TRADE"
+
+  IT_RES_WOOD_LOG_CHERRY_T8:
+    name: "Cherry Log T8"
+    type: "RESOURCE"
+    tier: "T8"
+    quality: "FIXED_Q1"
+    stack: 64
+    uses:
+      - "REFINING_INPUT"
+      - "CRAFTING_INPUT"
+      - "ECON_TRADE"

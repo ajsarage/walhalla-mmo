@@ -1,0 +1,32 @@
+# Phase 14: Market + Direct Trade
+# Canon: CONTRACT_MARKET_TRADING_v1 + ANNEX_AUCTION_HOUSE_SYSTEM_v1 + ANNEX_ECONOMY_WCRAFT_TRADE_POLICY_v1
+#
+# IMPORTANT:
+# - Canon defines WHAT exists (listing fee, sale tax), but does not lock numeric values here.
+# - Keep values data-driven. Adjust balancing in config, not in code.
+
+market:
+  listings:
+    max_active_per_player: 20
+    default_duration_minutes: 10080  # 7 days
+  fees:
+    # Listing fee (sink) paid on publish. Non-refundable (canon).
+    # If you want tier-scaling, use listing_fee_by_tier. If not used, keep 0.
+    listing_fee_wcoin_fixed: 0
+    listing_fee_by_tier:
+      T1: 0
+      T2: 0
+      T3: 0
+      T4: 0
+      T5: 0
+      T6: 0
+      T7: 0
+      T8: 0
+    # Sale tax percent (sink) applied on successful sale, per currency.
+    sale_tax_percent_wcoin: 0.0
+    sale_tax_percent_wcraft: 0.0
+
+trade:
+  enabled: true
+  max_distance: 4.0
+  confirm_timeout_seconds: 60

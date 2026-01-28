@@ -1,0 +1,317 @@
+# WalhallaMMO - Gathering Registry
+# Canonical gathering definitions for all professions
+# Version: 1.0
+# Last Updated: 2026-01-27
+
+# ============================================
+# MINING - ROCKS
+# ============================================
+mining:
+  rocks:
+    - id: "ROCK_T1"
+      resource: "IT_RES_ROCK_STONE_T1"
+      rarity: "COMMON"
+      base_amount: 2
+      profession: "MINERO"
+
+    - id: "ROCK_T2"
+      resource: "IT_RES_ROCK_ANDESITE_T2"
+      rarity: "COMMON"
+      base_amount: 2
+      profession: "MINERO"
+
+    - id: "ROCK_T3"
+      resource: "IT_RES_ROCK_DIORITE_T3"
+      rarity: "COMMON"
+      base_amount: 2
+      profession: "MINERO"
+
+    - id: "ROCK_T4"
+      resource: "IT_RES_ROCK_GRANITE_T4"
+      rarity: "UNCOMMON"
+      base_amount: 2
+      profession: "MINERO"
+
+    - id: "ROCK_T5"
+      resource: "IT_RES_ROCK_DEEPSLATE_T5"
+      rarity: "UNCOMMON"
+      base_amount: 2
+      profession: "MINERO"
+
+    - id: "ROCK_T6"
+      resource: "IT_RES_ROCK_BASALT_T6"
+      rarity: "RARE"
+      base_amount: 2
+      profession: "MINERO"
+
+    - id: "ROCK_T7"
+      resource: "IT_RES_ROCK_TUFF_T7"
+      rarity: "RARE"
+      base_amount: 1
+      profession: "MINERO"
+
+    - id: "ROCK_T8"
+      resource: "IT_RES_ROCK_OBSIDIAN_T8"
+      rarity: "EPIC"
+      base_amount: 1
+      profession: "MINERO"
+
+  # ============================================
+  # MINING - COPPER ORE
+  # ============================================
+  copper:
+    - id: "COPPER_T1"
+      resource: "IT_RES_METAL_ORE_COPPER_T1"
+      rarity: "COMMON"
+      base_amount: 1
+      profession: "MINERO"
+
+    - id: "COPPER_T2"
+      resource: "IT_RES_METAL_ORE_COPPER_T2"
+      rarity: "COMMON"
+      base_amount: 1
+      profession: "MINERO"
+
+    - id: "COPPER_T3"
+      resource: "IT_RES_METAL_ORE_COPPER_T3"
+      rarity: "UNCOMMON"
+      base_amount: 1
+      profession: "MINERO"
+
+    - id: "COPPER_T4"
+      resource: "IT_RES_METAL_ORE_COPPER_T4"
+      rarity: "UNCOMMON"
+      base_amount: 1
+      profession: "MINERO"
+
+    - id: "COPPER_T5"
+      resource: "IT_RES_METAL_ORE_COPPER_T5"
+      rarity: "RARE"
+      base_amount: 1
+      profession: "MINERO"
+
+    - id: "COPPER_T6"
+      resource: "IT_RES_METAL_ORE_COPPER_T6"
+      rarity: "RARE"
+      base_amount: 1
+      profession: "MINERO"
+
+    - id: "COPPER_T7"
+      resource: "IT_RES_METAL_ORE_COPPER_T7"
+      rarity: "EPIC"
+      base_amount: 1
+      profession: "MINERO"
+
+    - id: "COPPER_T8"
+      resource: "IT_RES_METAL_ORE_COPPER_T8"
+      rarity: "LEGENDARY"
+      base_amount: 1
+      profession: "MINERO"
+
+  # ============================================
+  # MINING - IRON ORE
+  # ============================================
+  iron:
+    - id: "IRON_T1"
+      resource: "IT_RES_METAL_ORE_IRON_T1"
+      rarity: "COMMON"
+      base_amount: 1
+      profession: "MINERO"
+
+    - id: "IRON_T2"
+      resource: "IT_RES_METAL_ORE_IRON_T2"
+      rarity: "COMMON"
+      base_amount: 1
+      profession: "MINERO"
+
+    - id: "IRON_T3"
+      resource: "IT_RES_METAL_ORE_IRON_T3"
+      rarity: "UNCOMMON"
+      base_amount: 1
+      profession: "MINERO"
+
+    - id: "IRON_T4"
+      resource: "IT_RES_METAL_ORE_IRON_T4"
+      rarity: "UNCOMMON"
+      base_amount: 1
+      profession: "MINERO"
+
+    - id: "IRON_T5"
+      resource: "IT_RES_METAL_ORE_IRON_T5"
+      rarity: "RARE"
+      base_amount: 1
+      profession: "MINERO"
+
+    - id: "IRON_T6"
+      resource: "IT_RES_METAL_ORE_IRON_T6"
+      rarity: "RARE"
+      base_amount: 1
+      profession: "MINERO"
+
+    - id: "IRON_T7"
+      resource: "IT_RES_METAL_ORE_IRON_T7"
+      rarity: "EPIC"
+      base_amount: 1
+      profession: "MINERO"
+
+    - id: "IRON_T8"
+      resource: "IT_RES_METAL_ORE_IRON_T8"
+      rarity: "LEGENDARY"
+      base_amount: 1
+      profession: "MINERO"
+
+  # ============================================
+  # MINING - GOLD ORE
+  # ============================================
+  gold:
+    - id: "GOLD_T1"
+      resource: "IT_RES_METAL_ORE_GOLD_T1"
+      rarity: "COMMON"
+      base_amount: 1
+      profession: "MINERO"
+
+    - id: "GOLD_T2"
+      resource: "IT_RES_METAL_ORE_GOLD_T2"
+      rarity: "COMMON"
+      base_amount: 1
+      profession: "MINERO"
+
+    - id: "GOLD_T3"
+      resource: "IT_RES_METAL_ORE_GOLD_T3"
+      rarity: "UNCOMMON"
+      base_amount: 1
+      profession: "MINERO"
+
+    - id: "GOLD_T4"
+      resource: "IT_RES_METAL_ORE_GOLD_T4"
+      rarity: "UNCOMMON"
+      base_amount: 1
+      profession: "MINERO"
+
+    - id: "GOLD_T5"
+      resource: "IT_RES_METAL_ORE_GOLD_T5"
+      rarity: "RARE"
+      base_amount: 1
+      profession: "MINERO"
+
+    - id: "GOLD_T6"
+      resource: "IT_RES_METAL_ORE_GOLD_T6"
+      rarity: "RARE"
+      base_amount: 1
+      profession: "MINERO"
+
+    - id: "GOLD_T7"
+      resource: "IT_RES_METAL_ORE_GOLD_T7"
+      rarity: "EPIC"
+      base_amount: 1
+      profession: "MINERO"
+
+    - id: "GOLD_T8"
+      resource: "IT_RES_METAL_ORE_GOLD_T8"
+      rarity: "LEGENDARY"
+      base_amount: 1
+      profession: "MINERO"
+
+  # ============================================
+  # MINING - NETHERITE ORE
+  # ============================================
+  netherite:
+    - id: "NETHERITE_T1"
+      resource: "IT_RES_METAL_ORE_NETHERITE_T1"
+      rarity: "COMMON"
+      base_amount: 1
+      profession: "MINERO"
+
+    - id: "NETHERITE_T2"
+      resource: "IT_RES_METAL_ORE_NETHERITE_T2"
+      rarity: "COMMON"
+      base_amount: 1
+      profession: "MINERO"
+
+    - id: "NETHERITE_T3"
+      resource: "IT_RES_METAL_ORE_NETHERITE_T3"
+      rarity: "UNCOMMON"
+      base_amount: 1
+      profession: "MINERO"
+
+    - id: "NETHERITE_T4"
+      resource: "IT_RES_METAL_ORE_NETHERITE_T4"
+      rarity: "UNCOMMON"
+      base_amount: 1
+      profession: "MINERO"
+
+    - id: "NETHERITE_T5"
+      resource: "IT_RES_METAL_ORE_NETHERITE_T5"
+      rarity: "RARE"
+      base_amount: 1
+      profession: "MINERO"
+
+    - id: "NETHERITE_T6"
+      resource: "IT_RES_METAL_ORE_NETHERITE_T6"
+      rarity: "RARE"
+      base_amount: 1
+      profession: "MINERO"
+
+    - id: "NETHERITE_T7"
+      resource: "IT_RES_METAL_ORE_NETHERITE_T7"
+      rarity: "EPIC"
+      base_amount: 1
+      profession: "MINERO"
+
+    - id: "NETHERITE_T8"
+      resource: "IT_RES_METAL_ORE_NETHERITE_T8"
+      rarity: "LEGENDARY"
+      base_amount: 1
+      profession: "MINERO"
+
+# ============================================
+# LOGGING - WOOD
+# ============================================
+logging:
+  - id: "WOOD_OAK_T1"
+    resource: "IT_RES_WOOD_LOG_OAK_T1"
+    rarity: "COMMON"
+    base_amount: 3
+    profession: "LEÑADOR"
+
+  - id: "WOOD_BIRCH_T2"
+    resource: "IT_RES_WOOD_LOG_BIRCH_T2"
+    rarity: "COMMON"
+    base_amount: 3
+    profession: "LEÑADOR"
+
+  - id: "WOOD_SPRUCE_T3"
+    resource: "IT_RES_WOOD_LOG_SPRUCE_T3"
+    rarity: "UNCOMMON"
+    base_amount: 3
+    profession: "LEÑADOR"
+
+  - id: "WOOD_JUNGLE_T4"
+    resource: "IT_RES_WOOD_LOG_JUNGLE_T4"
+    rarity: "UNCOMMON"
+    base_amount: 3
+    profession: "LEÑADOR"
+
+  - id: "WOOD_ACACIA_T5"
+    resource: "IT_RES_WOOD_LOG_ACACIA_T5"
+    rarity: "RARE"
+    base_amount: 3
+    profession: "LEÑADOR"
+
+  - id: "WOOD_DARK_OAK_T6"
+    resource: "IT_RES_WOOD_LOG_DARK_OAK_T6"
+    rarity: "RARE"
+    base_amount: 2
+    profession: "LEÑADOR"
+
+  - id: "WOOD_MANGROVE_T7"
+    resource: "IT_RES_WOOD_LOG_MANGROVE_T7"
+    rarity: "EPIC"
+    base_amount: 2
+    profession: "LEÑADOR"
+
+  - id: "WOOD_CHERRY_T8"
+    resource: "IT_RES_WOOD_LOG_CHERRY_T8"
+    rarity: "EPIC"
+    base_amount: 2
+    profession: "LEÑADOR"

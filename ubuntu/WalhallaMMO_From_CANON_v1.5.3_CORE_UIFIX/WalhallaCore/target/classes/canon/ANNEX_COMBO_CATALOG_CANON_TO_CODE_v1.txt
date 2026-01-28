@@ -1,0 +1,195 @@
+ANNEX_COMBO_CATALOG_CANON_TO_CODE_v1.txt
+=======================================
+
+ESTADO
+------
+CANONIZABLE
+DESCRIPTIVO
+SIN IMPLEMENTACIÓN
+FASE 6.2.5 — SOPORTE SEMÁNTICO
+
+DEPENDENCIAS CANÓNICAS
+---------------------
+- CANON_UNIFICADO_WALHALLAMMO_v3
+- CONTRACT_SPELL_NAMING_ALIGNMENT_v1
+- DEBUG_PROJECT_MASTER_PLAN_v1
+
+Este anexo NO modifica código.
+Este anexo NO habilita gameplay.
+Este anexo NO activa combinaciones.
+
+
+OBJETIVO
+--------
+Definir de forma EXPLÍCITA y CANÓNICA el catálogo completo
+de ELEMENTOS COMBINADOS del proyecto WalhallaMMOonline.
+
+Este documento fija:
+- Qué pares de elementos base existen
+- Qué nombre canónico recibe cada combinación
+- Qué combinaciones están creadas en código
+- Qué combinaciones están planificadas pero no creadas
+
+Este anexo es la ÚNICA fuente de verdad
+para combinaciones elementales.
+
+
+====================================================================
+ELEMENTOS BASE CANÓNICOS
+====================================================================
+
+- FUEGO
+- AGUA
+- AIRE
+- TIERRA
+- LUZ
+- OSCURIDAD
+
+
+====================================================================
+REGLA GENERAL DE COMBINACIÓN
+====================================================================
+
+- Un elemento combinado es un PAR NO ORDENADO de elementos base
+- Cada par tiene UN ÚNICO nombre canónico
+- El nombre canónico define la identidad del combinado
+- La existencia en CANON NO implica existencia en código
+- Ningún combinado crea un nuevo elemento base
+
+
+====================================================================
+CATÁLOGO CANÓNICO DE COMBINACIONES
+====================================================================
+
+--------------------------------------------------------------------
+AIRE + AGUA
+NOMBRE CANÓNICO: ELECTRICIDAD
+ESTADO: CREADO
+--------------------------------------------------------------------
+
+--------------------------------------------------------------------
+AIRE + TIERRA
+NOMBRE CANÓNICO: ARENA
+ESTADO: CREADO
+--------------------------------------------------------------------
+
+--------------------------------------------------------------------
+AIRE + FUEGO
+NOMBRE CANÓNICO: TORMENTA ÍGNEA
+ESTADO: CREADO
+--------------------------------------------------------------------
+
+--------------------------------------------------------------------
+TIERRA + FUEGO
+NOMBRE CANÓNICO: MAGMA
+ESTADO: CREADO
+--------------------------------------------------------------------
+
+--------------------------------------------------------------------
+TIERRA + AGUA
+NOMBRE CANÓNICO: VERDOR PRIMIGENIO
+ESTADO: CREADO
+--------------------------------------------------------------------
+
+--------------------------------------------------------------------
+FUEGO + AGUA
+NOMBRE CANÓNICO: VAPOR
+ESTADO: CREADO
+--------------------------------------------------------------------
+
+--------------------------------------------------------------------
+LUZ + AIRE
+NOMBRE CANÓNICO: CANTO
+ESTADO: CREADO
+--------------------------------------------------------------------
+
+--------------------------------------------------------------------
+LUZ + FUEGO
+NOMBRE CANÓNICO: SOLAR
+ESTADO: CREADO
+--------------------------------------------------------------------
+
+--------------------------------------------------------------------
+LUZ + AGUA
+NOMBRE CANÓNICO: SACRO
+ESTADO: CREADO
+--------------------------------------------------------------------
+
+--------------------------------------------------------------------
+LUZ + TIERRA
+NOMBRE CANÓNICO: SUELO SANTO
+ESTADO: PLANIFICADO (NO CREADO)
+--------------------------------------------------------------------
+
+--------------------------------------------------------------------
+OSCURIDAD + AIRE
+NOMBRE CANÓNICO: RÉQUIEM
+ESTADO: PLANIFICADO (NO CREADO)
+--------------------------------------------------------------------
+
+--------------------------------------------------------------------
+OSCURIDAD + FUEGO
+NOMBRE CANÓNICO: LLAMAS NEGRAS
+ESTADO: CREADO
+--------------------------------------------------------------------
+
+--------------------------------------------------------------------
+OSCURIDAD + AGUA
+NOMBRE CANÓNICO: VENENO
+ESTADO: CREADO
+--------------------------------------------------------------------
+
+--------------------------------------------------------------------
+OSCURIDAD + TIERRA
+NOMBRE CANÓNICO: ABISMO
+ESTADO: PLANIFICADO (NO CREADO)
+--------------------------------------------------------------------
+
+--------------------------------------------------------------------
+LUZ + OSCURIDAD
+NOMBRE CANÓNICO: ECLIPSE
+ESTADO: CREADO
+--------------------------------------------------------------------
+
+
+====================================================================
+REGLAS DE USO
+====================================================================
+
+1. Ningún elemento combinado es utilizable en FASE 6
+2. Ningún bastón combinado existe en FASE 6
+3. Los spells combinados existentes en código:
+   - permanecen BLOQUEADOS
+   - se clasifican como SPELL_BLOQUEADO o SPELL_REUTILIZABLE
+4. La habilitación de combinados requiere:
+   - contrato específico
+   - phase gating explícito
+   - decisión de diseño posterior
+
+
+====================================================================
+RELACIÓN CON FASE 6.3
+====================================================================
+
+CONTRACT_SKILL_TO_SPELL_MAPPING_v1:
+
+- SOLO mapeará elementos BASE
+- NO mapeará combinados
+- Usará este anexo como referencia oficial
+- No deducirá combinaciones
+
+
+====================================================================
+CIERRE
+====================================================================
+
+Con este anexo:
+
+✔ El sistema de combinaciones queda cerrado y completo
+✔ No hay ambigüedad semántica
+✔ El trabajo creativo existente queda preservado
+✔ El CANON no vuelve a contaminarse
+✔ El camino a FASE 6.3 queda limpio
+
+FIN DEL ANEXO
+================

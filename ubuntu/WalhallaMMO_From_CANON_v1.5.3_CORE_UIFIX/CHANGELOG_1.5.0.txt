@@ -1,0 +1,22 @@
+WalhallaMMO_From_CANON_v1.5.0
+===========================
+
+FASE 14 — Social: Trade UI + Mercado (Auction House)
+----------------------------------------------------
+
+- Added new plugin: WalhallaMarket
+  - Auction House style market (fixed-price listings) via UI
+  - Direct player-to-player trade UI (secondary channel)
+  - Supports mixed prices: WCoin + WCraft
+  - Atomicity best-effort: withdraw -> deliver -> pay seller, refund on failure
+  - Admin-only command: /walhalla-market reload|inspect
+
+- WalhallaCore
+  - New API: walhalla.mmo.core.api.market.MarketUiBridge
+
+- WalhallaRPGMenu
+  - Added “Mercado” entry in RPG MENU (UI-only access)
+
+Notes:
+- Numeric fees (listing fee, sale tax, tier scaling) remain data-driven in WalhallaMarket/config.yml.
+  Canon defines the mechanisms; balancing values are configured without code changes.

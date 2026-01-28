@@ -1,0 +1,6 @@
+name: WalhallaMenu
+version: 0.6.0-SNAPSHOT
+main: walhalla.mmo.menu.WalhallaMenuPlugin
+api-version: "1.21"
+depend: [WalhallaCore]
+softdepend: [WalhallaSpells]

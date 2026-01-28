@@ -1,0 +1,13 @@
+name: WalhallaMarket
+main: walhalla.mmo.market.WalhallaMarketPlugin
+version: 1.5.0
+api-version: "1.21"
+depend: [WalhallaCore]
+softdepend: [WalhallaRPGMenu]
+commands:
+  walhalla-market:
+    description: Admin market tools (OP only)
+    permission: walhalla.admin
+permissions:
+  walhalla.admin:
+    default: op

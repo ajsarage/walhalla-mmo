@@ -1,0 +1,8 @@
+walhalla\mmo\market\MarketController$Draft.class
+walhalla\mmo\market\MarketController.class
+walhalla\mmo\market\MarketListing.class
+walhalla\mmo\market\MarketStore.class
+walhalla\mmo\market\WalhallaMarketAdminCommand.class
+walhalla\mmo\market\MarketListing$Status.class
+walhalla\mmo\market\TradeSession.class
+walhalla\mmo\market\WalhallaMarketPlugin.class

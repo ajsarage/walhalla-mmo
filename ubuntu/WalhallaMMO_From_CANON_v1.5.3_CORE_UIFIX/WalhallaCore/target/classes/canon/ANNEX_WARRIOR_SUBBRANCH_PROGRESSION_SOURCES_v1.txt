@@ -1,0 +1,186 @@
+ANNEX_WARRIOR_SUBBRANCH_PROGRESSION_SOURCES_v1
+==============================================
+
+PROYECTO: WalhallaMMOonline
+CANON ACTIVO: CANON_UNIFICADO_WALHALLAMMO_v3
+ÁMBITO: Progresión / Subramas / Guerrero
+TIPO: ANNEX (aplicación de contrato general)
+ESTADO: CANONIZADO
+
+REFERENCIA OBLIGATORIA:
+- CONTRACT_SUBBRANCH_PROGRESSION_SOURCES_v1
+
+------------------------------------------------------------------
+1. PROPÓSITO DEL ANNEX
+------------------------------------------------------------------
+
+Este documento declara las FUENTES DE PROGRESIÓN
+aplicables a las subramas del GUERRERO.
+
+No define valores de XP.
+No define cantidades.
+No define balance.
+
+Su única función es:
+- declarar QUÉ acciones constituyen fuentes válidas
+- aplicar el contrato general de progresión
+  al caso concreto del GUERRERO
+
+------------------------------------------------------------------
+2. PRINCIPIOS APLICADOS (HEREDADOS)
+------------------------------------------------------------------
+
+Este ANNEX hereda y respeta estrictamente:
+
+- SPS-1: La progresión se basa en fuentes, no en habilidades.
+- SPS-2: La progresión es paralela (rama, subrama, afinidad).
+- SPS-4: No existe exclusividad salvo declaración explícita.
+- SPS-5: Core es la única autoridad de XP.
+- SPS-6: La progresión solo aplica a subramas desbloqueadas.
+
+Nada en este documento contradice estos principios.
+
+------------------------------------------------------------------
+3. SUBRAMAS AFECTADAS
+------------------------------------------------------------------
+
+Este ANNEX aplica a todas las subramas del GUERRERO:
+
+- COLOSO
+- DUELISTA
+- GLADIADOR
+
+Las fuentes declaradas son comunes a todas ellas,
+salvo que se indique lo contrario en documentos futuros.
+
+------------------------------------------------------------------
+4. FUENTES DE PROGRESIÓN DECLARADAS
+------------------------------------------------------------------
+
+--------------------------------------------------
+4.1 USO DE ATAQUE PRIMARIO
+--------------------------------------------------
+
+Acción:
+- Ejecución exitosa de un ataque primario.
+
+Fuente de progresión válida para:
+- Subrama activa del Guerrero.
+- Rama GUERRERO.
+- Afinidad con el arma equipada.
+
+Notas:
+- El ataque primario consume estamina.
+- La fuente se valida por ejecución,
+  no por daño infligido.
+
+--------------------------------------------------
+4.2 USO DE ATAQUE SECUNDARIO
+--------------------------------------------------
+
+Acción:
+- Ejecución exitosa de un ataque secundario
+  propio de la rama o subrama.
+
+Fuente de progresión válida para:
+- Subrama activa del Guerrero.
+- Rama GUERRERO.
+- Afinidad con el arma equipada (si aplica).
+
+Notas:
+- El ataque secundario consume estamina.
+- Puede aplicar estados, control o movilidad.
+- Contribuye a progresión paralela.
+
+--------------------------------------------------
+4.3 PARTICIPACIÓN EN COMBATE FÍSICO
+--------------------------------------------------
+
+Acción:
+- Participación activa en combate cuerpo a cuerpo.
+
+Fuente de progresión válida para:
+- Subrama activa del Guerrero.
+- Rama GUERRERO.
+
+Notas:
+- La fuente se valida por acción de combate,
+  no exclusivamente por matar enemigos.
+- El daño recibido NO constituye una fuente.
+
+--------------------------------------------------
+4.4 ATAQUE ESPECIAL (EXCLUSIÓN EXPLÍCITA)
+--------------------------------------------------
+
+Acción:
+- Ejecución de un ataque especial de rama.
+
+Declaración canónica:
+- El ataque especial NO constituye
+  una fuente de progresión.
+
+No genera:
+- XP de subrama
+- XP de rama
+- Afinidad de arma
+
+Esta exclusión es explícita
+y no contradice el contrato general.
+
+------------------------------------------------------------------
+5. PROGRESIÓN PARALELA
+------------------------------------------------------------------
+
+Una misma acción puede generar progresión simultánea para:
+
+- Subrama activa
+- Rama GUERRERO
+- Afinidad con el arma
+
+No existe exclusividad entre estas progresiones,
+salvo que se declare en un documento futuro.
+
+------------------------------------------------------------------
+6. LIMITACIONES Y PROHIBICIONES
+------------------------------------------------------------------
+
+Está prohibido:
+
+- Otorgar progresión a subramas no desbloqueadas.
+- Generar progresión desde UI o árboles.
+- Generar progresión desde ataques especiales.
+- Definir fuentes no declaradas en este ANNEX.
+
+Cualquier violación se considera no canónica.
+
+------------------------------------------------------------------
+7. RELACIÓN CON DESBLOQUEOS
+------------------------------------------------------------------
+
+Este ANNEX NO define:
+
+- cómo se desbloquean subramas
+- cómo se gastan puntos
+- cómo se aplican costes
+
+Esas reglas se rigen por:
+- CONTRACT_SUBBRANCH_UNLOCK_RULES_v1
+- YML de subrama documentados en
+  ANNEX_WARRIOR_SUBBRANCH_YML_v2
+
+------------------------------------------------------------------
+8. ALCANCE DEL DOCUMENTO
+------------------------------------------------------------------
+
+Este documento:
+- APLICA un contrato general al Guerrero
+- DECLARA fuentes de progresión válidas
+- BLOQUEA interpretaciones futuras erróneas
+
+Este documento:
+- NO define valores
+- NO altera balance
+- NO invade autoridad del Core
+
+FIN DEL DOCUMENTO
+==================================================

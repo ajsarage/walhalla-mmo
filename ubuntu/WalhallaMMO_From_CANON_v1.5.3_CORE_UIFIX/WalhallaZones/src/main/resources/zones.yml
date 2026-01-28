@@ -1,0 +1,48 @@
+defaults:
+  defaultZoneId: global_safe
+
+zones:
+  global_safe:
+    name: Global Safe
+    version: 1
+    rulesetId: SAFE
+
+  # Example boxed zones (adjust coords in production)
+  example_contested:
+    name: Example Contested
+    version: 1
+    rulesetId: CONTESTED
+    bounds:
+      world: world
+      minX: -200
+      minY: 0
+      minZ: -200
+      maxX: 200
+      maxY: 255
+      maxZ: 200
+
+  example_dangerous:
+    name: Example Dangerous
+    version: 1
+    rulesetId: DANGEROUS
+    bounds:
+      world: world
+      minX: 201
+      minY: 0
+      minZ: -200
+      maxX: 600
+      maxY: 255
+      maxZ: 200
+
+  example_black:
+    name: Example Black
+    version: 1
+    rulesetId: BLACK
+    bounds:
+      world: world
+      minX: 601
+      minY: 0
+      minZ: -200
+      maxX: 1000
+      maxY: 255
+      maxZ: 200

@@ -1,0 +1,205 @@
+ANNEX_ITEM_CATALOG_ALL_v1.1_ADD_ENTITY_ITEMS.txt
+================================================
+
+PROYECTO: WalhallaMMOonline
+TIPO: ADDENDUM CANÓNICO DE DATOS (CATÁLOGO DE ÍTEMS)
+VERSIÓN: v1.1
+ESTADO: ACTIVO – VINCULANTE
+ALCANCE: ÍTEMS NUEVOS (SOLO DROPS DE ENTIDADES)
+
+================================================
+1. PROPÓSITO
+================================================
+Este addendum amplía ANNEX_ITEM_CATALOG_ALL_v1 para incluir
+TODOS los ítems necesarios que pueden obtenerse por ENTIDADES
+(mobs) en Minecraft 1.21.8 y que impactan crafting/economía.
+
+================================================
+2. REGLAS
+================================================
+1) Estos ítems pasan a existir canónicamente y pueden ser usados
+   por refining/crafting/economía.
+2) Calidad: FIXED_Q1 (drops) salvo piezas “equipables” (si existieran),
+   que se definirían en anexos de equipo.
+3) Stack:
+   - 64 para recursos comunes
+   - 16 para recursos potentes/raros
+   - 1 para objetos únicos de boss
+
+================================================
+3. CAMPOS (FIJOS POR DEFECTO)
+================================================
+Tipo: RESOURCE (salvo que se indique MATERIAL/COMPONENT)
+Tier: T1–T8 según tabla de este addendum
+Calidad: FIXED_Q1
+Uso: PVE_LOOT_INPUT, CRAFTING_INPUT, ECON_TRADE
+Stack: según especificación individual
+
+================================================
+4. ÍTEMS DE DROPS – OVERWORLD (T1–T3)
+================================================
+
+# Alimentos básicos (T1)
+IT_RES_ENTITY_RAW_BEEF_T1
+Nombre: Carne de Res Cruda
+Tipo: RESOURCE | Tier: T1 | Calidad: FIXED_Q1 | Stack: 64
+Usos: CRAFTING_INPUT, ECON_TRADE, PVE_LOOT_INPUT
+
+IT_RES_ENTITY_RAW_PORK_T1
+Nombre: Cerdo Crudo
+Tipo: RESOURCE | Tier: T1 | Calidad: FIXED_Q1 | Stack: 64
+Usos: CRAFTING_INPUT, ECON_TRADE, PVE_LOOT_INPUT
+
+IT_RES_ENTITY_RAW_CHICKEN_T1
+Nombre: Pollo Crudo
+Tipo: RESOURCE | Tier: T1 | Calidad: FIXED_Q1 | Stack: 64
+Usos: CRAFTING_INPUT, ECON_TRADE, PVE_LOOT_INPUT
+
+IT_RES_ENTITY_RAW_MUTTON_T1
+Nombre: Cordero Crudo
+Tipo: RESOURCE | Tier: T1 | Calidad: FIXED_Q1 | Stack: 64
+Usos: CRAFTING_INPUT, ECON_TRADE, PVE_LOOT_INPUT
+
+# Materiales animales (T1)
+IT_RES_ENTITY_LEATHER_T1
+Nombre: Cuero
+Tipo: RESOURCE | Tier: T1 | Calidad: FIXED_Q1 | Stack: 64
+Usos: REFINING_INPUT, CRAFTING_INPUT, ECON_TRADE, PVE_LOOT_INPUT
+
+IT_RES_ENTITY_FEATHER_T1
+Nombre: Pluma
+Tipo: RESOURCE | Tier: T1 | Calidad: FIXED_Q1 | Stack: 64
+Usos: CRAFTING_INPUT, ECON_TRADE, PVE_LOOT_INPUT
+
+IT_RES_ENTITY_WOOL_T1
+Nombre: Lana
+Tipo: RESOURCE | Tier: T1 | Calidad: FIXED_Q1 | Stack: 64
+Usos: REFINING_INPUT, CRAFTING_INPUT, ECON_TRADE, PVE_LOOT_INPUT
+
+IT_RES_ENTITY_EGG_T1
+Nombre: Huevo
+Tipo: RESOURCE | Tier: T1 | Calidad: FIXED_Q1 | Stack: 16
+Usos: CRAFTING_INPUT, ECON_TRADE, PVE_LOOT_INPUT
+
+IT_RES_ENTITY_MILK_T1
+Nombre: Leche (Unidad)
+Tipo: RESOURCE | Tier: T1 | Calidad: FIXED_Q1 | Stack: 16
+Usos: CRAFTING_INPUT, ECON_TRADE, PVE_LOOT_INPUT
+
+# Drops comunes hostiles (T2)
+IT_RES_ENTITY_ROTTEN_FLESH_T2
+Nombre: Carne Podrida
+Tipo: RESOURCE | Tier: T2 | Calidad: FIXED_Q1 | Stack: 64
+Usos: CRAFTING_INPUT, ECON_TRADE, PVE_LOOT_INPUT
+
+IT_RES_ENTITY_BONE_T2
+Nombre: Hueso
+Tipo: RESOURCE | Tier: T2 | Calidad: FIXED_Q1 | Stack: 64
+Usos: REFINING_INPUT, CRAFTING_INPUT, ECON_TRADE, PVE_LOOT_INPUT
+
+IT_RES_ENTITY_STRING_T2
+Nombre: Hilo
+Tipo: RESOURCE | Tier: T2 | Calidad: FIXED_Q1 | Stack: 64
+Usos: REFINING_INPUT, CRAFTING_INPUT, ECON_TRADE, PVE_LOOT_INPUT
+
+IT_RES_ENTITY_SPIDER_EYE_T2
+Nombre: Ojo de Araña
+Tipo: RESOURCE | Tier: T2 | Calidad: FIXED_Q1 | Stack: 64
+Usos: REFINING_INPUT, CRAFTING_INPUT, ECON_TRADE, PVE_LOOT_INPUT
+
+IT_RES_ENTITY_ARROW_FRAGMENT_T2
+Nombre: Fragmento de Flecha
+Tipo: RESOURCE | Tier: T2 | Calidad: FIXED_Q1 | Stack: 64
+Usos: CRAFTING_INPUT, ECON_TRADE, PVE_LOOT_INPUT
+
+# Explosivos / viscosos (T3)
+IT_RES_ENTITY_GUNPOWDER_T3
+Nombre: Pólvora
+Tipo: RESOURCE | Tier: T3 | Calidad: FIXED_Q1 | Stack: 64
+Usos: CRAFTING_INPUT, ECON_TRADE, PVE_LOOT_INPUT
+
+IT_RES_ENTITY_SLIMEBALL_T3
+Nombre: Bola de Slime
+Tipo: RESOURCE | Tier: T3 | Calidad: FIXED_Q1 | Stack: 64
+Usos: REFINING_INPUT, CRAFTING_INPUT, ECON_TRADE, PVE_LOOT_INPUT
+
+IT_RES_ENTITY_MAGMA_CREAM_T3
+Nombre: Crema de Magma
+Tipo: RESOURCE | Tier: T3 | Calidad: FIXED_Q1 | Stack: 64
+Usos: REFINING_INPUT, CRAFTING_INPUT, ECON_TRADE, PVE_LOOT_INPUT
+
+================================================
+5. ÍTEMS DE DROPS – OCEÁNICO/PROFUNDO (T3–T5)
+================================================
+IT_RES_ENTITY_INK_SAC_T3
+Nombre: Saco de Tinta
+Tipo: RESOURCE | Tier: T3 | Calidad: FIXED_Q1 | Stack: 64
+Usos: REFINING_INPUT, CRAFTING_INPUT, ECON_TRADE, PVE_LOOT_INPUT
+
+IT_RES_ENTITY_PRISMARINE_SHARD_T5
+Nombre: Fragmento de Prismarina
+Tipo: RESOURCE | Tier: T5 | Calidad: FIXED_Q1 | Stack: 64
+Usos: REFINING_INPUT, CRAFTING_INPUT, ECON_TRADE, PVE_LOOT_INPUT
+
+IT_RES_ENTITY_PRISMARINE_CRYSTAL_T5
+Nombre: Cristal de Prismarina
+Tipo: RESOURCE | Tier: T5 | Calidad: FIXED_Q1 | Stack: 16
+Usos: REFINING_INPUT, CRAFTING_INPUT, ECON_TRADE, PVE_LOOT_INPUT
+
+================================================
+6. ÍTEMS DE DROPS – NETHER (T5–T7)
+================================================
+IT_RES_ENTITY_BLAZE_ROD_T5
+Nombre: Vara Ígnea
+Tipo: RESOURCE | Tier: T5 | Calidad: FIXED_Q1 | Stack: 16
+Usos: REFINING_INPUT, CRAFTING_INPUT, ECON_TRADE, PVE_LOOT_INPUT
+
+IT_RES_ENTITY_GHAST_TEAR_T6
+Nombre: Lágrima de Ghast
+Tipo: RESOURCE | Tier: T6 | Calidad: FIXED_Q1 | Stack: 16
+Usos: REFINING_INPUT, CRAFTING_INPUT, ECON_TRADE, PVE_LOOT_INPUT
+
+IT_RES_ENTITY_WITHER_SKULL_FRAGMENT_T7
+Nombre: Fragmento de Calavera Wither
+Tipo: RESOURCE | Tier: T7 | Calidad: FIXED_Q1 | Stack: 16
+Usos: CRAFTING_INPUT, ECON_TRADE, PVE_LOOT_INPUT
+
+================================================
+7. ÍTEMS DE DROPS – END (T6–T8)
+================================================
+IT_RES_ENTITY_ENDER_PEARL_T4
+Nombre: Perla de Ender
+Tipo: RESOURCE | Tier: T4 | Calidad: FIXED_Q1 | Stack: 16
+Usos: CRAFTING_INPUT, ECON_TRADE, PVE_LOOT_INPUT
+
+IT_RES_ENTITY_SHULKER_SHELL_T6
+Nombre: Caparazón de Shulker
+Tipo: RESOURCE | Tier: T6 | Calidad: FIXED_Q1 | Stack: 16
+Usos: CRAFTING_INPUT, ECON_TRADE, PVE_LOOT_INPUT
+
+================================================
+8. ÍTEMS DE DROPS – BOSSES / ULTRA (T7–T8)
+================================================
+IT_RES_ENTITY_NETHER_STAR_T7
+Nombre: Estrella del Nether
+Tipo: RESOURCE | Tier: T7 | Calidad: FIXED_Q1 | Stack: 1
+Usos: CRAFTING_INPUT, ECON_TRADE, PVE_LOOT_INPUT
+
+IT_RES_ENTITY_DRAGON_HEART_T8
+Nombre: Corazón de Dragón
+Tipo: RESOURCE | Tier: T8 | Calidad: FIXED_Q1 | Stack: 1
+Usos: CRAFTING_INPUT, ECON_TRADE, PVE_LOOT_INPUT
+
+IT_RES_ENTITY_DRAGON_SCALE_T8
+Nombre: Escama de Dragón
+Tipo: RESOURCE | Tier: T8 | Calidad: FIXED_Q1 | Stack: 16
+Usos: CRAFTING_INPUT, ECON_TRADE, PVE_LOOT_INPUT
+
+================================================
+9. CIERRE
+================================================
+Desde v1.1, todos los drops de entidades definidos en el anexo de loot
+tienen IDs válidos y existen en el catálogo canónico.
+
+FIN DEL DOCUMENTO
+================================================

@@ -1,0 +1,110 @@
+ANNEX_ECONOMY_WCRAFT_POLICY_v1.txt
+=================================
+
+PROYECTO: WalhallaMMOonline
+TIPO: ANEXO DE DECISIÓN CANÓNICA (ECONOMÍA)
+VERSIÓN: v1
+ESTADO: ACTIVO – VINCULANTE
+ALCANCE: USO, FUNCIÓN Y RESTRICCIONES DE WCRAFT
+
+=================================
+1. PROPÓSITO
+=================================
+Este documento define el rol exacto de WCraft
+dentro de la economía de WalhallaMMOonline.
+
+El objetivo es:
+- evitar paywalls obligatorios
+- permitir aceleración voluntaria
+- mantener justicia competitiva
+- proteger el endgame
+
+=================================
+2. DECISIÓN CANÓNICA PRINCIPAL
+=================================
+
+WCRAFT NO ES OBLIGATORIO
+PARA NINGÚN CONTENIDO DEL JUEGO
+
+Todo el contenido:
+- se puede farmear
+- se puede craftear
+- se puede comerciar
+
+WCraft SOLO sirve como:
+- acelerador de progreso
+- alternativa al farmeo prolongado
+- opción voluntaria para el jugador
+
+=================================
+3. FUNCIÓN REAL DE WCRAFT
+=================================
+
+WCraft puede usarse para:
+
+- Comprar directamente ítems caros
+- Pagar servicios de alto coste
+- Evitar largos procesos de crafteo
+- Evitar dependencias de mercado
+- Acceder más rápido al endgame
+
+WCraft NO:
+- desbloquea contenido exclusivo
+- bloquea progresión sin pago
+- crea ventajas imposibles de alcanzar farmeando
+
+=================================
+4. POLÍTICA DE PRECIOS (CLAVE)
+=================================
+
+Regla canónica:
+
+TODO ÍTEM O SERVICIO QUE ACEPTE WCRAFT
+DEBE PODER PAGARSE TAMBIÉN EN WCOIN
+
+Pero…
+
+El coste en WCoin será:
+- MUY alto
+- diseñado para representar muchas horas
+  de farmeo o crafteo
+
+Esto crea la decisión:
+TIEMPO vs DINERO (voluntaria)
+
+=================================
+5. EJEMPLOS CANÓNICOS DE EQUIVALENCIA
+=================================
+
+(no son ejemplos de implementación, son reglas de valor)
+
+- 1 WCraft ≈ farmeo intensivo prolongado
+- 1 WCraft ≈ múltiples ciclos completos de crafteo
+- 1 WCraft ≈ dependencia de varios oficios
+
+Nunca:
+- 1 WCraft = ítem exclusivo
+- 1 WCraft = poder inalcanzable
+
+=================================
+6. IMPACTO EN ECONOMÍA
+=================================
+
+Este modelo:
+- incentiva el mercado entre jugadores
+- mantiene valor del farmeo
+- mantiene valor del crafteo
+- evita inflación artificial
+
+=================================
+7. CIERRE CANÓNICO
+=================================
+
+Desde esta versión:
+
+- WCraft es opcional
+- El juego es 100% jugable sin pagar
+- El jugador paga por comodidad, no por poder
+
+FIN DEL DOCUMENTO
+=================================
