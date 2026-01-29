@@ -1,0 +1,42 @@
+# GAMEPLAY LOOP AND ENDGAME PROGRESSION
+
+## EARLY GAME (LEVELS 1-10)
+PHASE:Early Game
+FOCUS:Learning mechanics
+CONTENT:Tutorial quests, basic combat
+REWARDS:Starting equipment, initial currency
+DURATION_HOURS:3-5
+
+## MID GAME (LEVELS 11-30)
+PHASE:Mid Game
+FOCUS:Branch specialization and professions
+CONTENT:Dungeon instances, profession leveling, guild formation
+REWARDS:Uncommon gear, profession unlocks
+DURATION_HOURS:15-25
+
+## LATE GAME (LEVELS 31-45)
+PHASE:Late Game
+FOCUS:Endgame raids and legendary gear
+CONTENT:5-player dungeons, guild wars, world bosses
+REWARDS:Epic and legendary gear
+DURATION_HOURS:40-60
+
+## ENDGAME (LEVEL 45+)
+PHASE:Endgame
+FOCUS:Guild competition and prestige
+CONTENT:Endless dungeons, PvP arenas, speedruns
+REWARDS:Cosmetics, titles, leaderboard positions
+DURATION_HOURS:Unlimited
+
+## DAILY OBJECTIVES
+DAILY_QUEST_COUNT:3
+DAILY_LOGIN_REWARD:100 WCOIN
+DAILY_CHALLENGE_REWARD:250 WCOIN
+WEEKLY_BOSS_RESET:Sunday 00:00 UTC
+MONTHLY_LEADERBOARD_RESET:1st of month
+
+## ENDGAME MILESTONES
+ACHIEVE_LEVEL_50:Unlock world bosses
+ACHIEVE_FULL_EPIC:Access expert dungeons
+ACHIEVE_LEGENDARY_SET:Guild officer eligible
+ACHIEVE_100_QUESTS:Master rank achieved

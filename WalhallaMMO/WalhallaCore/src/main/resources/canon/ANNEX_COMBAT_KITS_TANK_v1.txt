@@ -1,0 +1,33 @@
+# TANK COMBAT KITS
+# Defensive specialist abilities
+
+## TANK KIT 1: BLOCK
+KIT_ID:TANK_BLOCK
+BRANCH:TANK
+NAME:Defensive Stance
+DESCRIPTION:Reduce all damage taken
+COOLDOWN:Bajo
+DURATION:10 seconds
+DEFENSE:Alto
+EFFECTS:Damage reduction 50%
+
+## TANK KIT 2: TAUNT
+KIT_ID:TANK_TAUNT
+BRANCH:TANK
+NAME:Taunt
+DESCRIPTION:Force enemies to attack you
+COOLDOWN:Medio
+RANGE:5 blocks
+MANA_COST:25
+DURATION:5 seconds
+EFFECTS:Force aggro, 25% damage reduction
+
+## TANK KIT 3: FORTIFY
+KIT_ID:TANK_FORTIFY
+BRANCH:TANK
+NAME:Fortify
+DESCRIPTION:Temporary armor bonus
+COOLDOWN:Alto
+DURATION:15 seconds
+MANA_COST:40
+EFFECTS:Armor +10, max health +30%

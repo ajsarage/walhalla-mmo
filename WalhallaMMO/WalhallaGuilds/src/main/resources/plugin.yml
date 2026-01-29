@@ -1,0 +1,10 @@
+name: WalhallaGuilds
+version: 0.6.0-SNAPSHOT
+main: walhalla.mmo.guilds.WalhallaGuildsPlugin
+api-version: "1.21"
+depend: [WalhallaCore]
+
+commands:
+  guild:
+    description: Manage your guild
+    usage: /guild [create|invite|kick|leave|disband|deposit|withdraw|list]

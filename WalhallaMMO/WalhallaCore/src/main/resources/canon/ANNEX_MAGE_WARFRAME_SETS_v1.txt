@@ -1,0 +1,42 @@
+# MAGE WARFRAME SETS
+# Specialized loadouts for mage class (similar to Warframe concept)
+
+## PYROMANCER SET
+WARFRAME_ID:PYROMANCER
+NAME:Pyromancer
+PASSIVE:Ignite - Spells cause burning
+ACTIVE_1:Fireball
+ACTIVE_2:Inferno
+ACTIVE_3:Flame Shield
+ULTIMATE:Meteor Storm
+COST:1000 WCOIN
+
+## FROSTWEAVER SET
+WARFRAME_ID:FROSTWEAVER
+NAME:Frostweaver
+PASSIVE:Chill - Spells slow enemies 30%
+ACTIVE_1:Icicle Shard
+ACTIVE_2:Blizzard
+ACTIVE_3:Ice Barrier
+ULTIMATE:Absolute Zero
+COST:1000 WCOIN
+
+## VOID CASTER SET
+WARFRAME_ID:VOID_CASTER
+NAME:Void Caster
+PASSIVE:Void Touch - Spells ignore 25% defense
+ACTIVE_1:Void Bolt
+ACTIVE_2:Dimensional Rift
+ACTIVE_3:Reality Warp
+ULTIMATE:Void Implosion
+COST:1000 WCOIN
+
+## LIGHTBRINGER SET
+WARFRAME_ID:LIGHTBRINGER
+NAME:Lightbringer
+PASSIVE:Holy Light - Healing increased 25%
+ACTIVE_1:Holy Burst
+ACTIVE_2:Divine Shield
+ACTIVE_3:Blessed Ground
+ULTIMATE:Ascension
+COST:1000 WCOIN

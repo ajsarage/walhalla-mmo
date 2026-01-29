@@ -1,5 +1,0 @@
-name: WalhallaWeapons
-version: 0.6.0-SNAPSHOT
-main: walhalla.mmo.weapons.WalhallaWeaponsPlugin
-api-version: "1.21"
-depend: [WalhallaCore]

@@ -1,0 +1,34 @@
+# COMPLETE ITEM CATALOG
+# All items in the game world
+
+## WEAPONS
+SWORD_IRON=Iron Sword|weapon|common|8
+SWORD_STEEL=Steel Sword|weapon|uncommon|12
+SWORD_MYTHRIL=Mythril Blade|weapon|epic|25
+
+STAFF_OAK=Oak Staff|weapon|common|6
+STAFF_ANCIENT=Ancient Staff|weapon|epic|22
+
+## ARMOR
+PLATE_CHEST_IRON=Iron Breastplate|armor|common|10
+PLATE_CHEST_STEEL=Steel Plate|armor|uncommon|15
+
+LEATHER_CHEST=Leather Armor|armor|common|5
+LEATHER_COAT=Studded Leather|armor|uncommon|8
+
+## CONSUMABLES
+POTION_HEALTH=Health Potion|consumable|common|1
+POTION_MANA=Mana Potion|consumable|common|1
+ELIXIR_STRENGTH=Strength Elixir|consumable|rare|5
+
+## CRAFTING MATERIALS
+ORE_COPPER=Copper Ore|material|common|1
+ORE_IRON=Iron Ore|material|common|2
+ORE_MYTHRIL=Mythril Ore|material|rare|10
+
+WOOD_OAK=Oak Wood|material|common|1
+WOOD_ELM=Elm Wood|material|uncommon|2
+
+## QUEST ITEMS
+ARTIFACT_ANCIENT_KEY=Ancient Key|quest|rare|0
+SCROLL_LOST_KNOWLEDGE=Scroll of Lost Knowledge|quest|epic|0

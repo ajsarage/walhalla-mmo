@@ -1,0 +1,27 @@
+# ENHANCED LOOT TABLES WITH RARITIES
+
+## WORLD BOSS - LICH KING
+BOSS:LICH_KING
+HEALTH:500
+LEVEL:40
+GUARANTEES:Lich Crown, 5000 WCOIN, 10000 XP
+COMMON_DROPS:Soul Fragment 5-10
+RARE_DROPS:Phylactery Shard|25% chance, Crown of Undeath|10% chance
+EPIC_DROPS:Lich Staff|5% chance|5000 WCOIN value
+LEGENDARY_DROPS:Heart of the Lich|1% chance|25000 WCOIN value
+
+## WORLD BOSS - DRAGON
+BOSS:DRAGON
+HEALTH:1000
+LEVEL:50
+GUARANTEES:Dragon Heart, 10000 WCOIN, 25000 XP
+COMMON_DROPS:Dragon Scale 8-15
+RARE_DROPS:Dragon Fang|30% chance, Dragon Egg|15% chance
+EPIC_DROPS:Dragon Sword|8% chance|10000 WCOIN value
+LEGENDARY_DROPS:Dragon Armor Set|2% chance|50000 WCOIN value
+
+## ELITE MOB DROPS (promoted enemies)
+ELITE_COMMON:Damaged Insignia, Extra Loot Bag
+ELITE_RARE:Crafting Materials, 500 WCOIN
+ELITE_EPIC:Uncommon Gear, 2000 WCOIN
+ELITE_LEGENDARY:Rare Gear, 5000 WCOIN

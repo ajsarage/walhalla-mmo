@@ -1,0 +1,28 @@
+# WalhallaSkills Configuration
+# Talent and progression system
+
+## Talent Tree Configuration
+talents:
+  warrior:
+    health-increase: 50
+    damage-bonus: 5
+  mage:
+    mana-pool: 100
+    spell-damage: 10
+  tank:
+    armor-bonus: 10
+    defense: 8
+  hunter:
+    crit-chance: 15
+    damage: 7
+
+## Progression Settings
+progression:
+  auto-save-interval: 300
+  max-talent-points: 100
+  level-cap: 50
+
+## Messaging
+messages:
+  enabled: true
+  prefix: "&6[Skills]&r "

@@ -1,0 +1,19 @@
+name: WalhallaParty
+version: 1.5.0-SNAPSHOT
+main: walhalla.mmo.party.WalhallaPartyPlugin
+api-version: "1.21"
+depend: [WalhallaCore]
+
+commands:
+  party:
+    description: Manage your party
+    usage: /party [invite|accept|leave|kick|disband|tp|list]
+    aliases: [p]
+
+permissions:
+  walhalla.party.use:
+    description: Use party system
+    default: true
+  walhalla.party.tp:
+    description: Teleport to party members
+    default: true

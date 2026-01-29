@@ -1,0 +1,36 @@
+# WARRIOR COMBAT KITS
+# Non-mage specialized attack sequences
+
+## WARRIOR KIT 1: CLEAVE
+KIT_ID:WARRIOR_CLEAVE
+BRANCH:WARRIOR
+NAME:Cleave
+DESCRIPTION:Wide horizontal slash hitting all nearby enemies
+COOLDOWN:Bajo
+DAMAGE:Alto
+RANGE:3 blocks
+MANA_COST:20
+EFFECTS:Knockback 1
+
+## WARRIOR KIT 2: WHIRLWIND
+KIT_ID:WARRIOR_WHIRLWIND
+BRANCH:WARRIOR
+NAME:Whirlwind
+DESCRIPTION:Spin attack dealing area damage
+COOLDOWN:Medio
+DAMAGE:Medio
+RANGE:4 blocks
+MANA_COST:30
+DURATION_SECONDS:3
+EFFECTS:Spin animation, AoE damage
+
+## WARRIOR KIT 3: SHIELD BASH
+KIT_ID:WARRIOR_SHIELD_BASH
+BRANCH:WARRIOR
+NAME:Shield Bash
+DESCRIPTION:Defensive counterattack
+COOLDOWN:Bajo
+DAMAGE:Bajo
+RANGE:2 blocks
+MANA_COST:15
+EFFECTS:Stun 1, damage reduction 50%

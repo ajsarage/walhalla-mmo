@@ -1,0 +1,33 @@
+# WalhallaParty Configuration
+# Party and cooperative gameplay system
+
+## Party Settings
+party:
+  max-members: 4
+  auto-disband-on-logout: true
+  share-xp: true
+  xp-share-multiplier: 0.95
+
+## Party Experience Sharing
+experience:
+  shared-xp-bonus: 10
+  proximity-range: 30
+  max-level-difference: 10
+
+## Loot Rules
+loot:
+  shared-loot-mode: true
+  distribution: round-robin
+  need-before-greed: true
+
+## Data Persistence
+data:
+  save-interval: 300
+  data-folder: parties/
+
+## Messaging
+messages:
+  enabled: true
+  prefix: "&b[Party]&r "
+  join-message: "&b{player} &rjoined the party"
+  leave-message: "&b{player} &rleft the party"

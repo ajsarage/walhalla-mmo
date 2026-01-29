@@ -1,0 +1,19 @@
+name: WalhallaSkills
+version: 1.5.0-SNAPSHOT
+main: walhalla.mmo.skills.WalhallaSkillsPlugin
+api-version: "1.21"
+depend: [WalhallaCore]
+
+commands:
+  skills:
+    description: Open skill tree menu
+    usage: /skills [reset]
+    aliases: [talents, sk]
+
+permissions:
+  walhalla.skills.use:
+    description: Use skill system
+    default: true
+  walhalla.skills.reset:
+    description: Reset talents
+    default: true

@@ -1,0 +1,36 @@
+# HUNTER COMBAT KITS
+# Ranged damage specialist abilities
+
+## HUNTER KIT 1: RAPID FIRE
+KIT_ID:HUNTER_RAPID_FIRE
+BRANCH:HUNTER
+NAME:Rapid Fire
+DESCRIPTION:Quick succession of arrows
+COOLDOWN:Bajo
+DAMAGE:Medio
+RANGE:20 blocks
+PROJECTILES:5
+EFFECTS:Fast attack speed
+
+## HUNTER KIT 2: AIMED SHOT
+KIT_ID:HUNTER_AIMED_SHOT
+BRANCH:HUNTER
+NAME:Aimed Shot
+DESCRIPTION:High damage single target
+COOLDOWN:Medio
+DAMAGE:Alto
+RANGE:25 blocks
+MANA_COST:35
+EFFECTS:Critical hit 50%
+
+## HUNTER KIT 3: MULTISHOT
+KIT_ID:HUNTER_MULTISHOT
+BRANCH:HUNTER
+NAME:Multishot
+DESCRIPTION:Fan of arrows in cone
+COOLDOWN:Medio
+DAMAGE:Medio
+RANGE:15 blocks
+PROJECTILES:8
+MANA_COST:40
+EFFECTS:Spread damage to multiple targets

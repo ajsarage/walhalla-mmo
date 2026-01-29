@@ -1,8 +1,0 @@
-walhalla\mmo\zones\model\ZoneBox.class
-walhalla\mmo\zones\listeners\ZoneTrackerListener.class
-walhalla\mmo\zones\model\ZoneRuleset.class
-walhalla\mmo\zones\WalhallaZonesPlugin.class
-walhalla\mmo\zones\service\ZonesServiceImpl.class
-walhalla\mmo\zones\ZoneAdminCommand.class
-walhalla\mmo\zones\service\ZoneManager.class
-walhalla\mmo\zones\model\ZoneDefinition.class

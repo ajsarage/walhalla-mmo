@@ -1,1 +1,92 @@
+# ============================================
+# Walhalla MMO - Git Ignore Configuration
+# ============================================
+
+# === Maven Build Artifacts ===
+**/target/
+**/dependency-reduced-pom.xml
+**/.mvn/
+
+# === IDE Files ===
+.vscode/
+.idea/
 .aider*
+*.iml
+*.iws
+*.ipr
+.project
+.classpath
+.settings/
+
+# === Server Runtime Files (DO NOT COMMIT) ===
+# Server JARs
+paper-*.jar
+spigot-*.jar
+bukkit-*.jar
+
+# World data
+world/
+world_nether/
+world_the_end/
+world_*/
+
+# Server configs (use COMPLETE_SERVER_PACKAGE templates)
+/server.properties
+/bukkit.yml
+/spigot.yml
+/paper.yml
+/config/
+
+# Player data
+/banned-ips.json
+/banned-players.json
+/ops.json
+/whitelist.json
+/usercache.json
+/usernamecache.json
+/version_history.json
+
+# Server runtime folders
+/cache/
+/logs/
+/crash-reports/
+/libraries/
+/versions/
+/plugins/
+/eula.txt
+/commands.yml
+/help.yml
+/permissions.yml
+/start.bat
+/start.sh
+
+# Timings
+timings/
+*.bin
+
+# === Temporary Files ===
+*.tmp
+*.bak
+*.swp
+*~
+.DS_Store
+Thumbs.db
+
+# === Old deployment packages ===
+SERVER_REPLACEMENT_PACKAGE/
+ubuntu/
+walhalla/
+
+# Old documentation
+CLEANUP_SUMMARY.txt
+DEPLOYMENT_MANIFEST.txt
+PRODUCTION_VERIFICATION_REPORT.txt
+SANITY_CHECK_REPORT.txt
+FULL_FUNCTIONALITY_GUIDE.txt
+ECONOMY_SYSTEM_OVERVIEW.txt
+IMPROVEMENT_ROADMAP.txt
+COMPLETE_SERVER_README.txt
+
+# Old ZIPs (keep only latest)
+WALHALLA_MMO_v*.zip
+!WALHALLA_MMO_COMPLETE_SERVER_v1.5.0.zip

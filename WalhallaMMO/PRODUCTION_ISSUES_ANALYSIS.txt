@@ -1,0 +1,614 @@
+====================================
+PRODUCTION QUALITY ISSUES ANALYSIS
+WalhallaMMO v1.6.0
+====================================
+Date: January 28, 2026
+Type: Comprehensive Code Review
+Focus: Production-readiness beyond persistence
+
+Similar to the persistence issue, this document identifies
+other critical problems that could cause player frustration,
+data corruption, or server instability.
+
+====================================
+ISSUE CATEGORY: MEMORY LEAKS
+Severity: 🔴 CRITICAL
+====================================
+
+Memory leaks occur when scheduled tasks continue running
+after they're no longer needed, consuming server resources
+and potentially causing TPS drops over time.
+
+PROBLEM 1: Uncancelled BukkitRunnables in Dungeons
+---------------------------------------------------
+Location: WalhallaDungeons/DungeonService.java
+
+Current Code (Lines 91-118):
+```java
+new BukkitRunnable() {
+    @Override
+    public void run() {
+        if (!instance.isActive()) {
+            cancel();
+            return;
+        }
+        // ... monitoring logic
+    }
+}.runTaskTimer(plugin, 20L, 20L);
+```
+
+❌ ISSUE:
+- BukkitRunnable is created but NOT stored
+- No way to cancel it on plugin disable
+- If dungeon fails/completes mid-task, only that instance cancels
+- On server reload, orphaned tasks continue running
+
+💥 IMPACT:
+- Memory leak: Task references never garbage collected
+- TPS degradation: Tasks run forever checking dead instances
+- After 10 dungeon runs: 10+ orphaned tasks polling every second
+
+✅ FIX REQUIRED:
+```java
+// Store task reference
+private final Map<String, BukkitTask> dungeonTasks = new HashMap<>();
+
+private void startDungeon(DungeonInstance instance) {
+    // ... existing code
+    
+    BukkitTask task = new BukkitRunnable() {
+        @Override
+        public void run() {
+            if (!instance.isActive()) {
+                dungeonTasks.remove(instance.instanceId);
+                cancel();
+                return;
+            }
+            // ... existing logic
+        }
+    }.runTaskTimer(plugin, 20L, 20L);
+    
+    dungeonTasks.put(instance.instanceId, task);
+}
+
+// In DungeonService:
+public void shutdown() {
+    dungeonTasks.values().forEach(BukkitTask::cancel);
+    dungeonTasks.clear();
+}
+
+// Call from WalhallaDungeonsPlugin.onDisable()
+```
+
+PROBLEM 2: Uncancelled Event Monitoring Tasks
+----------------------------------------------
+Location: WalhallaEvents/EventService.java
+
+Current Code (Lines 79-87):
+```java
+new BukkitRunnable() {
+    @Override
+    public void run() {
+        if (instance.isExpired()) {
+            endEvent(instance);
+            cancel();
+        }
+    }
+}.runTaskTimer(plugin, 20L, 20L);
+```
+
+❌ ISSUE:
+- Same pattern as dungeons
+- Task created per event, never stored
+- No cleanup on plugin disable
+- Multiple events = multiple orphaned tasks
+
+💥 IMPACT:
+- 5 events running = 5 tasks polling forever
+- Server lag accumulates over time
+- Restart required to clear tasks
+
+✅ FIX REQUIRED:
+Same pattern as dungeons - store task references,
+cancel on shutdown.
+
+PROBLEM 3: ActionBar Update Task Never Cancelled
+-------------------------------------------------
+Location: WalhallaCore/actionbar/ActionBarService.java
+
+Current Code (Lines 60-80):
+```java
+private void startUpdateTask() {
+    new BukkitRunnable() {
+        @Override
+        public void run() {
+            // ... update logic
+        }
+    }.runTaskTimer(plugin, 0L, 10L); // Every 0.5s
+}
+```
+
+❌ ISSUE:
+- Task starts on service creation
+- Never cancelled - no reference stored
+- Runs every 0.5 seconds FOREVER
+- Even when no players online
+
+💥 IMPACT:
+- Constant CPU usage even on empty server
+- Synchronized block checked 120 times/minute
+- After plugin reload: MULTIPLE tasks running (old + new)
+
+✅ FIX REQUIRED:
+```java
+private BukkitTask updateTask;
+
+private void startUpdateTask() {
+    if (updateTask != null) {
+        updateTask.cancel();
+    }
+    
+    updateTask = new BukkitRunnable() {
+        // ... existing logic
+    }.runTaskTimer(plugin, 0L, 10L);
+}
+
+public void shutdown() {
+    if (updateTask != null) {
+        updateTask.cancel();
+        updateTask = null;
+    }
+    activeMessages.clear();
+}
+```
+
+PROBLEM 4: StatusEffectManager Tick Task
+-----------------------------------------
+Location: WalhallaCombat/StatusEffectManager.java
+
+Current Code (Line 24):
+```java
+Bukkit.getScheduler().runTaskTimer(plugin, this::tick, 20L, 20L);
+```
+
+❌ ISSUE:
+- Task starts in constructor
+- No way to stop it
+- No shutdown method
+- Ticks every second forever
+
+💥 IMPACT:
+- Similar to ActionBar - accumulates on reload
+- Iterates ConcurrentHashMap every second
+- Old instances never cleaned up
+
+✅ FIX REQUIRED:
+Add task field and shutdown method.
+
+PROBLEM 5: WorldBossSpawner Task
+---------------------------------
+Location: WalhallaBosses/endgame/WorldBossSpawner.java
+
+Current Code (Line 39):
+```java
+this.task = Bukkit.getScheduler().runTaskTimer(plugin, this::tick, 20L, 20L * 30L);
+```
+
+✅ GOOD:
+- Task is stored in field
+- Can be cancelled
+
+⚠️ PARTIAL:
+- No shutdown method exposed
+- Plugin must manually cancel
+
+✅ RECOMMENDATION:
+Add explicit shutdown method for consistency.
+
+====================================
+ISSUE CATEGORY: NULL POINTER RISKS
+Severity: 🟠 HIGH
+====================================
+
+Multiple locations assume Bukkit.getPlayer() and
+Location.getWorld() return non-null values, but these
+can return null causing crashes.
+
+PROBLEM 6: Unsafe Bukkit.getPlayer() Calls
+-------------------------------------------
+Locations: 30+ instances across codebase
+
+Pattern Found:
+```java
+Player p = Bukkit.getPlayer(playerId);
+String name = p.getName(); // ❌ NPE if player offline
+```
+
+Examples:
+
+1. PartyService.java (Line 56):
+```java
+ChatColor.WHITE + Bukkit.getPlayer(inviter).getName());
+```
+❌ Crashes if inviter logs out before message sent
+
+2. PartyService.java (Line 85):
+```java
+ChatColor.WHITE + Bukkit.getPlayer(playerId).getName() + 
+```
+❌ Crashes if player leaves during party join
+
+3. PartyCommand.java (Line 75):
+```java
+Player leader = Bukkit.getPlayer(party.leader);
+sender.sendMessage(ChatColor.GREEN + "Party leader: " + leader.getName());
+```
+❌ Crashes if leader is offline
+
+4. EventService.java (Line 122):
+```java
+Player p = Bukkit.getPlayer(playerId);
+if (eco != null && event != null) {
+    eco.deposit(p.getUniqueId(), ...); // ❌ Should check p != null first
+```
+
+5. SkillService.java (Line 164, 181, 200):
+Multiple instances where getPlayer() result is used
+without null check.
+
+💥 IMPACT:
+- Server crashes with NullPointerException
+- Players lose party invites
+- Rewards fail to distribute
+- Poor user experience
+
+✅ FIX REQUIRED:
+```java
+// Pattern to use everywhere:
+Player p = Bukkit.getPlayer(playerId);
+if (p == null || !p.isOnline()) {
+    return; // or handle appropriately
+}
+String name = p.getName(); // Safe now
+```
+
+PROBLEM 7: Unsafe Location.getWorld() Calls
+--------------------------------------------
+Location: WalhallaDungeons/DungeonService.java (Line 130)
+
+Current Code:
+```java
+World world = instance.spawnPoint.getWorld();
+// Used immediately without null check
+```
+
+❌ ISSUE:
+- Location.getWorld() can return null
+- Happens if world unloads
+- Causes NPE in entity spawn
+
+✅ FIX:
+```java
+World world = instance.spawnPoint.getWorld();
+if (world == null) {
+    failDungeon(instance, "World unloaded!");
+    return;
+}
+```
+
+PROBLEM 8: ServiceManager.load() Without Null Checks
+-----------------------------------------------------
+Location: EventService.java (Line 104)
+
+Current Code:
+```java
+EconomyBridge eco = Bukkit.getServicesManager().load(EconomyBridge.class);
+
+for (int i = 0; i < Math.min(3, leaderboard.size()); i++) {
+    // ...
+    if (eco != null && event != null) {
+        eco.deposit(...);
+    }
+}
+```
+
+✅ GOOD:
+- Null check exists for eco
+
+⚠️ BUT:
+- Same pattern not used everywhere
+- Inconsistent null safety
+
+✅ RECOMMENDATION:
+Audit all ServiceManager.load() calls for null checks.
+
+====================================
+ISSUE CATEGORY: ERROR HANDLING
+Severity: 🟡 MEDIUM
+====================================
+
+Silent exception swallowing hides problems from
+administrators, making debugging impossible.
+
+PROBLEM 9: Silent Exception Catching
+-------------------------------------
+Found in 9 locations:
+
+1. WalhallaSpells (Line 65):
+```java
+} catch (Exception ignored) {}
+```
+
+2. WalhallaProfessions (Lines 50, 228, 241):
+```java
+try { return Integer.parseInt(m.group(1)); } catch (Exception ignored) {}
+```
+
+3. WalhallaMarket (Lines 42, TradeSession 350)
+4. WalhallaBosses (Lines 106, 51)
+5. WalhallaCore/CanonDataService (Line 151)
+
+❌ ISSUE:
+- Exceptions disappear completely
+- No logging, no error reporting
+- Admins can't debug issues
+- Data corruption goes unnoticed
+
+💥 IMPACT:
+- Items fail to parse: Players confused
+- Trades fail silently: Money lost
+- Boss loot breaks: No drops
+- Canon data fails: Game broken
+
+✅ FIX REQUIRED:
+```java
+// BEFORE:
+try { 
+    return Integer.parseInt(m.group(1)); 
+} catch (Exception ignored) {}
+
+// AFTER:
+try { 
+    return Integer.parseInt(m.group(1)); 
+} catch (NumberFormatException e) {
+    plugin.getLogger().warning("Failed to parse integer from: " + m.group(1));
+    // Return sensible default or handle error
+}
+```
+
+PRINCIPLE:
+- Log all unexpected exceptions
+- Use specific exception types
+- Never use "Exception ignored" in production
+
+====================================
+ISSUE CATEGORY: RACE CONDITIONS
+Severity: 🟡 MEDIUM
+====================================
+
+PROBLEM 10: Invite Expiration Race Condition
+---------------------------------------------
+Location: PartyService.java (Lines 62-66)
+
+Current Code:
+```java
+Bukkit.getScheduler().runTaskLater(plugin, () -> {
+    if (pendingInvites.get(invitee) == invite) {
+        pendingInvites.remove(invitee);
+    }
+}, 1200L);
+```
+
+❌ ISSUE:
+- Uses == comparison on object reference
+- If invite is replaced during 60 seconds, old task still runs
+- Can remove wrong invite
+- pendingInvites is not thread-safe (HashMap not ConcurrentHashMap)
+
+💥 IMPACT:
+- Player accepts invite
+- Old expiration task runs
+- Removes new invite meant for different party
+- Player confused
+
+✅ FIX REQUIRED:
+```java
+// In PartyService, change field:
+private final Map<UUID, PartyInvite> pendingInvites = new ConcurrentHashMap<>();
+
+// In invite method:
+Bukkit.getScheduler().runTaskLater(plugin, () -> {
+    pendingInvites.remove(invitee, invite); // Atomic remove if matches
+}, 1200L);
+```
+
+====================================
+ISSUE CATEGORY: DATA INTEGRITY
+Severity: 🟡 MEDIUM
+====================================
+
+PROBLEM 11: Talent Reset Cost Not Validated
+--------------------------------------------
+Location: WalhallaSkills/SkillService.java
+
+Current Code:
+```java
+public boolean resetTalents(UUID playerId) {
+    PlayerTalents pt = getOrCreate(playerId);
+    
+    long cost = 1000L; // Fixed cost
+    // TODO: Check if player has currency
+    
+    pt.allocatedTalents.clear();
+    pt.availablePoints = totalEarnedPoints;
+    pt.lastReset = System.currentTimeMillis();
+    
+    applyTalentEffects(playerId);
+    return true;
+}
+```
+
+❌ ISSUE:
+- TODO comment in production code
+- No economy check
+- Players can reset for free
+- No transaction logging
+
+💥 IMPACT:
+- Exploit: Free unlimited resets
+- Players abuse to test builds
+- Economy balance broken
+
+✅ FIX REQUIRED:
+```java
+public boolean resetTalents(UUID playerId) {
+    PlayerTalents pt = getOrCreate(playerId);
+    
+    long cost = 1000L;
+    EconomyBridge eco = Bukkit.getServicesManager().load(EconomyBridge.class);
+    
+    if (eco == null) {
+        plugin.getLogger().severe("Economy not available for talent reset!");
+        return false;
+    }
+    
+    if (!eco.withdraw(playerId, Currency.WCOIN, cost, "TALENT_RESET", 
+                     "TALENT_RESET:" + System.currentTimeMillis())) {
+        // Player notified by economy system
+        return false;
+    }
+    
+    pt.allocatedTalents.clear();
+    pt.availablePoints = calculateTotalPoints(playerId);
+    pt.lastReset = System.currentTimeMillis();
+    
+    applyTalentEffects(playerId);
+    return true;
+}
+```
+
+====================================
+SUMMARY OF CRITICAL ISSUES
+====================================
+
+🔴 CRITICAL (Fix Immediately):
+1. ✅ Data Persistence (ALREADY FIXED)
+2. ❌ Memory Leaks - BukkitRunnable tasks never cancelled
+3. ❌ ActionBar task runs forever
+4. ❌ Null pointer crashes from getPlayer()
+
+🟠 HIGH PRIORITY (Fix Soon):
+5. ❌ Silent exception swallowing
+6. ❌ Location.getWorld() null risks
+7. ❌ Talent reset economy bypass
+
+🟡 MEDIUM PRIORITY (Fix When Possible):
+8. ❌ Invite race condition
+9. ❌ StatusEffectManager cleanup
+10. ❌ Inconsistent null checks
+
+====================================
+ESTIMATED FIX TIME
+====================================
+
+Memory Leak Fixes:
+  DungeonService: 30 minutes
+  EventService: 20 minutes
+  ActionBarService: 15 minutes
+  StatusEffectManager: 15 minutes
+  Total: ~1.5 hours
+
+Null Pointer Fixes:
+  Add checks to 30+ getPlayer() calls: 1 hour
+  Add World null checks: 15 minutes
+  Total: ~1.25 hours
+
+Error Handling:
+  Replace 9 empty catches with logging: 30 minutes
+
+Talent Reset Economy:
+  Integrate economy check: 20 minutes
+
+Race Condition:
+  Fix invite expiration: 15 minutes
+
+TOTAL ESTIMATED TIME: ~3.5 hours
+
+====================================
+RECOMMENDED IMPLEMENTATION ORDER
+====================================
+
+Phase 1 (Most Critical - 2 hours):
+1. Fix ActionBarService task leak
+2. Fix DungeonService task leak
+3. Fix EventService task leak
+4. Add null checks to Party/Event getPlayer() calls
+
+Phase 2 (High Impact - 1 hour):
+5. Replace empty catch blocks with logging
+6. Fix talent reset economy check
+7. Add StatusEffectManager shutdown
+
+Phase 3 (Polish - 30 min):
+8. Fix invite race condition
+9. Add World null checks
+10. Audit remaining getPlayer() calls
+
+====================================
+TESTING CHECKLIST
+====================================
+
+After fixes are applied:
+
+Memory Leak Tests:
+□ Start server with plugins
+□ Run 5 dungeons
+□ Check /timings for task count
+□ Reload plugins with /reload confirm
+□ Verify old tasks cancelled
+□ Check task count again (should not increase)
+
+Null Pointer Tests:
+□ Send party invite
+□ Invitee logs out before accepting
+□ Inviter uses /party info (should not crash)
+□ Leader logs out
+□ Member uses /party info (should handle gracefully)
+
+Error Handling Tests:
+□ Corrupt a recipe file
+□ Check console for clear error message
+□ Verify plugin continues working
+
+Talent Reset Tests:
+□ Player with 0 currency tries reset
+□ Should fail with clear message
+□ Player with 1000+ wcoin tries reset
+□ Should succeed and deduct cost
+□ Verify transaction in economy logs
+
+====================================
+CONCLUSION
+====================================
+
+The persistence fix addressed data loss - a critical
+player-facing issue. These additional problems are
+equally important for production quality:
+
+✅ ALREADY FIXED:
+  • Data persistence (talents, parties, rewards)
+
+❌ STILL NEEDS FIXING:
+  • Memory leaks (server performance)
+  • Null pointer crashes (server stability)
+  • Silent errors (admin visibility)
+  • Economy bypasses (game balance)
+
+With these fixes, WalhallaMMO will be truly
+production-ready: stable, performant, and
+maintainable.
+
+====================================
+Generated: January 28, 2026
+Priority: HIGH - Production Quality
+====================================

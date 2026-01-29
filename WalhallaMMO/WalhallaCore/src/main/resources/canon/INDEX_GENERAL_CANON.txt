@@ -1,0 +1,34 @@
+# WALHALLA MMO - GENERAL INDEX
+# Defines canonical game concepts and version numbers
+
+VERSION: 1.0
+LAST_UPDATED: 2026-01-28
+
+## GAME BRANCHES
+BRANCH_WARRIOR=Warrior|Basic melee combat specialist
+BRANCH_MAGE=Mage|Spell-casting arcane authority
+BRANCH_TANK=Tank|Defensive fortification expert
+BRANCH_HUNTER=Hunter|Ranged physical damage dealer
+
+## ECONOMY BASELINE
+CURRENCY_WCOIN=WCOIN|Primary combat currency
+CURRENCY_WCRAFT=WCRAFT|Profession-exclusive currency
+
+## ZONES
+ZONE_SAFE=Safe Zone|No PvP, no penalties
+ZONE_CONTESTED=Contested|PvP enabled, minor XP loss
+ZONE_DANGEROUS=Dangerous|PvP enabled, gear durability loss
+ZONE_BLACK=Black|Endgame, maximum stakes
+
+## LIFECYCLE STATES
+STATE_UNINITIALIZED=Not started
+STATE_CHOOSING_BRANCHES=Selecting class branches
+STATE_ACTIVE=Actively progressing
+
+## CONTENT FLAGS
+FEATURE_COMBAT=Combat system enabled
+FEATURE_ECONOMY=Economy system enabled
+FEATURE_PROFESSIONS=Profession crafting enabled
+FEATURE_DUNGEONS=Dungeon instances enabled
+FEATURE_QUESTS=Quest tracking enabled
+FEATURE_GUILDS=Guild system enabled

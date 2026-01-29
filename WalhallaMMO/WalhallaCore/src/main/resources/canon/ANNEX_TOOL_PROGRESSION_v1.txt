@@ -1,0 +1,19 @@
+# TOOL PROGRESSION FOR PROFESSIONS
+# Defines what tools players unlock at each level
+
+## GATHERING TOOLS
+GATHERER_LVL_1=Wooden Pickaxe
+GATHERER_LVL_10=Bronze Pickaxe
+GATHERER_LVL_20=Iron Pickaxe
+GATHERER_LVL_30=Steel Pickaxe
+GATHERER_LVL_40=Mythril Pickaxe
+
+## CRAFTING WORKSTATIONS
+CRAFTER_LVL_1=Basic Workbench
+CRAFTER_LVL_15=Reinforced Bench
+CRAFTER_LVL_30=Expert Station
+CRAFTER_LVL_45=Master Workshop
+
+## SPECIAL TOOLS
+ALCHEMIST_LVL_5=Mortar and Pestle
+ALCHEMIST_LVL_25=Alchemical Apparatus

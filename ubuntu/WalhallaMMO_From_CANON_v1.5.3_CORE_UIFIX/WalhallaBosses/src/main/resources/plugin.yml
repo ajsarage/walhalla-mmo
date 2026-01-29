@@ -1,5 +1,0 @@
-name: WalhallaBosses
-version: 0.6.0-SNAPSHOT
-main: walhalla.mmo.bosses.WalhallaBossesPlugin
-api-version: "1.21"
-depend: [WalhallaCore]

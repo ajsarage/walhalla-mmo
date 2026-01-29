@@ -1,0 +1,24 @@
+# WCRAFT CURRENCY POLICY
+# Profession-specific currency regulations
+
+CURRENCY_ID:WCRAFT
+PURPOSE:Profession crafting only
+SOURCES:Selling profession items, daily bonuses
+USES:Station fees, special recipe unlocks
+TRADING_ALLOWED:false
+CONVERSION_TO_WCOIN:false
+
+## EARNING RATES
+GATHER_REWARD_WCRAFT:10% of WCOIN equivalent
+CRAFT_REFUND_WCRAFT:50% of WCOIN cost
+SALE_REWARD_WCRAFT:25% of vendor value
+
+## LIMITS
+PLAYER_MAX_WCRAFT:100000
+DAILY_EARNING_CAP:5000
+WEEKLY_EARNING_CAP:25000
+
+## VAULT STORAGE
+BANK_STORAGE_WCRAFT:true
+BANK_WITHDRAWAL_FEE:5%
+BANK_DEPOSIT_FEE:0%

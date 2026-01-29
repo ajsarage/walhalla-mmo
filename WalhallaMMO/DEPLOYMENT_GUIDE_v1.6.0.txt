@@ -1,0 +1,219 @@
+====================================
+WALHALLA MMO v1.6.0
+DEPLOYMENT GUIDE
+====================================
+
+📦 WHAT'S INCLUDED
+====================================
+
+✅ 18 Compiled Modules (JARs ready)
+✅ All source code
+✅ Complete documentation
+✅ User guide
+✅ Changelog
+
+====================================
+🚀 DEPLOYMENT STEPS
+====================================
+
+STEP 1: Backup Existing Installation
+------------------------------------
+If upgrading from v1.5.0:
+
+1. Stop your Minecraft server
+2. Backup your plugins folder:
+   > Copy-Item -Path "plugins" -Destination "plugins_backup_v1.5.0" -Recurse
+
+3. Backup player data:
+   > Copy-Item -Path "plugins/WalhallaCore/playerdata" -Destination "playerdata_backup" -Recurse
+
+STEP 2: Deploy New JARs
+------------------------------------
+Copy these 18 JAR files to your server's plugins folder:
+
+FROM: WalhallaMMO/*/target/*.jar
+TO: [server]/plugins/
+
+Required Files:
+✅ walhalla-core-1.5.0-SNAPSHOT.jar (97.53 KB)
+✅ walhalla-combat-1.5.0-SNAPSHOT.jar (39.94 KB)
+✅ walhalla-spells-1.5.0-SNAPSHOT.jar (33.99 KB)
+✅ walhalla-weapons-1.5.0-SNAPSHOT.jar (8.66 KB)
+✅ walhalla-weaponmods-1.5.0-SNAPSHOT.jar (2.71 KB)
+✅ walhalla-professions-1.5.0-SNAPSHOT.jar (46.07 KB)
+✅ walhalla-zones-1.5.0-SNAPSHOT.jar (18.80 KB)
+✅ walhalla-menu-1.5.0-SNAPSHOT.jar (8.43 KB)
+✅ walhalla-rpgmenu-1.5.0-SNAPSHOT.jar (9.40 KB)
+✅ WalhallaMarket-1.5.0-SNAPSHOT.jar (30.49 KB)
+✅ walhalla-guilds-1.5.0-SNAPSHOT.jar (10.92 KB)
+✅ walhalla-dungeons-1.5.0-SNAPSHOT.jar (17.90 KB)
+✅ walhalla-bosses-1.5.0-SNAPSHOT.jar (28.54 KB)
+✅ walhalla-quests-1.5.0-SNAPSHOT.jar (15.07 KB)
+✅ walhalla-events-1.5.0-SNAPSHOT.jar (14.83 KB)
+⭐ walhalla-party-1.5.0-SNAPSHOT.jar (13.80 KB) NEW
+⭐ walhalla-skills-1.5.0-SNAPSHOT.jar (18.19 KB) NEW
+
+PowerShell Command:
+```powershell
+# Copy all JARs to plugins folder
+Get-ChildItem -Path ".\WalhallaMMO\*\target\*.jar" -Recurse | 
+  Where-Object { $_.Name -like "*.jar" -and $_.Name -notlike "*-sources.jar" } | 
+  Copy-Item -Destination "[YOUR_SERVER_PATH]\plugins\" -Force
+```
+
+STEP 3: Start Server
+------------------------------------
+1. Start your Minecraft server
+2. Watch console for plugin loading:
+   - Look for "WalhallaCore enabled - Now with Daily Rewards & Action Bars!"
+   - All 18 modules should enable without errors
+
+3. Check for errors:
+   > /plugins
+   Should show all 18 Walhalla plugins in GREEN
+
+STEP 4: Verify New Features
+------------------------------------
+Test each new system:
+
+1. Daily Rewards:
+   > /daily
+   Should show "You claimed X WCoin and Y WCraft!"
+
+2. Party System:
+   - Player 1: /party invite Player2
+   - Player 2: /party accept Player1
+   - Both: /party list (should show 2 members)
+   - Test: /pc Hello party!
+
+3. Skill System:
+   > /skills
+   Should open GUI menu with talent nodes
+
+4. Action Bars:
+   - Gain XP (kill mobs, complete quests)
+   - Should see action bar message: "+X XP"
+
+====================================
+🔧 CONFIGURATION
+====================================
+
+No additional configuration needed!
+All new systems use default settings.
+
+Optional: Adjust costs/rewards in WalhallaCore config
+- Daily reward amounts: config.yml
+- Party teleport cost: 100 WCoin (hardcoded, can modify source)
+- Talent reset cost: 10,000 WCoin (hardcoded, can modify source)
+
+====================================
+⚠️ IMPORTANT NOTES
+====================================
+
+Dependencies:
+✅ Paper 1.21.8 (or compatible)
+✅ Java 21
+✅ All plugins depend on WalhallaCore (load order handled automatically)
+
+Player Data:
+• Daily reward data: stored in WalhallaCore/playerdata/
+• Party data: stored in memory (parties disband on restart)
+• Talent data: stored in WalhallaSkills/playerdata/
+
+Compatibility:
+• Fully backward compatible with v1.5.0
+• Existing player data preserved
+• New systems initialize automatically on first login
+
+====================================
+🐛 TROUBLESHOOTING
+====================================
+
+Problem: Plugin won't load
+Solution: 
+- Check Java version: java -version (needs 21+)
+- Check Paper version: version command (needs 1.21+)
+- Check console for error messages
+
+Problem: /daily command not found
+Solution:
+- Verify WalhallaCore loaded successfully
+- Check plugins/WalhallaCore/plugin.yml has daily command
+- Reload with: /reload confirm
+
+Problem: /party or /skills not working
+Solution:
+- Verify WalhallaParty and WalhallaSkills loaded
+- Check /plugins shows them in green
+- Verify JARs copied correctly
+
+Problem: "Cannot find symbol" errors
+Solution:
+- This is a compile error, not runtime
+- Re-run: mvn clean install -DskipTests
+- Verify all 18 JARs exist in target/ folders
+
+====================================
+📊 MIGRATION NOTES
+====================================
+
+From v1.5.0 to v1.6.0:
+• No breaking changes
+• No data migration needed
+• Drop-in replacement
+• New features auto-initialize
+
+First-Time Installation:
+• Copy all 17 JAR files to plugins/
+• Start server
+• Create onboarding zones (/walhalla guide)
+• Set up dungeons, quests, events as needed
+
+====================================
+📖 ADDITIONAL RESOURCES
+====================================
+
+For Users:
+📄 USER_GUIDE_v1.6.0.txt - Complete user guide
+📄 CHANGELOG_1.6.0.txt - What's new
+
+For Admins:
+📄 100_PERCENT_COMPLETE.txt - Module overview
+📄 ENHANCEMENT_IDEAS.txt - Future roadmap
+📄 AWESOME_UPDATE_SUMMARY.txt - Technical summary
+
+For Developers:
+📁 WalhallaMMO/*/src/ - All source code
+📄 pom.xml - Maven configuration
+📄 PROJECT_GUIDE.txt - Architecture guide
+
+====================================
+✅ POST-DEPLOYMENT CHECKLIST
+====================================
+
+□ All 18 plugins loaded (check /plugins)
+□ No errors in console
+□ Tested /daily command
+□ Tested /party invite/accept
+□ Tested /skills GUI
+□ Tested /pc party chat
+□ Verified XP sharing in parties
+□ Checked daily reward on login
+□ Confirmed action bar notifications working
+□ Player data persisting across restarts
+
+====================================
+🎉 YOU'RE DONE!
+====================================
+
+Congratulations! WalhallaMMO v1.6.0 is deployed.
+
+Your server now features:
+✅ Cooperative party system
+✅ Deep talent progression
+✅ Daily login rewards
+✅ Polished action bar notifications
+
+Enjoy your AWESOME MMO experience! ⚔️🛡️✨
+
+====================================

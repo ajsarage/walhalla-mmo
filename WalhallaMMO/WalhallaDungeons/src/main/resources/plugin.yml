@@ -1,0 +1,10 @@
+name: WalhallaDungeons
+version: 0.6.0-SNAPSHOT
+main: walhalla.mmo.dungeons.WalhallaDungeonsPlugin
+api-version: "1.21"
+depend: [WalhallaCore]
+
+commands:
+  dungeon:
+    description: Manage dungeons
+    usage: /dungeon [list|start <id>]

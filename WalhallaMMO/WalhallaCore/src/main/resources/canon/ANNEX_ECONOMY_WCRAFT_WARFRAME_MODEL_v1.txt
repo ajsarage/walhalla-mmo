@@ -1,0 +1,19 @@
+# WARFRAME MODEL FOR MAGE SPECIALIZATIONS
+# Cosmetic/progression items unlocked via WCRAFT
+
+## COSMETIC WARFRAMES (visual skins, no stat change)
+WARFRAME_COSMETIC:Pyromancer Robes|500 WCRAFT|Orange colored robes
+WARFRAME_COSMETIC:Frostweaver Cloak|500 WCRAFT|Blue icy appearance
+WARFRAME_COSMETIC:Void Aura|750 WCRAFT|Purple void effect
+WARFRAME_COSMETIC:Lightbringer Aura|750 WCRAFT|Golden holy glow
+
+## UTILITY UNLOCKS
+UNLOCK:Double Spell Slots|2000 WCRAFT|Equip 8 spells instead of 4
+UNLOCK:Spell Fusion|3000 WCRAFT|Combine 2 spells into 1 enhanced spell
+UNLOCK:Mana Reserve|1500 WCRAFT|+200 maximum mana pool
+
+## VANITY ITEMS (emotes, pets, etc)
+VANITY:Fire Elemental Pet|1000 WCRAFT|Summoned companion
+VANITY:Frost Wolf Pet|1000 WCRAFT|Summoned companion
+VANITY:Void Orb Pet|1500 WCRAFT|Summoned companion
+VANITY:Mage Tower Teleport|5000 WCRAFT|Fast travel to headquarters
